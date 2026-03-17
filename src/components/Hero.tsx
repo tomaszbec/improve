@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next'
+
 export function Hero() {
+  const { t } = useTranslation()
+
   return (
     <section className="hero" id="hero" aria-labelledby="hero-title">
       <div className="section__container">
@@ -6,26 +10,28 @@ export function Hero() {
           <div className="hero__content">
             <div className="hero__badge">
               <span className="hero__badge-dot" />
-              Zaufany partner technologiczny od 2016
+              {t('hero.badge')}
             </div>
 
-            <h1 id="hero-title" className="hero__title">
-              Budujemy Przyszłość{' '}
-              <span className="hero__title-gradient">Napędzaną przez AI</span>
+            <h1 
+              id="hero-title" 
+              className="hero__title"
+              data-text={`${t('hero.title_start')} ${t('hero.title_gradient')}`}
+            >
+              {t('hero.title_start')}{' '}
+              <span className="hero__title-gradient">{t('hero.title_gradient')}</span>
             </h1>
 
             <p className="hero__subtitle">
-              Projektujemy i wdrażamy zaawansowane systemy agentowe, 
-              inteligentną automatyzację i oprogramowanie AI-first, 
-              które redefiniuje efektywność Twojego biznesu.
+              {t('hero.subtitle')}
             </p>
 
             <div className="hero__actions">
               <a href="#kontakt" className="btn btn--primary">
-                Porozmawiajmy →
+                {t('hero.cta_talk')}
               </a>
               <a href="#portfolio" className="btn btn--outline">
-                Zobacz projekty
+                {t('hero.cta_portfolio')}
               </a>
             </div>
           </div>
@@ -52,14 +58,14 @@ export function Hero() {
                 <div className="hero__stat-icon">📈</div>
                 <div>
                   <div className="hero__stat-val">80+</div>
-                  <div className="hero__stat-nam">Klientów</div>
+                  <div className="hero__stat-nam">{t('hero.stat_clients')}</div>
                 </div>
               </div>
               <div className="hero__mini-stat">
                 <div className="hero__stat-icon">🌍</div>
                 <div>
                   <div className="hero__stat-val">75</div>
-                  <div className="hero__stat-nam">Krajów</div>
+                  <div className="hero__stat-nam">{t('hero.stat_countries')}</div>
                 </div>
               </div>
             </div>

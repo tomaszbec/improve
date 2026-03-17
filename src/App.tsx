@@ -1,30 +1,33 @@
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import { AntigravityBackground } from './components/AntigravityBackground'
 import { Navbar } from './components/Navbar'
-import { Hero } from './components/Hero'
-import { Services } from './components/Services'
-import { About } from './components/About'
-import { Technologies } from './components/Technologies'
-import { Portfolio } from './components/Portfolio'
-import { Testimonials } from './components/Testimonials'
-import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
+import { Home } from './pages/Home'
+import { Blog } from './pages/Blog'
+import { BlogPost } from './pages/BlogPost'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
 
 export default function App() {
   return (
-    <>
+    <BrowserRouter>
+      <ScrollToTop />
       <AntigravityBackground />
       <div className="grain-overlay" aria-hidden="true" />
       <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <Technologies />
-        <Portfolio />
-        <Testimonials />
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }

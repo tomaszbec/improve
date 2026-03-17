@@ -1,50 +1,51 @@
+import { useTranslation } from 'react-i18next'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
-const PROJECTS = [
-  {
-    image: '/images/ai-dev.png',
-    category: 'AI / Development',
-    title: 'Autonomiczny Inżynier AI',
-    text: 'Agent AI integrujący się z repozytoriami kodu, zdolny do samodzielnego naprawiania bugów, pisania testów i refaktoryzacji złożonych modułów.',
-    tech: ['Python', 'LLM Agents', 'Vector Search', 'Node.js'],
-  },
-  {
-    image: '/images/ai-travel.png',
-    category: 'SaaS / AI Agents',
-    title: 'Aura AI Travel Agent',
-    text: 'Konwersacyjny agent podróży planujący kompletne trasu, rezerwujący hotele i reagujący w czasie rzeczywistym na zmiany lotów.',
-    tech: ['React', 'LangChain', 'OpenAI', 'AWS'],
-  },
-  {
-    image: '/images/ai-saas.png',
-    category: 'FinTech / AI',
-    title: 'Predykcyjna Analityka Finansowa',
-    text: 'Platforma SaaS przewidująca trendy rynkowe i optymalizująca portfele inwestycyjne za pomocą zaawansowanych sieci neuronowych.',
-    tech: ['Next.js', 'TensorFlow', 'PostgreSQL', 'Azure'],
-  },
-  {
-    image: '/images/ai-medical.png',
-    category: 'HealthTech / AI',
-    title: 'Diagnostyka Obrazowa AI',
-    text: 'System wspomagający radiologów w wykrywaniu wczesnych zmian chorobowych na obrazach TK i MRI z dokładnością powyżej 98%.',
-    tech: ['Computer Vision', 'PyTorch', 'FastAPI', 'GCP'],
-  },
-]
-
 export function Portfolio() {
+  const { t } = useTranslation()
   const ref = useScrollReveal()
+
+  const PROJECTS = [
+    {
+      image: '/images/ai-dev.png',
+      category: t('portfolio.categories.ai_dev'),
+      title: t('portfolio.items.engineer.title'),
+      text: t('portfolio.items.engineer.description'),
+      tech: ['Python', 'LLM Agents', 'Vector Search', 'Node.js'],
+    },
+    {
+      image: '/images/ai-travel.png',
+      category: t('portfolio.categories.saas_agents'),
+      title: t('portfolio.items.travel.title'),
+      text: t('portfolio.items.travel.description'),
+      tech: ['React', 'LangChain', 'OpenAI', 'AWS'],
+    },
+    {
+      image: '/images/ai-saas.png',
+      category: t('portfolio.categories.fintech_ai'),
+      title: t('portfolio.items.finance.title'),
+      text: t('portfolio.items.finance.description'),
+      tech: ['Next.js', 'TensorFlow', 'PostgreSQL', 'Azure'],
+    },
+    {
+      image: '/images/ai-medical.png',
+      category: t('portfolio.categories.healthtech_ai'),
+      title: t('portfolio.items.medical.title'),
+      text: t('portfolio.items.medical.description'),
+      tech: ['Computer Vision', 'PyTorch', 'FastAPI', 'GCP'],
+    },
+  ]
 
   return (
     <section className="section" id="portfolio" aria-labelledby="portfolio-title">
       <div className="section__container" ref={ref}>
         <div className="section__header">
-          <span className="section__label">Portfolio</span>
+          <span className="section__label">{t('portfolio.label')}</span>
           <h2 id="portfolio-title" className="section__title">
-            Innowacje AI w praktyce
+            {t('portfolio.title')}
           </h2>
           <p className="section__description">
-            Od systemów agentowych po zaawansowaną analitykę — zobacz jak 
-            wdrażamy rozwiązania AI, które przynoszą realną wartość.
+            {t('portfolio.description')}
           </p>
         </div>
 

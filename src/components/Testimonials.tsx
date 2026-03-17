@@ -1,39 +1,41 @@
+import { useTranslation } from 'react-i18next'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
-const TESTIMONIALS = [
-  {
-    quote: 'Współpracuję z ImproveIT od ponad 3 lat. Zespół jest wysoce zmotywowany, zaangażowany i profesjonalny. Gorąco polecam!',
-    name: 'Clement P.',
-    role: 'Director, Aplikacja mobilna (Francja)',
-    initials: 'CP',
-  },
-  {
-    quote: 'Zespół jest bardzo zwinny i punktualny. Nasi interesariusze są pod szczególnym wrażeniem jakości dostarczanych rozwiązań.',
-    name: 'Alok A.',
-    role: 'CEO, Platforma SaaS (Szwecja)',
-    initials: 'AA',
-  },
-  {
-    quote: 'Współpraca z ImproveIT to czysta przyjemność. Stas dostarczył rozwiązanie na poziomie, jakiego oczekiwaliśmy, a dodatkowo pomagał ulepszać naszą aplikację.',
-    name: 'Aleksander G.',
-    role: 'CTO, E-commerce (Niemcy)',
-    initials: 'AG',
-  },
-]
-
 export function Testimonials() {
+  const { t } = useTranslation()
   const ref = useScrollReveal()
+
+  const TESTIMONIALS = [
+    {
+      quote: t('testimonials.items.t1.quote'),
+      name: 'Clement P.',
+      role: t('testimonials.items.t1.role'),
+      initials: 'CP',
+    },
+    {
+      quote: t('testimonials.items.t2.quote'),
+      name: 'Alok A.',
+      role: t('testimonials.items.t2.role'),
+      initials: 'AA',
+    },
+    {
+      quote: t('testimonials.items.t3.quote'),
+      name: 'Aleksander G.',
+      role: t('testimonials.items.t3.role'),
+      initials: 'AG',
+    },
+  ]
 
   return (
     <section className="section" id="opinie" aria-labelledby="testimonials-title">
       <div className="section__container" ref={ref}>
         <div className="section__header">
-          <span className="section__label">Opinie</span>
+          <span className="section__label">{t('testimonials.label')}</span>
           <h2 id="testimonials-title" className="section__title">
-            Co mówią nasi klienci
+            {t('testimonials.title')}
           </h2>
           <p className="section__description">
-            Zaufanie naszych klientów jest naszym największym osiągnięciem.
+            {t('testimonials.description')}
           </p>
         </div>
 

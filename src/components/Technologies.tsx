@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const TECHNOLOGIES = [
@@ -28,6 +29,7 @@ const TECHNOLOGIES = [
 ]
 
 export function Technologies() {
+  const { t } = useTranslation()
   const ref = useScrollReveal()
   const doubled = [...TECHNOLOGIES, ...TECHNOLOGIES]
 
@@ -35,13 +37,12 @@ export function Technologies() {
     <section className="section" id="technologie" aria-labelledby="tech-title">
       <div className="section__container" ref={ref}>
         <div className="section__header">
-          <span className="section__label">Technologie</span>
+          <span className="section__label">{t('tech.label')}</span>
           <h2 id="tech-title" className="section__title">
-            Nasz stack technologiczny
+            {t('tech.title')}
           </h2>
           <p className="section__description">
-            Pracujemy z najnowocześniejszymi technologiami,
-            aby dostarczać wydajne i skalowalne rozwiązania.
+            {t('tech.description')}
           </p>
         </div>
       </div>

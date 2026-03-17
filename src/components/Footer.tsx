@@ -1,13 +1,16 @@
+import { useTranslation } from 'react-i18next'
+
 export function Footer() {
+  const { t } = useTranslation()
   const year = new Date().getFullYear()
 
   return (
     <footer className="footer" role="contentinfo">
       <div className="footer__container">
         <p className="footer__copy">
-          &copy; {year} ImproveIT Solutions Sp. z o.o. Warszawa, Polska. Wszelkie prawa zastrzeżone.
+          &copy; {year} ImproveIT Solutions. Warszawa, Polska. {t('footer.rights')}
         </p>
-        <nav className="footer__links" aria-label="Linki w stopce">
+        <nav className="footer__links" aria-label="Social media links">
           <a
             href="https://www.linkedin.com/company/improveit-solutions"
             target="_blank"
@@ -25,7 +28,7 @@ export function Footer() {
             Clutch
           </a>
           <a href="#kontakt" className="footer__link">
-            Kontakt
+            {t('nav.contact')}
           </a>
         </nav>
       </div>

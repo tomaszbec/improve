@@ -41,6 +41,19 @@ body {
   position: relative;
 }
 
+h1, h2, h3, h4, h5, h6,
+.btn,
+.navbar__link,
+.navbar__cta,
+.section__label,
+.hero__badge,
+.hero__stat-val,
+.about__modern-num,
+.service-card__tag,
+.portfolio-card__tag-pill {
+  font-family: var(--font-display);
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -277,11 +290,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .navbar__link {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--color-text-muted);
   transition: var(--transition-fast);
   position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .navbar__link:hover { color: var(--color-text); }
@@ -538,7 +557,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero__title::before,
 .hero__title::after {
-  content: "Budujemy Przyszłość Napędzaną przez AI";
+  content: attr(data-text);
   position: absolute;
   top: 0;
   left: 0;

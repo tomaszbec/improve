@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About Us",
+    "tech": "Technologies",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Trusted technology partner since 2016",
+    "title_start": "Building the Future",
+    "title_gradient": "Powered by AI",
+    "subtitle": "We design and implement advanced agentic systems, intelligent automation, and AI-first software that redefines your business efficiency.",
+    "cta_talk": "Let's talk →",
+    "cta_portfolio": "See projects",
+    "stat_clients": "Clients",
+    "stat_countries": "Countries"
+  },
+  "services": {
+    "label": "Services",
+    "title": "Comprehensive Technological Solutions",
+    "description": "From strategy to implementation — we provide a full range of software engineering services.",
+    "items": {
+      "agents": {
+        "title": "AI Agents",
+        "description": "We build autonomous AI agents capable of planning, reasoning, and executing complex business tasks."
+      },
+      "llm": {
+        "title": "LLM & RAG Integration",
+        "description": "We implement advanced semantic search (RAG) and optimize language models for your data."
+      },
+      "automation": {
+        "title": "AI-First Automation",
+        "description": "We transform business processes by replacing manual work with intelligent AI-driven workflows."
+      },
+      "web": {
+        "title": "Intelligent Web Applications",
+        "description": "We create modern SaaS platforms with built-in AI features and predictive data analytics."
+      },
+      "mobile": {
+        "title": "Mobile AI",
+        "description": "Mobile applications utilizing on-device models and AI integrations for seamless UX."
+      },
+      "infra": {
+        "title": "AI Infrastructure & MLOps",
+        "description": "Scalable cloud environments optimized for training and serving AI models."
+      }
+    }
+  },
+  "about": {
+    "label": "About Us",
+    "title": "A Partner That {{gradient}}",
+    "gradient": "Drives Growth",
+    "description": "We specialize in building web, mobile, SaaS, and AI solutions for leading technology companies from Europe and the USA. Since 2016, we have been providing software engineering at the highest level.",
+    "features": {
+      "f1_title": "Senior Expertise",
+      "f1_desc": "80% of engineers with 4+ years of commercial experience.",
+      "f2_title": "Rapid Deployment",
+      "f2_desc": "Project start within 2 weeks of inquiry.",
+      "f3_title": "Scale Ready",
+      "f3_desc": "Flexible teams ready for rapid product scaling."
+    },
+    "stats": {
+      "years": "Years on market",
+      "countries": "Countries",
+      "clients": "Happy Clients"
+    }
+  },
+  "tech": {
+    "label": "Technologies",
+    "title": "Our Tech Stack",
+    "description": "We work with cutting-edge technologies to deliver efficient and scalable solutions."
+  },
+  "portfolio": {
+    "label": "Portfolio",
+    "title": "AI Innovations in Practice",
+    "description": "From agentic systems to advanced analytics — see how we implement AI solutions that bring real value.",
+    "categories": {
+      "ai_dev": "AI / Development",
+      "saas_agents": "SaaS / AI Agents",
+      "fintech_ai": "FinTech / AI",
+      "healthtech_ai": "HealthTech / AI"
+    },
+    "items": {
+      "engineer": {
+        "title": "Autonomous AI Engineer",
+        "description": "An AI agent integrating with code repositories, capable of independently fixing bugs, writing tests, and refactoring complex modules."
+      },
+      "travel": {
+        "title": "Aura AI Travel Agent",
+        "description": "A conversational travel agent planning complete itineraries, booking hotels, and reacting in real-time to flight changes."
+      },
+      "finance": {
+        "title": "Predictive Financial Analytics",
+        "description": "A SaaS platform predicting market trends and optimizing investment portfolios using advanced neural networks."
+      },
+      "medical": {
+        "title": "AI Imaging Diagnostics",
+        "description": "A system assisting radiologists in detecting early diseased lesions on CT and MRI images with over 98% accuracy."
+      }
+    }
+  },
+  "testimonials": {
+    "label": "Testimonials",
+    "title": "What Our Clients Say",
+    "description": "Our clients' trust is our greatest achievement.",
+    "items": {
+      "t1": {
+        "quote": "I have been working with ImproveIT for over 3 years. The team is highly motivated, committed, and professional. I highly recommend them!",
+        "role": "Director, Mobile App (France)"
+      },
+      "t2": {
+        "quote": "The team is very agile and punctual. Our stakeholders are particularly impressed with the quality of the solutions delivered.",
+        "role": "CEO, SaaS Platform (Sweden)"
+      },
+      "t3": {
+        "quote": "Working with ImproveIT is a pure pleasure. The team delivered a top-level solution and constantly improved our application.",
+        "role": "CTO, E-commerce (Germany)"
+      }
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's Talk About Your Project",
+    "description": "Describe your needs — we will respond within 24 hours with a collaboration proposal tailored to your budget and goals.",
+    "info_text": "We are ready to help you build a digital product, extend your engineering team, or optimize existing solutions.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "company": "Company",
+      "subject": "Select a topic...",
+      "s1": "Web / SaaS Application",
+      "s2": "Mobile Application",
+      "s3": "AI / ML Solutions",
+      "s4": "Dedicated Team",
+      "s5": "IT Consulting",
+      "s6": "Other",
+      "message": "Describe your project or needs...",
+      "submit": "Send Inquiry →"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "blog": {
+    "label": "Blog",
+    "title_start": "Knowledge and ",
+    "gradient": "AI Innovation",
+    "description": "Discover the latest trends in agentic systems, LLMs, and AI-First development.",
+    "read_more": "Read more →",
+    "back": "← Back to blog",
+    "no_post": "Post does not exist",
+    "cta_title": "Interested in implementing AI?",
+    "cta_desc": "Contact our experts to discuss how agentic systems can help your company.",
+    "cta_btn": "Expert Consultation",
+    "post1": {
+      "title": "The Future of AI Agents in Business",
+      "excerpt": "How agentic systems are redefining how companies approach complex problems."
+    },
+    "post2": {
+      "title": "Optimizing LLMs with RAG",
+      "excerpt": "Why Retrieval-Augmented Generation is key to building reliable solutions."
+    }
+  }
+}
