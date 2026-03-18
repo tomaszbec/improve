@@ -1,0 +1,100 @@
+name: Deploy React to Server (improveit.pl)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: |
+          bun install
+
+      - name: Build React app
+        run: |
+          bun run build
+
+      - name: Get current version and increment
+        id: version
+        run: |
+          VERSION_FILE="dist/assets/version.txt"
+          if [ -f "$VERSION_FILE" ]; then
+            VERSION=$(cat $VERSION_FILE)
+            BUILD_NUMBER=$(echo $VERSION | sed 's/^b\([0-9]*\)-.*$/\1/')
+            BUILD_NUMBER=$((BUILD_NUMBER + 1))
+          else
+            BUILD_NUMBER=1
+          fi
+          SHORT_HASH=$(git rev-parse --short HEAD)
+          VERSION="b${BUILD_NUMBER}-${SHORT_HASH}"
+          echo "Build version: $VERSION"
+          mkdir -p dist/assets
+          echo $VERSION > $VERSION_FILE
+
+      - name: Rename index.html to index.phtml
+        run: |
+          mv dist/index.html dist/index.phtml
+
+      - name: Copy index.php to dist (conditional)
+        run: |
+          if [ -f "src/index.php" ]; then
+            cp src/index.php dist/index.php
+          elif [ -f "index.php" ]; then
+            cp index.php dist/index.php
+          fi
+
+      - name: Prepare remote directory
+        run: |
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ubuntu@146.59.13.80 "
+            # Cleanup _improveit.pl directory
+            rm -rf /var/www/html/_improveit.pl/ &&
+            mkdir -p /var/www/html/_improveit.pl/
+          "
+
+      - name: Deploy to server using SCP
+        run: |
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" scp -o StrictHostKeyChecking=no -r dist/* ubuntu@146.59.13.80:/var/www/html/_improveit.pl/
+
+      - name: Finalize deployment and rotate backups
+        run: |
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ubuntu@146.59.13.80 "
+            # Move old app to backup
+            mkdir -p /var/www/html/backups/improveit.pl && 
+            if [ -d \"/var/www/html/improveit.pl\" ]; then
+              cp -r /var/www/html/improveit.pl /var/www/html/backups/improveit.pl/$(date +'%Y-%m-%d_%H-%M-%S')
+            fi && 
+            
+            # Keep only the last 2 backups
+            cd /var/www/html/backups/improveit.pl && 
+            ls -t | tail -n +3 | xargs rm -rf 2>/dev/null || true && 
+            
+            # Clear target directory
+            rm -rf /var/www/html/improveit.pl && 
+            
+            # Rename the newly deployed app
+            mv /var/www/html/_improveit.pl /var/www/html/improveit.pl && 
+            
+            # Set ownership
+            chown -R ubuntu:www-data /var/www/html/improveit.pl &&
+
+            # Set group write and execute permissions
+            chmod -R g+rwX /var/www/html/improveit.pl
+
+            # Invalidate cache
+            aws cloudfront create-invalidation --distribution-id E2YT025NB5YE4X --paths \"/*\" \"/\"
+            aws cloudfront create-invalidation --distribution-id E17SHJLZV9W1P7 --paths \"/*\" \"/\"
+          "
+        shell: bash
+        timeout-minutes: 10

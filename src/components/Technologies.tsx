@@ -53,7 +53,7 @@ export function Technologies() {
             <div key={`${tech.name}-${i}`} className="tech__item">
               <span
                 className="tech__item-dot"
-                style={{ background: tech.color }}
+                style={{ color: tech.color, background: tech.color }}
               />
               {tech.name}
             </div>

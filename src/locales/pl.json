@@ -14,37 +14,88 @@
     "subtitle": "Projektujemy i wdrażamy zaawansowane systemy agentowe, inteligentną automatyzację i oprogramowanie AI-first, które redefiniuje efektywność Twojego biznesu.",
     "cta_talk": "Porozmawiajmy →",
     "cta_portfolio": "Zobacz projekty",
-    "stat_clients": "Klientów",
-    "stat_countries": "Krajów"
+    "stat_clients": "Wdrożeń AI",
+    "stat_countries": "Projektów"
   },
   "services": {
     "label": "Usługi",
     "title": "Kompleksowe rozwiązania technologiczne",
     "description": "Od strategii po wdrożenie — dostarczamy pełen zakres usług inżynierii oprogramowania.",
+    "back": "Powrót do usług",
     "items": {
       "agents": {
-        "title": "Systemy Agentowe (AI Agents)",
-        "description": "Budujemy autonomiczne agenty AI zdolne do planowania, rozumowania i wykonywania złożonych zadań biznesowych."
+        "title": "Agenci AI & Autonomiczne Przepływy",
+        "description": "Inteligentne systemy agentowe, które samodzielnie planują i wykonują złożone procesy biznesowe.",
+        "full_text": "Projektujemy i wdrażamy zaawansowane systemy agentowe oparte na architekturach typu Multi-Agent Systems (MAS). Nasze rozwiązania potrafią autonomicznie zarządzać zadaniami, od obsługi klienta po złożone analizy rynkowe.",
+        "features": ["Zarządzanie stanem (Memory systems)", "Wykorzystanie narzędzi zewnętrznych (Tool use)", "Autorefleksja i korekta błędów", "Wielozadaniowość"],
+        "tech": ["LangGraph", "AutoGPT", "CrewAI", "Custom Orchestrators"]
       },
       "llm": {
-        "title": "Integracja LLM & RAG",
-        "description": "Wdrażamy zaawansowane wyszukiwanie semantyczne (RAG) i optymalizujemy modele językowe pod Twoje dane."
+        "title": "LLM & Wyszukiwanie Semantyczne",
+        "description": "Wykorzystaj moc modeli językowych do analizy dokumentów i intuicyjnego wyszukiwania informacji.",
+        "full_text": "Budujemy systemy RAG (Retrieval-Augmented Generation), które pozwalają modelom AI na korzystanie z Twoich prywatnych danych w sposób bezpieczny i precyzyjny. Nigdy więcej halucynacji.",
+        "features": ["Bazy wektorowe (Pinecone, Weaviate)", "Context window management", "Hybrydowe wyszukiwanie", "Prompt Engineering"],
+        "tech": ["OpenAI", "Anthropic Claude", "Llama 3", "Mistral"]
       },
       "automation": {
-        "title": "Automatyzacja AI-First",
-        "description": "Transformujemy procesy biznesowe zastępując manualną pracę inteligentnymi przepływami pracy sterowanymi przez AI."
+        "title": "Automatyzacja Procesów",
+        "description": "Pozbądź się powtarzalnych zadań dzięki inteligentnym botom i przepływom pracy napędzanym przez AI.",
+        "full_text": "Łączymy klasyczne RPA ze sztuczną inteligencją, tworząc systemy, które nie tylko wykonują kroki, ale rozumieją dane, na których pracują. Automatyzujemy e-maile, faktury i bazy danych.",
+        "features": ["Inteligentne OCR", "Integracja API/SaaS", "Przetwarzanie dokumentów w czasie rzeczywistym", "Workflow monitoring"],
+        "tech": ["n8n", "Make", "Custom Python Engines", "Zapier"]
       },
       "web": {
-        "title": "Inteligentne Aplikacje Web",
-        "description": "Tworzymy nowoczesne platformy SaaS z wbudowanymi funkcjami AI i predykcyjną analityką danych."
+        "title": "Nowoczesne Aplikacje Webowe",
+        "description": "Szybkie, skalowalne i bezpieczne platformy webowe z natywną integracją modułów AI.",
+        "full_text": "Tworzymy dedykowane systemy SaaS i platformy korporacyjne, które od pierwszego dnia są gotowe na integrację z modelami sztucznej inteligencji. Stawiamy na wydajność i doskonały UX.",
+        "features": ["Server Side Rendering (SSR)", "Architektura mikroserwisów", "PWA (Progressive Web Apps)", "Security by design"],
+        "tech": ["React / Next.js", "Node.js", "Go", "PostgreSQL"]
       },
       "mobile": {
-        "title": "Mobile AI",
-        "description": "Aplikacje mobilne wykorzystujące modele on-device i integracje AI dla bezproblemowego UX."
+        "title": "Aplikacje Mobilne Napędzane AI",
+        "description": "Mobilne doświadczenia nowej generacji z modelami on-device i inteligentnym UX.",
+        "full_text": "Dostarczamy aplikacje na iOS i Android, które wykorzystują lokalne przetwarzanie obrazu, mowy i tekstu. Twoja aplikacja działa inteligentnie, nawet gdy użytkownik jest offline.",
+        "features": ["On-device Inference", "Przetwarzanie biometryczne", "Real-time AI camera modes", "Intuicyjne interfejsy głosowe"],
+        "tech": ["React Native", "CoreML", "TensorFlow Lite", "Swift/Kotlin"]
+      },
+      "security": {
+        "title": "Audyt Bezpieczeństwa & Pentesty",
+        "description": "Kompleksowa ochrona Twoich systemów przed atakami i wyciekami danych w erze AI.",
+        "full_text": "Bezpieczeństwo to proces, a nie produkt. Przeprowadzamy testy penetracyjne, audyty kodu źródłowego oraz badamy odporność systemów AI na techniki prompt injection.",
+        "features": ["Web/Mobile Pentesting", "Automated scan & Manual check", "Zgodność z RODO/GDPR", "Ochrona modeli AI"],
+        "tech": ["Kali Linux", "Burp Suite", "OWASP Standards", "Deep Source Review"]
       },
       "infra": {
-        "title": "AI Infrastructure & MLOps",
-        "description": "Skalowalne środowiska chmurowe zoptymalizowane pod kątem trenowania i serwowania modeli AI."
+        "title": "Infrastruktura AI & MLOps",
+        "description": "Skalowalne środowiska chmurowe zoptymalizowane pod kątem trenowania i serwowania modeli AI.",
+        "full_text": "Zapewniamy wydajność i oszczędność kosztów poprzez precyzyjne skalowanie instancji GPU i CPU. Wdrażamy systemy monitoringu modeli w produkcji (MLOps).",
+        "features": ["Auto-scaling GPU clusters", "Model hosting & Versioning", "Fine-tuning pipelines", "Monitoring i drift detection"],
+        "tech": ["AWS SageMaker", "Kubernetes", "vLLM", "Docker"]
+      }
+    }
+  },
+  "security_audit": {
+    "label": "Audyt Bezpieczeństwa",
+    "title_start": "Chroń swoje ",
+    "gradient": "Cyfrowe Aktywa",
+    "description": "Identyfikujemy podatności, zanim zrobią to inni. Nasze audyty łączą ręczną analizę ekspercką z automatycznymi testami napędzanymi przez AI.",
+    "cta": "Zamów Audyt",
+    "sections": {
+      "pentests": {
+        "title": "Testy Penetracyjne",
+        "desc": "Symulacje rzeczywistych ataków na Twoje aplikacje webowe i mobilne."
+      },
+      "code": {
+        "title": "Audyt Kodu Źródłowego",
+        "desc": "Głęboka analiza kodu pod kątem błędów logicznych i podatności."
+      },
+      "cloud": {
+        "title": "Infrastruktura i Chmura",
+        "desc": "Zabezpieczanie konfiguracji AWS/Azure/GCP oraz klastrów Kubernetes."
+      },
+      "ai": {
+        "title": "Bezpieczeństwo Modeli AI",
+        "desc": "Ochrona przed prompt injection i wyciekiem danych w systemach LLM."
       }
     }
   },
@@ -63,8 +114,8 @@
     },
     "stats": {
       "years": "Lat na rynku",
-      "countries": "Krajów",
-      "clients": "Zadowolonych Klientów"
+      "countries": "Projektów",
+      "clients": "Wdrożeń AI"
     }
   },
   "tech": {
@@ -85,19 +136,39 @@
     "items": {
       "engineer": {
         "title": "Autonomiczny Inżynier AI",
-        "description": "Agent AI integrujący się z repozytoriami kodu, zdolny do samodzielnego naprawiania bugów, pisania testów i refaktoryzacji złożonych modułów."
+        "description": "Agent AI integrujący się z repozytoriami kodu, zdolny do samodzielnego naprawiania bugów, pisania testów i refaktoryzacji złożonych modułów.",
+        "full_text": "Opracowaliśmy agenta AI nowej generacji, zaprojektowanego do pracy jako starszy inżynier oprogramowania. System nie tylko sugeruje kod; rozumie całe bazy kodu, identyfikuje dług technologiczny i autonomicznie wykonuje złożone zadania refaktoryzacji.",
+        "challenge": "Ręczne przeglądy kodu i naprawianie błędów pochłaniają do 40% czasu deweloperów w dużych projektach, spowalniając dostarczanie funkcji i zwiększając koszty.",
+        "solution": "Wdrożenie systemu wieloagentowego wykorzystującego RAG (Retrieval-Augmented Generation) i autonomiczne pętle rozumowania do planowania i wykonywania modyfikacji bazy kodu.",
+        "features": ["Autonomiczne naprawianie bugów", "Refaktoryzacja kodu", "Generowanie testów jednostkowych", "Integracja CI/CD"],
+        "tech_detailed": ["LangGraph", "Docker", "Git API", "GPT-4o"]
       },
       "travel": {
-        "title": "Aura AI Travel Agent",
-        "description": "Konwersacyjny agent podróży planujący kompletne trasu, rezerwujący hotele i reagujący w czasie rzeczywistym na zmiany lotów."
+        "title": "AI Travel Agent",
+        "description": "Konwersacyjny agent podróży planujący kompletne trasu, rezerwujący hotele i reagujący w czasie rzeczywistym na zmiany lotów.",
+        "full_text": "AI Travel Agent to kompleksowy system konsjerża, który redefiniuje doświadczenie planowania podróży. Dzięki wykorzystaniu danych w czasie rzeczywistym i preferencji użytkownika, działa jako proaktywny osobisty asystent podczas całej podróży.",
+        "challenge": "Podróżni borykają się ze zmęczeniem decyzyjnym i złożoną logistyką podczas planowania wielodniowych wycieczek obejmujących różne strefy czasowe i systemy rezerwacyjne.",
+        "solution": "Konwersacyjny interfejs AI z możliwością wywoływania narzędzi (tool-calling) do rezerwacji lotów, hoteli i restauracji przy zachowaniu kontekstowej pamięci.",
+        "features": ["Optymalizacja trasy", "Śledzenie lotów w czasie rzeczywistym", "Wsparcie dla rezerwacji natychmiastowych", "Wielojęzyczność"],
+        "tech_detailed": ["React Native", "LangChain", "OpenAI API", "Stripe"]
       },
       "finance": {
         "title": "Predykcyjna Analityka Finansowa",
-        "description": "Platforma SaaS przewidująca trendy rynkowe i optymalizująca portfele inwestycyjne za pomocą zaawansowanych sieci neuronowych."
+        "description": "Platforma SaaS przewidująca trendy rynkowe i optymalizująca portfele inwestycyjne za pomocą zaawansowanych sieci neuronowych.",
+        "full_text": "Ta platforma dostarcza analizy finansowe klasy instytucjonalnej inwestorom indywidualnym. Wykorzystując zaawansowane modele uczenia maszynowego, identyfikuje wzorce zmienności rynkowej, które umykają tradycyjnym algorytmom.",
+        "challenge": "Wysoka zmienność rynku i ogrom danych finansowych utrudniają inwestorom identyfikację wiarygodnych sygnałów i skuteczne zarządzanie ryzykiem.",
+        "solution": "Architektury sieci neuronowych zoptymalizowane pod kątem prognozowania szeregów czasowych, zintegrowane z globalną analizą sentymentu wiadomości dla holistycznego widoku rynku.",
+        "features": ["Wskaźnik prawdopodobieństwa ryzyka", "Optymalizacja portfela", "Analiza sentymentu", "Silnik backtestingowy"],
+        "tech_detailed": ["Python / PyTorch", "PostgreSQL", "Next.js", "Redis"]
       },
       "medical": {
         "title": "Diagnostyka Obrazowa AI",
-        "description": "System wspomagający radiologów w wykrywaniu wczesnych zmian chorobowych na obrazach TK i MRI z dokładnością powyżej 98%."
+        "description": "System wspomagający radiologów w wykrywaniu wczesnych zmian chorobowych na obrazach TK i MRI z dokładnością powyżej 98%.",
+        "full_text": "Nasze rozwiązanie AI Medical Imaging służy jako druga para eksperckich oczu dla radiologów, drastycznie redukując czas potrzebny na wstępną analizę skanów przy jednoczesnym zwiększeniu wykrywalności stanów krytycznych.",
+        "challenge": "Przeciążeni radiolodzy i duża ilość danych obrazowych mogą prowadzić do opóźnień diagnostycznych lub mikropominięć w wykrywaniu chorób we wczesnym stadium.",
+        "solution": "Niestandardowe modele Computer Vision przeszkolone na specjalistycznych zestawach danych klinicznych, zaprojektowane do płynnej integracji z istniejącymi systemami szpitalnymi PACS.",
+        "features": ["Zautomatyzowane wykrywanie zmian", "Integracja PACS/DICOM", "Wizualizacja map ciepła", "Generowanie raportów"],
+        "tech_detailed": ["TensorFlow", "FastAPI", "Nvidia CUDA", "Standard DICOM"]
       }
     }
   },
@@ -149,7 +220,7 @@
     "gradient": "Innowacje AI",
     "description": "Odkryj najnowsze trendy w systemach agentowych, LLMs i AI-First development.",
     "read_more": "Czytaj więcej →",
-    "back": "← Powrót do bloga",
+    "back": "Powrót do bloga",
     "no_post": "Post nie istnieje",
     "cta_title": "Zainteresowany wdrożeniem AI?",
     "cta_desc": "Skontaktuj się z naszymi ekspertami, aby porozmawiać o tym, jak systemy agentowe mogą pomóc Twojej firmie.",

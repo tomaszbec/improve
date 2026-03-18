@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
@@ -7,6 +8,7 @@ export function Portfolio() {
 
   const PROJECTS = [
     {
+      slug: 'autonomous-ai-engineer',
       image: '/images/ai-dev.png',
       category: t('portfolio.categories.ai_dev'),
       title: t('portfolio.items.engineer.title'),
@@ -14,6 +16,7 @@ export function Portfolio() {
       tech: ['Python', 'LLM Agents', 'Vector Search', 'Node.js'],
     },
     {
+      slug: 'ai-travel-agent',
       image: '/images/ai-travel.png',
       category: t('portfolio.categories.saas_agents'),
       title: t('portfolio.items.travel.title'),
@@ -21,6 +24,7 @@ export function Portfolio() {
       tech: ['React', 'LangChain', 'OpenAI', 'AWS'],
     },
     {
+      slug: 'predictive-finance-analytics',
       image: '/images/ai-saas.png',
       category: t('portfolio.categories.fintech_ai'),
       title: t('portfolio.items.finance.title'),
@@ -28,6 +32,7 @@ export function Portfolio() {
       tech: ['Next.js', 'TensorFlow', 'PostgreSQL', 'Azure'],
     },
     {
+      slug: 'ai-medical-imaging',
       image: '/images/ai-medical.png',
       category: t('portfolio.categories.healthtech_ai'),
       title: t('portfolio.items.medical.title'),
@@ -51,25 +56,27 @@ export function Portfolio() {
 
         <div className="portfolio__modern-grid">
           {PROJECTS.map((project, i) => (
-            <article 
-              key={i} 
+            <article
+              key={i}
               className={`portfolio-card ${i === 0 || i === 3 ? 'portfolio-card--featured' : ''}`}
             >
-              <div className="portfolio-card__image">
-                <img src={project.image} alt={project.title} loading="lazy" />
-                <div className="portfolio-card__overlay">
-                  <span className="portfolio-card__tag-pill">{project.category}</span>
+              <Link to={`/portfolio/${project.slug}`} className="portfolio-card__link-wrapper">
+                <div className="portfolio-card__image">
+                  <img src={project.image} alt={project.title} loading="lazy" />
+                  <div className="portfolio-card__overlay">
+                    <span className="portfolio-card__tag-pill">{project.category}</span>
+                  </div>
                 </div>
-              </div>
-              <div className="portfolio-card__body">
-                <h3 className="portfolio-card__title">{project.title}</h3>
-                <p className="portfolio-card__text">{project.text}</p>
-                <div className="portfolio-card__tech">
-                   {project.tech.map((t) => (
-                    <span key={t} className="service-card__tag">{t}</span>
-                  ))}
+                <div className="portfolio-card__body">
+                  <h3 className="portfolio-card__title">{project.title}</h3>
+                  <p className="portfolio-card__text">{project.text}</p>
+                  <div className="portfolio-card__tech">
+                    {project.tech.map((t) => (
+                      <span key={t} className="service-card__tag">{t}</span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </Link>
             </article>
           ))}
         </div>

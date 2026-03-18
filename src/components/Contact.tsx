@@ -20,31 +20,23 @@ export function Contact() {
 
         <div className="contact__grid">
           <div className="contact__info">
-            <h3>Improve<span>IT</span> Solutions</h3>
+            <h3>improve<span>IT</span>.pl</h3>
             <p>
               {t('contact.info_text')}
             </p>
 
             <address className="contact__details">
               <div className="contact__detail">
-                <div className="contact__detail-icon">📍</div>
-                <span>ul. Adama Branickiego 21/U3, 02-972 Warszawa</span>
+                <div className="contact__detail-icon">🏢</div>
+                <span>NIP: 7343126810</span>
+              </div>
+              <div className="contact__detail">
+                <div className="contact__detail-icon">📞</div>
+                <a href="tel:+48886555201">+48 886 555 201</a>
               </div>
               <div className="contact__detail">
                 <div className="contact__detail-icon">✉️</div>
-                <a href="mailto:hello@improveit.pl">hello@improveit.pl</a>
-              </div>
-              <div className="contact__detail">
-                <div className="contact__detail-icon">🔗</div>
-                <a href="https://www.linkedin.com/company/improveit-solutions" target="_blank" rel="noopener noreferrer">
-                  LinkedIn — ImproveIT Solutions
-                </a>
-              </div>
-              <div className="contact__detail">
-                <div className="contact__detail-icon">⭐</div>
-                <a href="https://clutch.co/profile/improveit-solutions" target="_blank" rel="noopener noreferrer">
-                  Clutch.co — 5.0 / 26 opinii
-                </a>
+                <a href="mailto:contact@improveit.pl">contact@improveit.pl</a>
               </div>
             </address>
           </div>

@@ -14,37 +14,88 @@
     "subtitle": "We design and implement advanced agentic systems, intelligent automation, and AI-first software that redefines your business efficiency.",
     "cta_talk": "Let's talk →",
     "cta_portfolio": "See projects",
-    "stat_clients": "Clients",
-    "stat_countries": "Countries"
+    "stat_clients": "AI Deployments",
+    "stat_countries": "Projects"
   },
   "services": {
     "label": "Services",
     "title": "Comprehensive Technological Solutions",
     "description": "From strategy to implementation — we provide a full range of software engineering services.",
+    "back": "Back to services",
     "items": {
       "agents": {
-        "title": "AI Agents",
-        "description": "We build autonomous AI agents capable of planning, reasoning, and executing complex business tasks."
+        "title": "AI Agents & Autonomous Workflows",
+        "description": "Intelligent agentic systems that plan and execute complex business processes independently.",
+        "full_text": "We design and deploy advanced agentic systems based on Multi-Agent Systems (MAS) architectures. Our solutions can autonomously manage tasks ranging from customer support to complex market analysis.",
+        "features": ["Context & Memory management", "Tool use integration", "Self-refining & Error correction", "Multi-step reasoning"],
+        "tech": ["LangGraph", "AutoGPT", "CrewAI", "Custom Orchestrators"]
       },
       "llm": {
-        "title": "LLM & RAG Integration",
-        "description": "We implement advanced semantic search (RAG) and optimize language models for your data."
+        "title": "LLM & Semantic Search",
+        "description": "Unlock the power of large language models for document analysis and intuitive information retrieval.",
+        "full_text": "We build RAG (Retrieval-Augmented Generation) systems that allow AI models to interact with your private data securely and accurately. No more hallucinations.",
+        "features": ["Vector Databases (Pinecone, Weaviate)", "Dynamic context management", "Hybrid Search capabilities", "Expert Prompt Engineering"],
+        "tech": ["OpenAI GPT-4", "Claude 3.5", "Llama 3", "Mistral Large"]
       },
       "automation": {
-        "title": "AI-First Automation",
-        "description": "We transform business processes by replacing manual work with intelligent AI-driven workflows."
+        "title": "Intelligent Process Automation",
+        "description": "Eliminate repetitive tasks with AI-powered bots and highly efficient workflows.",
+        "full_text": "We combine traditional RPA with state-of-the-art AI, creating systems that don't just follow steps but understand the data they process. Automated emails, invoices, and databases.",
+        "features": ["Intelligent OCR", "Deep API/SaaS Integrations", "Real-time document processing", "Workflow health monitoring"],
+        "tech": ["n8n", "Make.com", "Custom Python Engines", "Zapier"]
       },
       "web": {
-        "title": "Intelligent Web Applications",
-        "description": "We create modern SaaS platforms with built-in AI features and predictive data analytics."
+        "title": "Modern Web Applications",
+        "description": "Fast, scalable, and secure web platforms with native AI module integration.",
+        "full_text": "We build custom SaaS products and enterprise platforms designed from ground-up to leverage AI. We prioritize high performance and exceptional user experience.",
+        "features": ["SSR (Server Side Rendering)", "Microservices Architecture", "PWA Support", "Enterprise-grade Security"],
+        "tech": ["React / Next.js", "Node.js (NestJS)", "Go", "PostgreSQL"]
       },
       "mobile": {
-        "title": "Mobile AI",
-        "description": "Mobile applications utilizing on-device models and AI integrations for seamless UX."
+        "title": "AI-Driven Mobile Apps",
+        "description": "Next-gen mobile experiences featuring on-device models and intelligent UX.",
+        "full_text": "We deliver iOS and Android apps that utilize local processing for vision, speech, and text. Your app stays smart even without an active internet connection.",
+        "features": ["On-device Inference", "Biometric Processing", "Real-time AR/AI camera", "Voice-first Interfaces"],
+        "tech": ["React Native", "CoreML", "TensorFlow Lite", "Swift & Kotlin"]
+      },
+      "security": {
+        "title": "Security Audit & Pentesting",
+        "description": "Comprehensive analysis of your apps, infra, and AI models to prevent data breaches.",
+        "full_text": "Security is a continuous journey. We perform deep penetration testing, source code audits, and probe AI systems for vulnerabilities like prompt injection.",
+        "features": ["Web/Mobile Penetration Testing", "Security Code Reviews", "GDPR/ISO Compliance", "AI Model Integrity Checks"],
+        "tech": ["Kali Linux", "Burp Suite", "OWASP", "Vulnerability assessment"]
       },
       "infra": {
         "title": "AI Infrastructure & MLOps",
-        "description": "Scalable cloud environments optimized for training and serving AI models."
+        "description": "Scalable cloud environments optimized for training and serving AI models.",
+        "full_text": "We provide efficiency and cost-savings through precise hardware management. We implement robust monitoring for models in production (MLOps).",
+        "features": ["Auto-scaling GPU instances", "Model Serving & Versioning", "Automated Fine-tuning pipelines", "Model Drift Detection"],
+        "tech": ["AWS SageMaker", "Kubernetes (K8s)", "vLLM", "Docker"]
+      }
+    }
+  },
+  "security_audit": {
+    "label": "Security Audit",
+    "title_start": "Protect Your ",
+    "gradient": "Digital Assets",
+    "description": "We identify vulnerabilities before others do. Our audits combine manual expert analysis with automated AI-driven testing.",
+    "cta": "Request Audit",
+    "sections": {
+      "pentests": {
+        "title": "Penetration Testing",
+        "desc": "Real-world attack simulations on your web and mobile applications."
+      },
+      "code": {
+        "title": "Security Code Review",
+        "desc": "Deep dive into your source code to find logic flaws and vulnerabilities."
+      },
+      "cloud": {
+        "title": "Infrastructure & Cloud",
+        "desc": "Securing AWS/Azure/GCP configurations and Kubernetes clusters."
+      },
+      "ai": {
+        "title": "AI Model Security",
+        "desc": "Protection against prompt injection and data leakage in LLM systems."
       }
     }
   },
@@ -63,8 +114,8 @@
     },
     "stats": {
       "years": "Years on market",
-      "countries": "Countries",
-      "clients": "Happy Clients"
+      "countries": "Projects",
+      "clients": "Deployments"
     }
   },
   "tech": {
@@ -85,19 +136,39 @@
     "items": {
       "engineer": {
         "title": "Autonomous AI Engineer",
-        "description": "An AI agent integrating with code repositories, capable of independently fixing bugs, writing tests, and refactoring complex modules."
+        "description": "An AI agent integrating with code repositories, capable of independently fixing bugs, writing tests, and refactoring complex modules.",
+        "full_text": "We developed a next-generation AI agent designed to function as a senior software engineer. This system doesn't just suggest code; it understands entire codebases, identifies technical debt, and executes complex refactoring tasks autonomously.",
+        "challenge": "Manual code review and bug fixing consume up to 40% of developer time in large-scale projects, slowing down feature delivery and increasing costs.",
+        "solution": "Implementation of a multi-agent system utilizing RAG (Retrieval-Augmented Generation) and autonomous reasoning loops to plan and execute codebase modifications.",
+        "features": ["Autonomous Bug Fixing", "Legacy Code Refactoring", "Unit Test Generation", "CI/CD Integration"],
+        "tech_detailed": ["LangGraph", "Docker", "Git API", "GPT-4o"]
       },
       "travel": {
-        "title": "Aura AI Travel Agent",
-        "description": "A conversational travel agent planning complete itineraries, booking hotels, and reacting in real-time to flight changes."
+        "title": "AI Travel Agent",
+        "description": "A conversational travel agent planning complete itineraries, booking hotels, and reacting in real-time to flight changes.",
+        "full_text": "AI Travel Agent is a comprehensive concierge system that redefines the travel planning experience. By leveraging real-time data and user preferences, it acts as a proactive personal assistant throughout the entire journey.",
+        "challenge": "Travelers face decision fatigue and complex logistics when planning multi-destination trips across different time zones and booking systems.",
+        "solution": "A conversational AI interface with 'tool-calling' capabilities to book flights, hotels, and restaurants while maintaining context-aware memory.",
+        "features": ["Itinerary Optimization", "Real-time Flight Tracking", "Instant Booking Support", "Multilingual Support"],
+        "tech_detailed": ["React Native", "LangChain", "OpenAI API", "Stripe"]
       },
       "finance": {
         "title": "Predictive Financial Analytics",
-        "description": "A SaaS platform predicting market trends and optimizing investment portfolios using advanced neural networks."
+        "description": "A SaaS platform predicting market trends and optimizing investment portfolios using advanced neural networks.",
+        "full_text": "This platform provides institutional-grade financial analysis to individual investors. Using advanced machine learning models, it identifies patterns in market volatility that traditional algorithms miss.",
+        "challenge": "High market volatility and the volume of financial data make it difficult for investors to identify reliable signals and manage risk effectively.",
+        "solution": "Neural network architectures optimized for time-series forecasting, integrated with global news sentiment analysis for a holistic market view.",
+        "features": ["Risk Probability Score", "Portfolio Optimization", "Sentiment Analysis", "Backtesting Engine"],
+        "tech_detailed": ["Python / PyTorch", "PostgreSQL", "Next.js", "Redis"]
       },
       "medical": {
         "title": "AI Imaging Diagnostics",
-        "description": "A system assisting radiologists in detecting early diseased lesions on CT and MRI images with over 98% accuracy."
+        "description": "A system assisting radiologists in detecting early diseased lesions on CT and MRI images with over 98% accuracy.",
+        "full_text": "Our AI Medical Imaging solution serves as a second pair of expert eyes for radiologists, drastically reducing the time required for initial scan review while improving detection rates for critical conditions.",
+        "challenge": "Overworked radiologists and high volume of imaging data can lead to diagnostic delays or micro-omissions in early-stage disease detection.",
+        "solution": "Custom Computer Vision models trained on specialized clinical datasets, designed for seamless integration with existing hospital PACS systems.",
+        "features": ["Automated Lesion Detection", "PACS/DICOM Integration", "Heatmap Visualization", "Report Generation"],
+        "tech_detailed": ["TensorFlow", "FastAPI", "Nvidia CUDA", "DICOM Standard"]
       }
     }
   },
@@ -149,7 +220,7 @@
     "gradient": "AI Innovation",
     "description": "Discover the latest trends in agentic systems, LLMs, and AI-First development.",
     "read_more": "Read more →",
-    "back": "← Back to blog",
+    "back": "Back to blog",
     "no_post": "Post does not exist",
     "cta_title": "Interested in implementing AI?",
     "cta_desc": "Contact our experts to discuss how agentic systems can help your company.",

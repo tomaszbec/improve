@@ -38,7 +38,7 @@ export function BlogPost() {
     <article className="section" style={{ paddingTop: '12rem' }}>
       <div className="section__container" ref={ref}>
         <Link to="/blog" className="hero__stat-nam" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
-          {t('blog.back')}
+          ← {t('blog.back')}
         </Link>
         <div className="section__header" style={{ textAlign: 'left', marginBottom: '3rem' }}>
           <span className="section__label">{post.category}</span>
@@ -57,7 +57,7 @@ export function BlogPost() {
           <div style={{ marginTop: '4rem', padding: '2rem', background: 'var(--color-bg-card)', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
             <h4 style={{ marginBottom: '1rem' }}>{t('blog.cta_title')}</h4>
             <p className="hero__stat-nam">{t('blog.cta_desc')}</p>
-            <a href="/#kontakt" className="btn btn--primary" style={{ marginTop: '1.5rem' }}>{t('blog.cta_btn')}</a>
+            <Link to="/contact" className="btn btn--primary" style={{ marginTop: '1.5rem' }}>{t('blog.cta_btn')}</Link>
           </div>
         </div>
       </div>

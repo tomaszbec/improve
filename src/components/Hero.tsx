@@ -1,11 +1,14 @@
+import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 export function Hero() {
   const { t } = useTranslation()
+  const ref = useRef(null)
 
   return (
-    <section className="hero" id="hero" aria-labelledby="hero-title">
-      <div className="section__container">
+    <section className="hero" aria-labelledby="hero-title">
+      <div className="section__container" ref={ref}>
         <div className="hero__grid">
           <div className="hero__content">
             <div className="hero__badge">
@@ -27,16 +30,17 @@ export function Hero() {
             </p>
 
             <div className="hero__actions">
-              <a href="#kontakt" className="btn btn--primary">
+              <Link to="/contact" className="btn btn--primary">
                 {t('hero.cta_talk')}
-              </a>
-              <a href="#portfolio" className="btn btn--outline">
+              </Link>
+              <Link to="/portfolio" className="btn btn--outline">
                 {t('hero.cta_portfolio')}
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="hero__visual">
+            <div className="hero__gemini-visual" style={{ backgroundImage: 'url(/v2/neural_core.png)' }} />
             <div className="hero__visual-card">
               <div className="hero__visual-header">
                 <div className="hero__visual-dot" />

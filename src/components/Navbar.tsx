@@ -1,18 +1,19 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 export function Navbar() {
   const { t, i18n } = useTranslation()
+  const { pathname } = useLocation()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const NAV_LINKS = [
-    { href: '/#uslugi', label: t('nav.services'), width: '110px' },
-    { href: '/#o-nas', label: t('nav.about'), width: '110px' },
-    { href: '/#technologie', label: t('nav.tech'), width: '140px' },
-    { href: '/#portfolio', label: t('nav.portfolio'), width: '120px' },
-    { href: '/blog', label: t('nav.blog'), width: '80px', isRouter: true },
+    { href: '/services', label: t('nav.services'), width: '110px' },
+    { href: '/about', label: t('nav.about'), width: '110px' },
+    { href: '/technologies', label: t('nav.tech'), width: '140px' },
+    { href: '/portfolio', label: t('nav.portfolio'), width: '120px' },
+    { href: '/blog', label: t('nav.blog'), width: '80px' },
   ]
 
   const toggleLanguage = () => {
@@ -27,26 +28,33 @@ export function Navbar() {
 
   return (
     <header className={`navbar-wrapper ${scrolled ? 'navbar-wrapper--scrolled' : ''}`}>
-      <nav className="navbar" aria-label="Nawigacja główna">
+      <nav className="navbar" aria-label="Main Navigation">
         <Link 
           to="/" 
           className="navbar__logo" 
-          aria-label="ImproveIT Solutions"
+          aria-label="improveIT.pl"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          Improve<span>IT</span>
+          improve<span>IT</span>.pl
         </Link>
 
         <ul className="navbar__links">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              {link.isRouter ? (
-                <Link to={link.href} className="navbar__link" style={{ width: link.width }}>{link.label}</Link>
-              ) : (
-                <a href={link.href} className="navbar__link" style={{ width: link.width }}>{link.label}</a>
-              )}
-            </li>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = link.href === '/' 
+              ? pathname === '/' 
+              : pathname.startsWith(link.href);
+            return (
+              <li key={link.href}>
+                <Link 
+                  to={link.href} 
+                  className={`navbar__link ${isActive ? 'navbar__link--active' : ''}`} 
+                  style={{ width: link.width }}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
@@ -57,11 +65,11 @@ export function Navbar() {
           >
             {i18n.language.toUpperCase().split('-')[0]}
           </button>
-          <a href="/#kontakt" className="navbar__cta">{t('nav.contact')}</a>
+          <Link to="/contact" className="navbar__cta">{t('nav.contact')}</Link>
           <button
             className="navbar__hamburger"
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Otwórz menu"
+            aria-label="Toggle Menu"
             aria-expanded={mobileOpen}
           >
             <span />
@@ -73,15 +81,11 @@ export function Navbar() {
 
       <div className={`navbar__mobile-menu ${mobileOpen ? 'navbar__mobile-menu--open' : ''}`}>
         {NAV_LINKS.map((link) => (
-          link.isRouter ? (
-            <Link key={link.href} to={link.href} onClick={() => setMobileOpen(false)}>{link.label}</Link>
-          ) : (
-            <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)}>{link.label}</a>
-          )
+          <Link key={link.href} to={link.href} onClick={() => setMobileOpen(false)}>{link.label}</Link>
         ))}
-        <a href="/#kontakt" className="btn btn--primary" onClick={() => setMobileOpen(false)}>
+        <Link to="/contact" className="btn btn--primary" onClick={() => setMobileOpen(false)}>
           {t('nav.contact')}
-        </a>
+        </Link>
       </div>
     </header>
   )
