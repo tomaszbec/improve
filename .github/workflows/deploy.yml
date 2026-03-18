@@ -92,9 +92,6 @@ jobs:
             # Set group write and execute permissions
             chmod -R g+rwX /var/www/html/improveit.pl
 
-            # Invalidate cache
-            aws cloudfront create-invalidation --distribution-id E2YT025NB5YE4X --paths \"/*\" \"/\"
-            aws cloudfront create-invalidation --distribution-id E17SHJLZV9W1P7 --paths \"/*\" \"/\"
           "
         shell: bash
         timeout-minutes: 10
