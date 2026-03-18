@@ -208,7 +208,10 @@
       "s5": "IT Consulting",
       "s6": "Other",
       "message": "Describe your project or needs...",
-      "submit": "Send Inquiry →"
+      "submit": "Send Inquiry →",
+      "success": "Your message has been sent successfully!",
+      "error": "Something went wrong. Please try again later.",
+      "sending": "Sending..."
     }
   },
   "footer": {

@@ -208,7 +208,10 @@
       "s5": "Consulting IT",
       "s6": "Inne",
       "message": "Opisz swój projekt lub potrzeby...",
-      "submit": "Wyślij zapytanie →"
+      "submit": "Wyślij zapytanie →",
+      "success": "Twoja wiadomość została wysłana pomyślnie!",
+      "error": "Wystąpił błąd. Spróbuj ponownie później.",
+      "sending": "Wysyłanie..."
     }
   },
   "footer": {
