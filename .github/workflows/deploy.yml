@@ -50,7 +50,6 @@ jobs:
       - name: Copy PHP files to dist
         run: |
           find src -name "*.php" -exec cp {} dist/ \;
-          # Also check root for index.php if not in src
           if [ ! -f "src/index.php" ] && [ -f "index.php" ]; then
             cp index.php dist/
           fi
@@ -58,7 +57,6 @@ jobs:
       - name: Prepare remote directory
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ubuntu@146.59.13.80 "
-            # Cleanup _improveit.pl directory
             rm -rf /var/www/html/_improveit.pl/ &&
             mkdir -p /var/www/html/_improveit.pl/
           "
@@ -70,28 +68,31 @@ jobs:
       - name: Finalize deployment and rotate backups
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ubuntu@146.59.13.80 "
-            # Move old app to backup
-            mkdir -p /var/www/html/backups/improveit.pl && 
-            if [ -d \"/var/www/html/improveit.pl\" ]; then
-              cp -r /var/www/html/improveit.pl /var/www/html/backups/improveit.pl/$(date +'%Y-%m-%d_%H-%M-%S')
-            fi && 
             
-            # Keep only the last 2 backups
-            cd /var/www/html/backups/improveit.pl && 
-            ls -t | tail -n +3 | xargs rm -rf 2>/dev/null || true && 
+            # Ensure base dir exists
+            mkdir -p /var/www/html/improveit.pl/site
+            mkdir -p /var/www/html/backups/improveit.pl
             
-            # Clear target directory
-            rm -rf /var/www/html/improveit.pl && 
+            # Backup ONLY site directory
+            if [ -d \"/var/www/html/improveit.pl/site\" ]; then
+              cp -r /var/www/html/improveit.pl/site /var/www/html/backups/improveit.pl/$(date +'%Y-%m-%d_%H-%M-%S')
+            fi &&
             
-            # Rename the newly deployed app
-            mv /var/www/html/_improveit.pl /var/www/html/improveit.pl && 
+            # Keep only last 2 backups
+            cd /var/www/html/backups/improveit.pl &&
+            ls -t | tail -n +3 | xargs rm -rf 2>/dev/null || true &&
+            
+            # Clear target site directory
+            rm -rf /var/www/html/improveit.pl/site &&
+            
+            # Move new build into /site
+            mv /var/www/html/_improveit.pl /var/www/html/improveit.pl/site &&
             
             # Set ownership
             chown -R ubuntu:www-data /var/www/html/improveit.pl &&
-
-            # Set group write and execute permissions
+            
+            # Permissions
             chmod -R g+rwX /var/www/html/improveit.pl
-
           "
         shell: bash
         timeout-minutes: 10
