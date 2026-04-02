@@ -40,7 +40,7 @@ export function ProjectPage() {
     <div className="project-detail-page">
       <section className="hero" style={{ paddingTop: '10rem', paddingBottom: '4rem', minHeight: 'auto' }}>
         <div className="section__container" ref={ref}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '2rem', flexWrap: 'wrap' }}>
             <Link to="/portfolio" className="blog-post__back" style={{ display: 'inline-flex', gap: '0.5rem', alignItems: 'center', color: 'var(--color-text-muted)', textDecoration: 'none' }}>
               ← {t('portfolio.label')}
             </Link>
@@ -106,8 +106,7 @@ export function ProjectPage() {
               </h3>
               <ul className="service-detail__list" style={{ listStyle: 'none', padding: 0 }}>
                 {features.map((f: any, i: number) => (
-                  <li key={i} className="service-detail__list-item" style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--color-text-muted)' }}>
-                    <span style={{ width: '6px', height: '6px', background: 'var(--color-primary)', borderRadius: '50%', flexShrink: 0 }} />
+                  <li key={i} className="service-detail__list-item" style={{ marginBottom: '1rem', color: 'var(--color-text-muted)' }}>
                     {f}
                   </li>
                 ))}

@@ -9,6 +9,7 @@ import { BlogPost } from './pages/BlogPost'
 import { SecurityAudit } from './pages/SecurityAudit'
 import { ServicePage } from './pages/ServicePage'
 import { ProjectPage } from './pages/ProjectPage'
+import { TechnologyPage } from './pages/TechnologyPage'
 import { NotFound } from './pages/NotFound'
 
 function ScrollToTop() {
@@ -44,6 +45,7 @@ export default function App() {
             <Route path="/technologies" element={<Home />} />
             <Route path="/portfolio" element={<Home />} />
             <Route path="/portfolio/:slug" element={<ProjectPage />} />
+            <Route path="/technologies/:slug" element={<TechnologyPage />} />
             <Route path="/contact" element={<Home />} />
             <Route path="/audyt-bezpieczenstwa" element={<SecurityAudit />} />
             <Route path="/security-audit" element={<SecurityAudit />} />

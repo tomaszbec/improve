@@ -121,7 +121,184 @@
   "tech": {
     "label": "Technologies",
     "title": "Our Tech Stack",
-    "description": "We work with cutting-edge technologies to deliver efficient and scalable solutions."
+    "description": "We work with cutting-edge technologies to deliver efficient and scalable solutions.",
+    "items": {
+      "go": {
+        "title": "Go Development",
+        "description": "We build high-performance backend systems and microservices in Go (Golang).",
+        "full_text": "We specialize in creating scalable, secure, and incredibly fast backend systems using Go. Thanks to Go's concurrency model, our solutions are perfect for microservices architectures and real-time systems.",
+        "features": ["High performance & Low latency", "Advanced Concurrency (Goroutines)", "Lightweight Microservices", "Type safety & Stability"],
+        "tech": ["Goroutines", "gRPC", "Gin / Echo", "Docker / K8s"]
+      },
+      "python": {
+        "title": "Python Development",
+        "description": "Advanced AI solutions, Data Science, and stable backends in Python.",
+        "full_text": "We use Python as the foundation for our AI and machine learning systems. From intelligent automation to extensive analytical platforms — we deliver code that is clean, maintainable, and ready for future challenges.",
+        "features": ["AI & LLM Integrations", "Data Science & Analytics", "Rapid Prototyping (MVP)", "Extensive library ecosystem"],
+        "tech": ["FastAPI / Django", "PyTorch / TensorFlow", "Pandas / NumPy", "LangChain"]
+      },
+      "node": {
+        "title": "Node.js Development",
+        "description": "Modern, asynchronous web applications based on the JavaScript ecosystem.",
+        "full_text": "We build dynamic and scalable web applications using Node.js. Our approach guarantees fast server response times and smooth handling of thousands of concurrent connections, which is crucial for modern SaaS platforms.",
+        "features": ["Real-time processing (WebSockets)", "Event-driven architecture", "Fast API (REST / GraphQL)", "TypeScript Ecosystem"],
+        "tech": ["Express / NestJS", "TypeScript", "Socket.io", "Prisma / TypeORM"]
+      },
+      "php": {
+        "title": "PHP Development",
+        "description": "Solid and proven web solutions and e-commerce systems.",
+        "full_text": "We deliver modern PHP applications based on the latest versions of the language and proven frameworks. We specialize in building extensive content management systems and sales platforms, ensuring their security and performance.",
+        "features": ["Modern Laravel / Symfony", "E-commerce & SaaS systems", "Easy scalability & Hosting", "Security & Stability"],
+        "tech": ["Laravel", "Symfony", "Eloquent / Doctrine", "PHP 8.3+"]
+      },
+      "react": {
+        "title": "React Development",
+        "description": "We build modern, interactive user interfaces using React.",
+        "full_text": "We specialize in creating efficient Single Page Applications (SPA) and complex frontend systems using React. We focus on component reusability, clean code, and excellent User Experience.",
+        "features": ["Component-based architecture", "Virtual DOM for performance", "Rich library ecosystem", "Hooks & Modern State Management"],
+        "tech": ["React 18+", "Redux / Zustand", "React Query", "Styled Components / Tailwind"]
+      },
+      "vue": {
+        "title": "Vue.js Development",
+        "description": "Lightweight and efficient web applications based on the Vue.js framework.",
+        "full_text": "We create intuitive and fast user interfaces using Vue.js. Thanks to the progressive nature of this framework, we deliver solutions that are easy to maintain and scale.",
+        "features": ["Out-of-the-box reactivity", "Simple & Clear structure", "Composition API", "Fast load times"],
+        "tech": ["Vue 3", "Pinia", "Vue Router", "Vite"]
+      },
+      "angular": {
+        "title": "Angular Development",
+        "description": "Extensive corporate applications built in the solid Angular framework.",
+        "full_text": "We deliver enterprise-grade scalable applications using Angular. Our approach guarantees stability, security, and ease of management of large datasets in banking, medical, and logistics applications.",
+        "features": ["Full TypeScript support", "Dependency Injection", "Modular architecture", "Reactive Forms & RxJS"],
+        "tech": ["Angular 17+", "RxJS", "NgRx", "Angular Material"]
+      },
+      "next": {
+        "title": "Next.js Development",
+        "description": "Fast, SEO-optimized web applications with server-side rendering.",
+        "full_text": "Next.js is our choice for projects requiring top performance and excellent visibility in search engines. We build applications that combine SPA advantages with the speed of static sites.",
+        "features": ["Server-Side Rendering (SSR)", "Static Site Generation (SSG)", "Image & Font optimization", "Integrated API Routes"],
+        "tech": ["Next.js 14", "App Router", "Vercel", "Server Actions"]
+      },
+      "typescript": {
+        "title": "TypeScript Development",
+        "description": "Safe and scalable code thanks to static typing in TypeScript.",
+        "full_text": "We use TypeScript in all our JavaScript projects to ensure the highest code quality, minimize production errors, and facilitate collaboration in large engineering teams.",
+        "features": ["Strong static typing", "Early error detection", "Better autocomplete & Documentation", "Easier refactoring"],
+        "tech": ["TypeScript 5+", "TS-Node", "TSRuntime", "Zod"]
+      },
+      "dotnet": {
+        "title": ".NET Development",
+        "description": "Solid backend applications and distributed systems based on the Microsoft .NET platform.",
+        "full_text": "We build efficient and secure backend systems using modern .NET (Core). It's an ideal choice for corporate solutions that require integration with the Azure ecosystem and high availability.",
+        "features": ["Cross-platform .NET Core", "High backend performance", "Strong security", "Azure Services integration"],
+        "tech": ["ASP.NET Core", "Entity Framework", "C# 12", "Azure SQL"]
+      },
+      "java": {
+        "title": "Java Development",
+        "description": "Reliable and scalable backend systems in the Java language.",
+        "full_text": "Java remains the standard for critical business systems. We create extensive microservices and platforms that process huge amounts of data with a guarantee of stability and security.",
+        "features": ["Microservices Architecture", "Spring Boot Ecosystem", "High scalability", "Handling large workloads"],
+        "tech": ["Spring Boot", "Hibernate", "Java 21", "Apache Kafka"]
+      },
+      "flutter": {
+        "title": "Flutter Development",
+        "description": "Beautiful, native mobile apps for iOS and Android from a single codebase.",
+        "full_text": "We use Flutter to build high-quality mobile applications with smooth animations and consistent UX on both platforms, allowing our clients to enter the market faster.",
+        "features": ["Cross-platform (iOS, Android, Web)", "Native performance", "Beautiful custom UI", "Fast development time"],
+        "tech": ["Dart", "Flutter SDK", "Riverpod / Bloc", "Firebase"]
+      },
+      "reactnative": {
+        "title": "React Native Development",
+        "description": "Efficient mobile applications built on React.",
+        "full_text": "React Native allows us to deliver applications with a native feel, leveraging the power of the React ecosystem. It's an ideal solution for dynamic products that must run on multiple devices.",
+        "features": ["Code sharing with Web", "Access to native APIs", "Fast iterations (Fast Refresh)", "Large community"],
+        "tech": ["React Native", "Expo", "React Navigation", "Paper / Elements"]
+      },
+      "swift": {
+        "title": "Swift Development",
+        "description": "Native applications for iOS, macOS, and watchOS platforms.",
+        "full_text": "We create uncompromising applications for Apple devices, using the full power of Swift and SwiftUI. We focus on performance, energy efficiency, and compliance with Human Interface Guidelines.",
+        "features": ["Maximum iOS performance", "Native Look & Feel", "CoreML & ARKit usage", "Security & Smoothness"],
+        "tech": ["Swift 5.9", "SwiftUI", "Combine", "Core Data"]
+      },
+      "kotlin": {
+        "title": "Kotlin Development",
+        "description": "Modern Android applications and cross-platform solutions.",
+        "full_text": "Kotlin is our standard for Android app development. We build modern, stable mobile products that fully utilize the latest Google system features.",
+        "features": ["Native Android development", "Jetpack Compose", "Kotlin Multiplatform", "Code safety"],
+        "tech": ["Kotlin 1.9", "Jetpack Compose", "Ktor", "Room DB"]
+      },
+      "postgres": {
+        "title": "PostgreSQL Development",
+        "description": "Advanced, relational databases for your applications.",
+        "full_text": "PostgreSQL is our foundation for data durability. We design optimal schemas, take care of query performance, and ensure information integrity even in the most complex systems.",
+        "features": ["Advanced data types", "JSONB support", "High transactionality (ACID)", "Full-text search support"],
+        "tech": ["PostgreSQL 16", "TimescaleDB", "PostGIS", "PgVector"]
+      },
+      "mongo": {
+        "title": "MongoDB Development",
+        "description": "Flexible and scalable NoSQL (document) databases.",
+        "full_text": "For projects requiring fast schema changes and high horizontal scalability, we use MongoDB. It's an ideal solution for analytical systems and content management.",
+        "features": ["Flexible document schema", "Horizontal scaling (Sharding)", "High write performance", "Real-time aggregations"],
+        "tech": ["MongoDB Atlas", "Mongoose", "Aggregation Framework", "Change Streams"]
+      },
+      "redis": {
+        "title": "Redis Development",
+        "description": "Blighting-fast in-memory databases and caching systems.",
+        "full_text": "Redis allows us to drastically speed up applications through intelligent data caching and real-time queue handling.",
+        "features": ["Low latency (<1ms)", "Pub/Sub systems", "Task queues", "Session & Data caching"],
+        "tech": ["Redis Stack", "BullMQ", "Redis Streams", "Redlock"]
+      },
+      "docker": {
+        "title": "Docker Containerization",
+        "description": "App containerization for repeatability and ease of deployment.",
+        "full_text": "We use Docker to ensure environment consistency from development to production. Our containers are lightweight, secure, and ready to run in any cloud.",
+        "features": ["Process isolation", "Easy orchestration", "Image optimization", "Multi-stage builds"],
+        "tech": ["Docker Engine", "Docker Compose", "Registry", "Security Scanning"]
+      },
+      "k8s": {
+        "title": "Kubernetes Orchestration",
+        "description": "Production-scale container orchestration.",
+        "full_text": "We deploy and manage Kubernetes clusters to provide your applications with automatic scaling, self-healing, and high availability regardless of traffic.",
+        "features": ["Auto-scaling", "Self-healing", "Load Balancing", "Configuration management"],
+        "tech": ["Helm", "Terraform", "Istio / Linkerd", "Prometheus / Grafana"]
+      },
+      "aws": {
+        "title": "AWS Cloud Solutions",
+        "description": "Building and scaling infrastructure in the Amazon Web Services cloud.",
+        "full_text": "As AWS specialists, we design and implement serverless and microservices architectures that are cost and performance optimized.",
+        "features": ["Wide range of services", "Serverless (Lambda)", "Global reach", "AWS IAM security"],
+        "tech": ["EC2 / ECS", "AWS Lambda", "S3", "CloudFormation / CDK"]
+      },
+      "azure": {
+        "title": "Microsoft Azure Solutions",
+        "description": "Microsoft cloud solutions for modern business.",
+        "full_text": "We implement Azure-based solutions, integrating them with existing enterprise systems. We focus on hybrid cloud models and data security.",
+        "features": ["Active Directory integration", "Azure Functions", "DevOps Pipeline", "PowerBI data analysis"],
+        "tech": ["Azure App Service", "AKS", "CosmosDB", "Azure DevOps"]
+      },
+      "graphql": {
+        "title": "GraphQL API Development",
+        "description": "Efficient and flexible next-gen API interfaces.",
+        "full_text": "We replace traditional REST APIs with GraphQL solutions, allowing the frontend to fetch exactly the data it needs, reducing transfer and the number of queries.",
+        "features": ["Strongly typed schemas", "No over-fetching", "Real-time documentation", "Subscriptions (Real-time)"],
+        "tech": ["Apollo Server", "Hasura", "GraphQL Yoga", "Codegen"]
+      },
+      "tensorflow": {
+        "title": "TensorFlow / AI Development",
+        "description": "Building and training advanced machine learning models.",
+        "full_text": "We use TensorFlow to create Computer Vision, NLP models, and recommendation systems that really solve our clients' complex business problems.",
+        "features": ["Deep neural networks", "Machine Learning pipelines", "Training on GPU", "Production deployments with TF Serving"],
+        "tech": ["Keras", "Tensorboard", "TF Lite", "TF Extended"]
+      },
+      "figma": {
+        "title": "Figma UI/UX Design",
+        "description": "Designing modern interfaces and visual systems.",
+        "full_text": "Our Figma-based design process allows for fast prototyping and close collaboration between design and development, guaranteeing perfect project reproduction in code.",
+        "features": ["Interactive Prototypes", "Design Systems", "Real-time collaboration", "User Experience Audit"],
+        "tech": ["Auto Layout", "Variables", "Components", "Dev Mode"]
+      }
+    }
   },
   "portfolio": {
     "label": "Portfolio",

@@ -17,12 +17,15 @@ export function SecurityAudit() {
     <div className="security-page">
       <section className="hero" style={{ paddingTop: '12rem', paddingBottom: '6rem' }}>
         <div className="section__container" ref={ref}>
-          <Link to="/services" className="blog-post__back" style={{ marginBottom: '2rem', display: 'inline-flex' }}>
-            ← {t('services.back')}
-          </Link>
-          <div className="hero__badge">
-            <span className="hero__badge-dot" style={{ backgroundColor: '#ef4444' }} />
-            {t('security_audit.label')}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '2rem', flexWrap: 'wrap' }}>
+            <Link to="/services" className="blog-post__back" style={{ display: 'inline-flex' }}>
+              ← {t('services.back')}
+            </Link>
+
+            <div className="hero__badge" style={{ margin: 0 }}>
+              <span className="hero__badge-dot" style={{ backgroundColor: '#ef4444' }} />
+              {t('security_audit.label')}
+            </div>
           </div>
           
           <h1 className="hero__title" data-text={`${t('security_audit.title_start')} ${t('security_audit.gradient')}`}>

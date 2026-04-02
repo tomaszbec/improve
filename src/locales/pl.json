@@ -121,7 +121,309 @@
   "tech": {
     "label": "Technologie",
     "title": "Nasz stack technologiczny",
-    "description": "Pracujemy z najnowocześniejszymi technologiami, aby dostarczać wydajne i skalowalne rozwiązania."
+    "description": "Pracujemy z najnowocześniejszymi technologiami, aby dostarczać wydajne i skalowalne rozwiązania.",
+    "items": {
+      "go": {
+        "title": "Go Development",
+        "description": "Budujemy wysokowydajne systemy backendowe i mikroserwisy w języku Go (Golang).",
+        "full_text": "Specjalizujemy się w tworzeniu skalowalnych, bezpiecznych i niesamowicie szybkich systemów backendowych wykorzystujących język Go. Dzięki modelowi współbieżności Go, nasze rozwiązania idealnie sprawdzają się w architekturach mikroserwisowych i systemach czasu rzeczywistego.",
+        "features": [
+          "Wysoka wydajność i niskie opóźnienia",
+          "Zaawansowana współbieżność (Goroutines)",
+          "Lekkie i szybkie mikroserwisy",
+          "Bezpieczeństwo typów i stabilność"
+        ],
+        "tech": ["Goroutines", "gRPC", "Gin / Echo", "Docker / K8s"]
+      },
+      "python": {
+        "title": "Python Development",
+        "description": "Zaawansowane rozwiązania AI, Data Science i stabilne backendy w Pythonie.",
+        "full_text": "Wykorzystujemy Pythona jako fundament dla naszych systemów AI i uczenia maszynowego. Od inteligentnej automatyzacji po rozbudowane platformy analityczne — dostarczamy kod, który jest czysty, łatwy w utrzymaniu i gotowy na wyzwania przyszłości.",
+        "features": [
+          "Integracje z modelami AI i LLM",
+          "Data Science i Analityka",
+          "Szybkie prototypowanie (MVP)",
+          "Rozbudowane ekosystemy bibliotek"
+        ],
+        "tech": ["FastAPI / Django", "PyTorch / TensorFlow", "Pandas / NumPy", "LangChain"]
+      },
+      "node": {
+        "title": "Node.js Development",
+        "description": "Nowoczesne, asynchroniczne aplikacje webowe oparte na ekosystemie JavaScript.",
+        "full_text": "Budujemy dynamiczne i skalowalne aplikacje webowe wykorzystując Node.js. Nasze podejście gwarantuje szybki czas reakcji serwera i płynną obsługę tysięcy jednoczesnych połączeń, co jest kluczowe dla współczesnych platform SaaS.",
+        "features": [
+          "Przetwarzanie w czasie rzeczywistym (WebSockets)",
+          "Architektura Event-driven",
+          "Szybkie API (REST / GraphQL)",
+          "Ekosystem TypeScript"
+        ],
+        "tech": ["Express / NestJS", "TypeScript", "Socket.io", "Prisma / TypeORM"]
+      },
+      "php": {
+        "title": "PHP Development",
+        "description": "Solidne i sprawdzone rozwiązania webowe oraz systemy e-commerce.",
+        "full_text": "Dostarczamy nowoczesne aplikacje PHP oparte na najnowszych wersjach języka i sprawdzonych frameworkach. Specjalizujemy się w budowie rozbudowanych systemów zarządzania treścią i platform sprzedażowych, dbając o ich bezpieczeństwo i wydajność.",
+        "features": [
+          "Nowoczesny Laravel / Symfony",
+          "Systemy E-commerce i SaaS",
+          "Łatwa skalowalność i hosting",
+          "Bezpieczeństwo i stabilność"
+        ],
+        "tech": ["Laravel", "Symfony", "Eloquent / Doctrine", "PHP 8.3+"]
+      },
+      "react": {
+        "title": "React Development",
+        "description": "Budujemy nowoczesne, interaktywne interfejsy użytkownika wykorzystując React.",
+        "full_text": "Specjalizujemy się w tworzeniu wydajnych aplikacji typu Single Page Application (SPA) oraz złożonych systemów frontendowych przy użyciu React. Stawiamy na reużywalność komponentów, czysty kod i doskonały User Experience.",
+        "features": [
+          "Komponentowa architektura",
+          "Wirtualny DOM dla wydajności",
+          "Bogaty ekosystem bibliotek",
+          "Hooks i nowoczesny State Management"
+        ],
+        "tech": ["React 18+", "Redux / Zustand", "React Query", "Styled Components / Tailwind"]
+      },
+      "vue": {
+        "title": "Vue.js Development",
+        "description": "Lekkie i wydajne aplikacje webowe oparte na frameworku Vue.js.",
+        "full_text": "Tworzymy intuicyjne i szybkie interfejsy użytkownika z wykorzystaniem Vue.js. Dzięki progresywnej naturze tego frameworka, dostarczamy rozwiązania które są łatwe w utrzymaniu i skalowaniu.",
+        "features": [
+          "Reaktywność out-of-the-box",
+          "Prosta i przejrzysta struktura",
+          "Composition API",
+          "Szybki czas ładowania"
+        ],
+        "tech": ["Vue 3", "Pinia", "Vue Router", "Vite"]
+      },
+      "angular": {
+        "title": "Angular Development",
+        "description": "Rozbudowane aplikacje korporacyjne budowane w solidnym frameworku Angular.",
+        "full_text": "Dostarczamy skalowalne aplikacje klasy enterprise wykorzystując Angular. Nasze podejście gwarantuje stabilność, bezpieczeństwo i łatwość zarządzania dużymi zbiorami danych w aplikacjach bankowych, medycznych i logistycznych.",
+        "features": [
+          "Pełne wsparcie TypeScript",
+          "Dependency Injection",
+          "Architektura modułowa",
+          "Reactive Forms i RxJS"
+        ],
+        "tech": ["Angular 17+", "RxJS", "NgRx", "Angular Material"]
+      },
+      "next": {
+        "title": "Next.js Development",
+        "description": "Szybkie, zoptymalizowane pod SEO aplikacje webowe z renderowaniem po stronie serwera.",
+        "full_text": "Next.js to nasz wybór dla projektów wymagających najwyższej wydajności i doskonałej widoczności w wyszukiwarkach. Budujemy aplikacje, które łączą zalety SPA z szybkością statycznych stron.",
+        "features": [
+          "Server-Side Rendering (SSR)",
+          "Static Site Generation (SSG)",
+          "Optymalizacja obrazów i fontów",
+          "Zintegrowane API Routes"
+        ],
+        "tech": ["Next.js 14", "App Router", "Vercel", "Server Actions"]
+      },
+      "typescript": {
+        "title": "TypeScript Development",
+        "description": "Bezpieczny i skalowalny kod dzięki statycznemu typowaniu w TypeScript.",
+        "full_text": "Używamy TypeScript we wszystkich naszych projektach JavaScript, aby zapewnić najwyższą jakość kodu, minimalizować błędy w produkcji i ułatwić współpracę w dużych zespołach inżynierskich.",
+        "features": [
+          "Silne typowanie statyczne",
+          "Wcześniejsze wykrywanie błędów",
+          "Lepsza autouzupełnianie i dokumentacja",
+          "Łatwiejsza refaktoryzacja"
+        ],
+        "tech": ["TypeScript 5+", "TS-Node", "TSRuntime", "Zod"]
+      },
+      "dotnet": {
+        "title": ".NET Development",
+        "description": "Solidne aplikacje backendowe i systemy rozproszone oparte na platformie Microsoft .NET.",
+        "full_text": "Budujemy wydajne i bezpieczne systemy backendowe wykorzystując nowoczesny .NET (Core). To idealny wybór dla rozwiązań korporacyjnych, które wymagają integracji z ekosystemem Azure i wysokiej dostępności.",
+        "features": [
+          "Cross-platform .NET Core",
+          "Wysoka wydajność backendu",
+          "Silne bezpieczeństwo",
+          "Integracja z Azure Services"
+        ],
+        "tech": ["ASP.NET Core", "Entity Framework", "C# 12", "Azure SQL"]
+      },
+      "java": {
+        "title": "Java Development",
+        "description": "Niezawodne i skalowalne systemy backendowe w języku Java.",
+        "full_text": "Java pozostaje standardem dla krytycznych systemów biznesowych. Tworzymy rozbudowane mikroserwisy i platformy, które przetwarzają ogromne ilości danych z gwarancją stabilności i bezpieczeństwa.",
+        "features": [
+          "Architektura Mikroserwisów",
+          "Spring Boot Ecosystem",
+          "Wysoka skalowalność",
+          "Zarządzanie dużymi obciążeniami"
+        ],
+        "tech": ["Spring Boot", "Hibernate", "Java 21", "Apache Kafka"]
+      },
+      "flutter": {
+        "title": "Flutter Development",
+        "description": "Piękne, natywne aplikacje mobilne na iOS i Android z jednego kodu.",
+        "full_text": "Wykorzystujemy Fluttera do budowy wysokiej jakości aplikacji mobilnych z płynnymi animacjami i spójnym UX na obu platformach, co pozwala naszym klientom na szybsze wejście na rynek.",
+        "features": [
+          "Cross-platform (iOS, Android, Web)",
+          "Natywna wydajność",
+          "Piękne, customowe UI",
+          "Szybki czas developmentu"
+        ],
+        "tech": ["Dart", "Flutter SDK", "Riverpod / Bloc", "Firebase"]
+      },
+      "reactnative": {
+        "title": "React Native Development",
+        "description": "Wydajne aplikacje mobilne budowane w oparciu o React.",
+        "full_text": "React Native pozwala nam dostarczać aplikacje o natywnym odczuciu, wykorzystując siłę ekosystemu React. To idealne rozwiązanie dla dynamicznych produktów, które muszą działać na wielu urządzeniach.",
+        "features": [
+          "Współdzielenie kodu z Web",
+          "Dostęp do natywnych API",
+          "Szybkie iteracje (Fast Refresh)",
+          "Duża społeczność"
+        ],
+        "tech": ["React Native", "Expo", "React Navigation", "Paper / Elements"]
+      },
+      "swift": {
+        "title": "Swift Development",
+        "description": "Natywne aplikacje na platformę iOS, macOS i watchOS.",
+        "full_text": "Tworzymy bezkompromisowe aplikacje na urządzenia Apple, wykorzystując pełną moc drzemiącą w Swift i SwiftUI. Skupiamy się na wydajności, energooszczędności i zgodności z Human Interface Guidelines.",
+        "features": [
+          "Maksymalna wydajność iOS",
+          "Natywny Look & Feel",
+          "Wykorzystanie CoreML i ARKit",
+          "Bezpieczeństwo i płynność"
+        ],
+        "tech": ["Swift 5.9", "SwiftUI", "Combine", "Core Data"]
+      },
+      "kotlin": {
+        "title": "Kotlin Development",
+        "description": "Nowoczesne aplikacje na Androida i rozwiązania wieloplatformowe.",
+        "full_text": "Kotlin to dla nas standard w tworzeniu aplikacji na Androida. Budujemy nowoczesne, stabilne produkty mobilne, które w pełni wykorzystują najnowsze funkcje systemu od Google.",
+        "features": [
+          "Natywny rozwój Androida",
+          "Jetpack Compose",
+          "Kotlin Multiplatform",
+          "Bezpieczeństwo kodu"
+        ],
+        "tech": ["Kotlin 1.9", "Jetpack Compose", "Ktor", "Room DB"]
+      },
+      "postgres": {
+        "title": "PostgreSQL Development",
+        "description": "Zaawansowane, relacyjne bazy danych dla Twoich aplikacji.",
+        "full_text": "PostgreSQL to nasz fundament dla trwałości danych. Projektujemy optymalne schematy, dbamy o wydajność zapytań i zapewniamy integralność informacji nawet w najbardziej złożonych systemach.",
+        "features": [
+          "Zaawansowane typy danych",
+          "Wsparcie dla JSONB",
+          "Wysoka transakcyjność (ACID)",
+          "Wsparcie dla wyszukiwania pełnotekstowego"
+        ],
+        "tech": ["PostgreSQL 16", "TimescaleDB", "PostGIS", "PgVector"]
+      },
+      "mongo": {
+        "title": "MongoDB Development",
+        "description": "Elastyczne i skalowalne bazy danych NoSQL (dokumentowe).",
+        "full_text": "Dla projektów wymagających szybkich zmian schematu i wysokiej skalowalności poziomej używamy MongoDB. To idealne rozwiązanie dla systemów analitycznych i content management.",
+        "features": [
+          "Elastyczny schemat dokumentowy",
+          "Skalowanie poziome (Sharding)",
+          "Wysoka wydajność zapisu",
+          "Agregacje w czasie rzeczywistym"
+        ],
+        "tech": ["MongoDB Atlas", "Mongoose", "Aggregation Framework", "Change Streams"]
+      },
+      "redis": {
+        "title": "Redis Development",
+        "description": "Błyskawiczne bazy danych in-memory i systemy cache.",
+        "full_text": "Redis pozwala nam na drastyczne przyspieszenie aplikacji poprzez inteligentne buforowanie danych i obsługę kolejek w czasie rzeczywistym.",
+        "features": [
+          "Niskie opóźnienia (<1ms)",
+          "Systemy Pub/Sub",
+          "Kolejki zadań",
+          "Caching sesji i danych"
+        ],
+        "tech": ["Redis Stack", "BullMQ", "Redis Streams", "Redlock"]
+      },
+      "docker": {
+        "title": "Docker Containerization",
+        "description": "Konteneryzacja aplikacji dla powtarzalności i łatwości wdrażania.",
+        "full_text": "Używamy Dockera, aby zapewnić spójność środowisk od developmentu po produkcję. Nasze kontenery są lekkie, bezpieczne i gotowe do uruchomienia w dowolnej chmurze.",
+        "features": [
+          "Izolacja procesów",
+          "Łatwa orkiestracja",
+          "Optymalizacja obrazów",
+          "Multi-stage builds"
+        ],
+        "tech": ["Docker Engine", "Docker Compose", "Registry", "Security Scanning"]
+      },
+      "k8s": {
+        "title": "Kubernetes Orchestration",
+        "description": "Orkiestracja kontenerów na skalę produkcyjną.",
+        "full_text": "Wdrażamy i zarządzamy klastrami Kubernetes, aby zapewnić Twoim aplikacjom automatyczne skalowanie, samonaprawianie i wysoką dostępność bez względu na ruch.",
+        "features": [
+          "Auto-scaling",
+          "Self-healing",
+          "Load Balancing",
+          "Zarządzanie konfiguracją"
+        ],
+        "tech": ["Helm", "Terraform", "Istio / Linkerd", "Prometheus / Grafana"]
+      },
+      "aws": {
+        "title": "AWS Cloud Solutions",
+        "description": "Budowa i skalowanie infrastruktury w chmurze Amazon Web Services.",
+        "full_text": "Jako specjaliści AWS, projektujemy i wdrażamy architektury serverless i mikroserwisowe, które są zoptymalizowane pod kątem kosztów i wydajności.",
+        "features": [
+          "Szeroki wachlarz usług",
+          "Serverless (Lambda)",
+          "Globalny zasięg",
+          "Bezpieczeństwo AWS IAM"
+        ],
+        "tech": ["EC2 / ECS", "AWS Lambda", "S3", "CloudFormation / CDK"]
+      },
+      "azure": {
+        "title": "Microsoft Azure Solutions",
+        "description": "Chmurowe rozwiązania Microsoft dla nowoczesnego biznesu.",
+        "full_text": "Wdrażamy rozwiązania oparte na Azure, integrując je z istniejącymi systemami enterprise. Skupiamy się na hybrydowych modelach chmurowych i bezpieczeństwie danych.",
+        "features": [
+          "Integracja z Active Directory",
+          "Azure Functions",
+          "DevOps Pipeline",
+          "Analiza danych PowerBI"
+        ],
+        "tech": ["Azure App Service", "AKS", "CosmosDB", "Azure DevOps"]
+      },
+      "graphql": {
+        "title": "GraphQL API Development",
+        "description": "Efektywne i elastyczne interfejsy API nowej generacji.",
+        "full_text": "Zastępujemy klasyczne REST API rozwiązaniami GraphQL, co pozwala na pobieranie dokładnie takich danych, jakich potrzebuje frontend, redukując transfer i liczbę zapytań.",
+        "features": [
+          "Silnie typowane schematy",
+          "Brak over-fetchingu",
+          "Dokumentacja w czasie rzeczywistym",
+          "Subskrypcje (Real-time)"
+        ],
+        "tech": ["Apollo Server", "Hasura", "GraphQL Yoga", "Codegen"]
+      },
+      "tensorflow": {
+        "title": "TensorFlow / AI Development",
+        "description": "Budowa i trenowanie zaawansowanych modeli uczenia maszynowego.",
+        "full_text": "Wykorzystujemy TensorFlow do tworzenia modeli Computer Vision, NLP i systemów rekomendacyjnych, które realnie rozwiązują złożone problemy biznesowe nasi klientów.",
+        "features": [
+          "Głębokie sieci neuronowe",
+          "Machine Learning pipelines",
+          "Trenowanie na GPU",
+          "Wdrożenia produkcyjne TF Serving"
+        ],
+        "tech": ["Keras", "Tensorboard", "TF Lite", "TF Extended"]
+      },
+      "figma": {
+        "title": "Figma UI/UX Design",
+        "description": "Projektowanie nowoczesnych interfejsów i systemów wizualnych.",
+        "full_text": "Nasz proces projektowy oparty na Figma pozwala na szybkie prototypowanie i ścisłą współpracę między designem a developmentem, gwarantując idealne odwzorowanie projektu w kodzie.",
+        "features": [
+          "Interaktywne Prototypy",
+          "Design Systems",
+          "Współpraca w czasie rzeczywistym",
+          "User Experience Audit"
+        ],
+        "tech": ["Auto Layout", "Variables", "Components", "Dev Mode"]
+      }
+    }
   },
   "portfolio": {
     "label": "Portfolio",

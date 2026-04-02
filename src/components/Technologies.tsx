@@ -1,31 +1,33 @@
 import { useTranslation } from 'react-i18next'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { Link } from 'react-router-dom'
 
 const TECHNOLOGIES = [
-  { name: 'React', color: '#61dafb' },
-  { name: 'Vue.js', color: '#42b883' },
-  { name: 'Angular', color: '#dd0031' },
-  { name: 'Next.js', color: '#ffffff' },
-  { name: 'Node.js', color: '#68a063' },
-  { name: 'TypeScript', color: '#3178c6' },
-  { name: 'Python', color: '#ffd43b' },
-  { name: '.NET', color: '#512bd4' },
-  { name: 'Java', color: '#f89820' },
-  { name: 'PHP', color: '#777bb4' },
-  { name: 'Flutter', color: '#02569b' },
-  { name: 'React Native', color: '#61dafb' },
-  { name: 'Swift', color: '#fa7343' },
-  { name: 'Kotlin', color: '#7f52ff' },
-  { name: 'PostgreSQL', color: '#336791' },
-  { name: 'MongoDB', color: '#47a248' },
-  { name: 'Redis', color: '#dc382d' },
-  { name: 'Docker', color: '#2496ed' },
-  { name: 'Kubernetes', color: '#326ce5' },
-  { name: 'AWS', color: '#ff9900' },
-  { name: 'Azure', color: '#0078d4' },
-  { name: 'GraphQL', color: '#e10098' },
-  { name: 'TensorFlow', color: '#ff6f00' },
-  { name: 'Figma', color: '#f24e1e' },
+  { name: 'React', color: '#61dafb', slug: 'react-development' },
+  { name: 'Vue.js', color: '#42b883', slug: 'vue-development' },
+  { name: 'Angular', color: '#dd0031', slug: 'angular-development' },
+  { name: 'Next.js', color: '#ffffff', slug: 'next-js-development' },
+  { name: 'Node.js', color: '#68a063', slug: 'node-development' },
+  { name: 'TypeScript', color: '#3178c6', slug: 'typescript-development' },
+  { name: 'Python', color: '#ffd43b', slug: 'python-development' },
+  { name: 'Go', color: '#00add8', slug: 'go-development' },
+  { name: '.NET', color: '#512bd4', slug: 'dotnet-development' },
+  { name: 'Java', color: '#f89820', slug: 'java-development' },
+  { name: 'PHP', color: '#777bb4', slug: 'php-development' },
+  { name: 'Flutter', color: '#02569b', slug: 'flutter-development' },
+  { name: 'React Native', color: '#61dafb', slug: 'react-native-development' },
+  { name: 'Swift', color: '#fa7343', slug: 'swift-development' },
+  { name: 'Kotlin', color: '#7f52ff', slug: 'kotlin-development' },
+  { name: 'PostgreSQL', color: '#336791', slug: 'postgresql-development' },
+  { name: 'MongoDB', color: '#47a248', slug: 'mongodb-development' },
+  { name: 'Redis', color: '#dc382d', slug: 'redis-development' },
+  { name: 'Docker', color: '#2496ed', slug: 'docker-development' },
+  { name: 'Kubernetes', color: '#326ce5', slug: 'kubernetes-development' },
+  { name: 'AWS', color: '#ff9900', slug: 'aws-development' },
+  { name: 'Azure', color: '#0078d4', slug: 'azure-development' },
+  { name: 'GraphQL', color: '#e10098', slug: 'graphql-development' },
+  { name: 'TensorFlow', color: '#ff6f00', slug: 'tensorflow-development' },
+  { name: 'Figma', color: '#f24e1e', slug: 'figma-development' },
 ]
 
 export function Technologies() {
@@ -47,17 +49,37 @@ export function Technologies() {
         </div>
       </div>
 
-      <div className="tech__track-wrapper" aria-hidden="true">
+      <div className="tech__track-wrapper">
         <div className="tech__track">
-          {doubled.map((tech, i) => (
-            <div key={`${tech.name}-${i}`} className="tech__item">
-              <span
-                className="tech__item-dot"
-                style={{ color: tech.color, background: tech.color }}
-              />
-              {tech.name}
-            </div>
-          ))}
+          {doubled.map((tech, i) => {
+            const ItemContent = (
+              <>
+                <span
+                  className="tech__item-dot"
+                  style={{ color: tech.color, background: tech.color }}
+                />
+                {tech.name}
+              </>
+            )
+
+            if (tech.slug) {
+              return (
+                <Link
+                  key={`${tech.name}-${i}`}
+                  to={`/technologies/${tech.slug}`}
+                  className="tech__item tech__item--link"
+                >
+                  {ItemContent}
+                </Link>
+              )
+            }
+
+            return (
+              <div key={`${tech.name}-${i}`} className="tech__item">
+                {ItemContent}
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
