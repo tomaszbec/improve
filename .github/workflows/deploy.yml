@@ -57,42 +57,42 @@ jobs:
       - name: Prepare remote directory
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ubuntu@146.59.13.80 "
-            rm -rf /var/www/html/_improveit.pl/ &&
-            mkdir -p /var/www/html/_improveit.pl/
+            rm -rf /home/ubuntu/_improveit.pl/ &&
+            mkdir -p /home/ubuntu/_improveit.pl/
           "
 
       - name: Deploy to server using SCP
         run: |
-          sshpass -p "${{ secrets.SSH_PASSWORD }}" scp -o StrictHostKeyChecking=no -r dist/* ubuntu@146.59.13.80:/var/www/html/_improveit.pl/
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" scp -o StrictHostKeyChecking=no -r dist/* ubuntu@146.59.13.80:/home/ubuntu/_improveit.pl/
 
       - name: Finalize deployment and rotate backups
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ubuntu@146.59.13.80 "
             
             # Ensure base dir exists
-            mkdir -p /var/www/html/improveit.pl/site
-            mkdir -p /var/www/html/backups/improveit.pl
+            sudo mkdir -p /var/www/html/improveit.pl/site
+            sudo mkdir -p /var/www/html/backups/improveit.pl
             
             # Backup ONLY site directory
             if [ -d \"/var/www/html/improveit.pl/site\" ]; then
-              cp -r /var/www/html/improveit.pl/site /var/www/html/backups/improveit.pl/$(date +'%Y-%m-%d_%H-%M-%S')
+              sudo cp -r /var/www/html/improveit.pl/site /var/www/html/backups/improveit.pl/$(date +'%Y-%m-%d_%H-%M-%S')
             fi &&
             
             # Keep only last 2 backups
             cd /var/www/html/backups/improveit.pl &&
-            ls -t | tail -n +3 | xargs rm -rf 2>/dev/null || true &&
+            ls -t | tail -n +3 | sudo xargs rm -rf 2>/dev/null || true &&
             
             # Clear target site directory
-            rm -rf /var/www/html/improveit.pl/site &&
+            sudo rm -rf /var/www/html/improveit.pl/site &&
             
             # Move new build into /site
-            mv /var/www/html/_improveit.pl /var/www/html/improveit.pl/site &&
+            sudo mv /home/ubuntu/_improveit.pl /var/www/html/improveit.pl/site &&
             
             # Set ownership
-            chown -R ubuntu:www-data /var/www/html/improveit.pl &&
+            sudo chown -R ubuntu:www-data /var/www/html/improveit.pl &&
             
             # Permissions
-            chmod -R g+rwX /var/www/html/improveit.pl
+            sudo chmod -R g+rwX /var/www/html/improveit.pl
           "
         shell: bash
         timeout-minutes: 10
