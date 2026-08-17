@@ -308,9 +308,30 @@
       "ai_dev": "AI / Development",
       "saas_agents": "SaaS / AI Agents",
       "fintech_ai": "FinTech / AI",
-      "healthtech_ai": "HealthTech / AI"
+      "healthtech_ai": "HealthTech / AI",
+      "internet_analytics": "Internet Analytics",
+      "family_discovery": "Family / Local Discovery"
     },
+    "visit_project": "Visit live project",
     "items": {
+      "internetAnalysis": {
+        "title": "internet-analysis.com",
+        "description": "A global platform for testing connection quality and exploring transparent internet performance data.",
+        "full_text": "Internet Analysis combines browser-based network diagnostics with data-backed reports, rankings and research tools. It helps users understand download and upload speed, latency, jitter and packet loss, while keeping measurement sources and methodology transparent.",
+        "challenge": "Internet performance is difficult to assess from a single speed number, and public comparisons often mix measured data, estimates and provider claims without clearly explaining the differences.",
+        "solution": "We built an SSR platform with browser diagnostics powered by Measurement Lab NDT7, a Go API and PostgreSQL-backed reporting. The product connects individual test results with global, country and provider-level context.",
+        "features": ["Browser-based speed and network quality tests", "Global and country internet reports", "ISP and technology comparison tools", "Shareable results and transparent methodology"],
+        "tech_detailed": ["Next.js", "Go", "PostgreSQL", "Measurement Lab NDT7", "Docker", "Cloudflare"]
+      },
+      "kidsRadar": {
+        "title": "kids-radar.com",
+        "description": "A location-aware discovery platform helping families find child-friendly places, events, services, apps and deals.",
+        "full_text": "Kids Radar is a comprehensive family discovery platform that connects parents with relevant activities and services near them. Location, age ranges and rich content make it easier to move from inspiration to a practical family plan.",
+        "challenge": "Family-friendly recommendations are scattered across local websites, social media and outdated directories, making it time-consuming for parents to find trustworthy, age-appropriate options nearby.",
+        "solution": "We created a multilingual, geo-aware directory with structured content workflows, editorial tooling and AI-assisted enrichment. A dedicated administration panel supports places, events, services, apps and deals at scale.",
+        "features": ["Location-aware family discovery", "Places, events, services, apps and deals", "Age and category-based filtering", "AI-assisted content and SEO workflows"],
+        "tech_detailed": ["React", "Go / Gin", "PostgreSQL", "OpenAI API", "Docker", "Nginx"]
+      },
       "engineer": {
         "title": "Autonomous AI Engineer",
         "description": "An AI agent integrating with code repositories, capable of independently fixing bugs, writing tests, and refactoring complex modules.",

@@ -433,9 +433,30 @@
       "ai_dev": "AI / Rozwój",
       "saas_agents": "SaaS / Agenci AI",
       "fintech_ai": "FinTech / AI",
-      "healthtech_ai": "HealthTech / AI"
+      "healthtech_ai": "HealthTech / AI",
+      "internet_analytics": "Analityka internetu",
+      "family_discovery": "Rodzina / Lokalne odkrycia"
     },
+    "visit_project": "Zobacz działający projekt",
     "items": {
+      "internetAnalysis": {
+        "title": "internet-analysis.com",
+        "description": "Globalna platforma do testowania jakości łącza i analizy przejrzystych danych o wydajności internetu.",
+        "full_text": "Internet Analysis łączy działające w przeglądarce narzędzia diagnostyczne z raportami, rankingami i analizami opartymi na danych. Pomaga zrozumieć prędkość pobierania i wysyłania, opóźnienia, jitter oraz utratę pakietów, jasno prezentując źródła i metodologię pomiarów.",
+        "challenge": "Jakości internetu nie da się wiarygodnie ocenić jedną liczbą, a publiczne porównania często mieszają pomiary, estymacje i deklaracje operatorów bez jasnego wyjaśnienia różnic.",
+        "solution": "Zbudowaliśmy platformę SSR z diagnostyką przeglądarkową opartą na Measurement Lab NDT7, API w Go i raportami zasilanymi przez PostgreSQL. Produkt łączy indywidualne wyniki testów z globalnym, krajowym i operatorskim kontekstem.",
+        "features": ["Testy prędkości i jakości sieci w przeglądarce", "Globalne i krajowe raporty internetu", "Porównania operatorów i technologii", "Udostępniane wyniki i przejrzysta metodologia"],
+        "tech_detailed": ["Next.js", "Go", "PostgreSQL", "Measurement Lab NDT7", "Docker", "Cloudflare"]
+      },
+      "kidsRadar": {
+        "title": "kids-radar.com",
+        "description": "Platforma lokalnych odkryć, która pomaga rodzinom znajdować miejsca, wydarzenia, usługi, aplikacje i okazje dla dzieci.",
+        "full_text": "Kids Radar to kompleksowa platforma rodzinna, która łączy rodziców z dopasowanymi aktywnościami i usługami w ich okolicy. Lokalizacja, przedziały wiekowe i rozbudowane treści ułatwiają przejście od inspiracji do konkretnego rodzinnego planu.",
+        "challenge": "Rekomendacje dla rodzin są rozproszone pomiędzy lokalnymi stronami, mediami społecznościowymi i nieaktualnymi katalogami, przez co znalezienie wiarygodnych opcji dopasowanych do wieku zajmuje dużo czasu.",
+        "solution": "Stworzyliśmy wielojęzyczny katalog wykorzystujący geolokalizację, uporządkowane procesy redakcyjne i wzbogacanie treści z pomocą AI. Dedykowany panel administracyjny pozwala skalować bazę miejsc, wydarzeń, usług, aplikacji i ofert.",
+        "features": ["Lokalne odkrycia oparte na geolokalizacji", "Miejsca, wydarzenia, usługi, aplikacje i okazje", "Filtrowanie według wieku i kategorii", "Procesy treści i SEO wspierane przez AI"],
+        "tech_detailed": ["React", "Go / Gin", "PostgreSQL", "OpenAI API", "Docker", "Nginx"]
+      },
       "engineer": {
         "title": "Autonomiczny Inżynier AI",
         "description": "Agent AI integrujący się z repozytoriami kodu, zdolny do samodzielnego naprawiania bugów, pisania testów i refaktoryzacji złożonych modułów.",

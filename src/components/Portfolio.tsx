@@ -8,6 +8,22 @@ export function Portfolio() {
 
   const PROJECTS = [
     {
+      slug: 'internet-analysis',
+      image: '/images/internet-analysis.png',
+      category: t('portfolio.categories.internet_analytics'),
+      title: t('portfolio.items.internetAnalysis.title'),
+      text: t('portfolio.items.internetAnalysis.description'),
+      tech: ['Next.js', 'Go', 'PostgreSQL', 'M-Lab NDT7'],
+    },
+    {
+      slug: 'kids-radar',
+      image: '/images/kids-radar.png',
+      category: t('portfolio.categories.family_discovery'),
+      title: t('portfolio.items.kidsRadar.title'),
+      text: t('portfolio.items.kidsRadar.description'),
+      tech: ['React', 'Go', 'PostgreSQL', 'OpenAI'],
+    },
+    {
       slug: 'autonomous-ai-engineer',
       image: '/images/ai-dev.png',
       category: t('portfolio.categories.ai_dev'),

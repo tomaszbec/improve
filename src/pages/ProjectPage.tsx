@@ -9,6 +9,8 @@ export function ProjectPage() {
   const ref = useScrollReveal()
 
   const slugToKey: Record<string, string> = {
+    'internet-analysis': 'internetAnalysis',
+    'kids-radar': 'kidsRadar',
     'autonomous-ai-engineer': 'engineer',
     'ai-travel-agent': 'travel',
     'predictive-finance-analytics': 'finance',
@@ -30,10 +32,17 @@ export function ProjectPage() {
   const techStack = Array.isArray(translatedTech) ? translatedTech : []
 
   const projectImages: Record<string, string> = {
+    internetAnalysis: '/images/internet-analysis.png',
+    kidsRadar: '/images/kids-radar.png',
     engineer: '/images/ai-dev.png',
     travel: '/images/ai-travel.png',
     finance: '/images/ai-saas.png',
     medical: '/images/ai-medical.png'
+  }
+
+  const projectUrls: Record<string, string> = {
+    internetAnalysis: 'https://internet-analysis.com',
+    kidsRadar: 'https://kids-radar.com'
   }
 
   return (
@@ -60,6 +69,11 @@ export function ProjectPage() {
           </p>
 
           <div className="hero__actions">
+            {projectUrls[projectKey] && (
+              <a href={projectUrls[projectKey]} className="btn btn--primary" target="_blank" rel="noreferrer">
+                {t('portfolio.visit_project')}
+              </a>
+            )}
             <Link to="/contact" className="btn btn--primary">
               {t('hero.cta_talk')}
             </Link>
@@ -105,7 +119,7 @@ export function ProjectPage() {
                 Key Features
               </h3>
               <ul className="service-detail__list" style={{ listStyle: 'none', padding: 0 }}>
-                {features.map((f: any, i: number) => (
+                {features.map((f: string, i: number) => (
                   <li key={i} className="service-detail__list-item" style={{ marginBottom: '1rem', color: 'var(--color-text-muted)' }}>
                     {f}
                   </li>
@@ -118,7 +132,7 @@ export function ProjectPage() {
                 Tech Stack
               </h3>
               <div className="service-card__tags" style={{ justifyContent: 'flex-start', marginTop: '0', flexWrap: 'wrap', gap: '10px', display: 'flex' }}>
-                {techStack.map((tech: any) => (
+                {techStack.map((tech: string) => (
                   <span key={tech} className="service-card__tag" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.2)', borderRadius: '999px', color: 'var(--color-primary-light)' }}>
                     {tech}
                   </span>
