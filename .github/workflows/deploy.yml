@@ -74,18 +74,18 @@ jobs:
 
       - name: Prepare remote directory
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@146.59.13.80 "
-            rm -rf /home/ubuntu/_improveit.pl/ &&
-            mkdir -p /home/ubuntu/_improveit.pl/
+          ssh -o StrictHostKeyChecking=no root@146.59.13.80 "
+            rm -rf /root/_improveit.pl/ &&
+            mkdir -p /root/_improveit.pl/
           "
 
       - name: Deploy to server using SCP
         run: |
-          scp -o StrictHostKeyChecking=no -r dist/* ubuntu@146.59.13.80:/home/ubuntu/_improveit.pl/
+          scp -o StrictHostKeyChecking=no -r dist/* root@146.59.13.80:/root/_improveit.pl/
 
       - name: Finalize deployment and rotate backups
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@146.59.13.80 "
+          ssh -o StrictHostKeyChecking=no root@146.59.13.80 "
             
             # Ensure base dir exists
             sudo mkdir -p /var/www/html/improveit.pl/site
@@ -104,7 +104,7 @@ jobs:
             sudo rm -rf /var/www/html/improveit.pl/site &&
             
             # Move new build into /site
-            sudo mv /home/ubuntu/_improveit.pl /var/www/html/improveit.pl/site &&
+            sudo mv /root/_improveit.pl /var/www/html/improveit.pl/site &&
             
             # Set ownership
             sudo chown -R ubuntu:www-data /var/www/html/improveit.pl &&
