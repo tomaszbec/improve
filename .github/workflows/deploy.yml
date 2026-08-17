@@ -66,43 +66,26 @@ jobs:
       - name: Configure SSH
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
         run: |
+          test -n "$SSH_PRIVATE_KEY"
           install -m 700 -d ~/.ssh
           printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-          chmod 600 ~/.ssh/known_hosts
 
       - name: Prepare remote directory
-        env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
-          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         run: |
-          port="${DEPLOY_PORT:-22}"
-          ssh -p "$port" "$DEPLOY_USER@$DEPLOY_HOST" "
+          ssh -o StrictHostKeyChecking=no ubuntu@146.59.13.80 "
             rm -rf /home/ubuntu/_improveit.pl/ &&
             mkdir -p /home/ubuntu/_improveit.pl/
           "
 
       - name: Deploy to server using SCP
-        env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
-          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         run: |
-          port="${DEPLOY_PORT:-22}"
-          scp -P "$port" -r dist/* "$DEPLOY_USER@$DEPLOY_HOST:/home/ubuntu/_improveit.pl/"
+          scp -o StrictHostKeyChecking=no -r dist/* ubuntu@146.59.13.80:/home/ubuntu/_improveit.pl/
 
       - name: Finalize deployment and rotate backups
-        env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
-          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         run: |
-          port="${DEPLOY_PORT:-22}"
-          ssh -p "$port" "$DEPLOY_USER@$DEPLOY_HOST" "
+          ssh -o StrictHostKeyChecking=no ubuntu@146.59.13.80 "
             
             # Ensure base dir exists
             sudo mkdir -p /var/www/html/improveit.pl/site
