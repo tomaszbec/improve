@@ -73,8 +73,8 @@ export function Portfolio() {
         <div className="portfolio__modern-grid">
           {PROJECTS.map((project, i) => (
             <article
-              key={i}
-              className={`portfolio-card ${i === 0 || i === 3 ? 'portfolio-card--featured' : ''}`}
+              key={project.slug}
+              className={`portfolio-card ${i % 4 === 0 || i % 4 === 3 ? 'portfolio-card--featured' : ''}`}
             >
               <Link to={`/portfolio/${project.slug}`} className="portfolio-card__link-wrapper">
                 <div className="portfolio-card__image">

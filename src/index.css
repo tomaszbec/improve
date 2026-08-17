@@ -1136,15 +1136,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   grid-row: span 1;
 }
 
-/* On larger screens, the first and last items take more space */
+/* Alternating 7/5 bento rows; the pattern repeats for any project count. */
 @media (min-width: 1024px) {
   .portfolio__modern-grid {
     grid-template-columns: repeat(12, 1fr);
   }
-  .portfolio-card:nth-child(1) { grid-column: span 7; }
-  .portfolio-card:nth-child(2) { grid-column: span 5; }
-  .portfolio-card:nth-child(3) { grid-column: span 5; }
-  .portfolio-card:nth-child(4) { grid-column: span 7; }
+  .portfolio-card:nth-child(4n + 1),
+  .portfolio-card:nth-child(4n + 4) { grid-column: span 7; }
+  .portfolio-card:nth-child(4n + 2),
+  .portfolio-card:nth-child(4n + 3) { grid-column: span 5; }
 }
 
 .portfolio-card__link-wrapper {
