@@ -11,6 +11,11 @@ import { ServicePage } from './pages/ServicePage'
 import { ProjectPage } from './pages/ProjectPage'
 import { TechnologyPage } from './pages/TechnologyPage'
 import { NotFound } from './pages/NotFound'
+import { SeoLandingPage } from './pages/SeoLandingPage'
+import { Carriers } from './pages/Carriers'
+import { AITransformation } from './pages/AITransformation'
+import { AITransformationOverview } from './pages/AITransformationOverview'
+import { AIServiceLanding } from './pages/AIServiceLanding'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -21,8 +26,10 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const basename = /^\/en(?:\/|$)/.test(window.location.pathname) ? '/en' : undefined
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <ScrollToTop />
       
       {/* Visual Enhancements */}
@@ -40,6 +47,9 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Home />} />
+            <Route path="/services/ai-transformation" element={<AITransformationOverview />} />
+            <Route path="/services/ai-transformation/ecommerce" element={<AITransformation />} />
+            <Route path="/services/ai-transformation/:serviceSlug" element={<AIServiceLanding />} />
             <Route path="/services/:slug" element={<ServicePage />} />
             <Route path="/about" element={<Home />} />
             <Route path="/technologies" element={<Home />} />
@@ -51,6 +61,9 @@ export default function App() {
             <Route path="/security-audit" element={<SecurityAudit />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/carriers" element={<Carriers />} />
+            <Route path="/ai-optimization/*" element={<SeoLandingPage />} />
+            <Route path="/claude-code/*" element={<SeoLandingPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

@@ -13,10 +13,12 @@ i18n
       en: { translation: en },
       pl: { translation: pl }
     },
+    lng: /^\/en(?:\/|$)/.test(window.location.pathname) ? 'en' : 'pl',
     fallbackLng: 'pl',
     detection: {
-      order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
-      caches: ['localStorage', 'cookie'],
+      order: ['path'],
+      lookupFromPathIndex: 0,
+      caches: [],
     },
     interpolation: {
       escapeValue: false

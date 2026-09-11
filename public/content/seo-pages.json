@@ -1,0 +1,268 @@
+{
+  "updatedAt": "2026-08-20",
+  "pages": [
+    {
+      "path": "/ai-optimization/",
+      "cluster": "AI Optimization",
+      "kind": "hub",
+      "title": "AI Usage Optimization",
+      "subtitle": "Maximize AI value. Minimize cost.",
+      "description": "A practical framework for measuring AI usage, allocating spend and improving the business value of AI across engineering teams.",
+      "directAnswer": "AI usage optimization connects spend and token consumption with developer activity, delivery outcomes and business value. The goal is not simply to use fewer tokens, but to spend the right tokens on work that improves quality, throughput or customer outcomes.",
+      "image": "/images/ai-optimization-hub.png",
+      "metrics": [{"label":"Measure","value":"Usage"},{"label":"Allocate","value":"Cost"},{"label":"Improve","value":"ROI"}],
+      "sections": [
+        {"title":"The AI efficiency model","text":"A useful operating model follows the chain from AI spend to usage, developer behavior, engineering output and business impact. Every stage needs an owner and a consistent measurement period.","bullets":["AI spend by provider, model, team and developer","Input, output, cache-read and cache-write token usage","Active days, sessions and high-cost workflows","Commits, pull requests, cycle time and quality signals","Efficiency trends and documented optimization actions"]},
+        {"title":"Build governance without blocking adoption","text":"Good governance gives teams visibility and guardrails while leaving room for experimentation. Start with transparent reporting, then introduce budgets and policies only where the data shows a repeatable risk.","bullets":["Define ownership for AI FinOps and engineering analytics","Set budget alerts before hard limits","Separate exploration from production usage","Review expensive sessions with context, not blame","Publish a monthly optimization backlog"]}
+      ],
+      "faqs": [
+        {"question":"What is AI usage optimization?","answer":"It is the continuous process of measuring AI consumption, cost and outcomes, then changing models, prompts, context, caching and workflows to improve value per unit of spend."},
+        {"question":"Should companies optimize only for fewer tokens?","answer":"No. A lower token count can reduce cost but may also reduce quality. The target should be an acceptable outcome at the lowest reliable total cost."}
+      ],
+      "related": ["/ai-optimization/ai-usage-monitoring","/ai-optimization/ai-cost-per-developer","/ai-optimization/ai-roi","/ai-optimization/ai-finops"]
+    },
+    {
+      "path": "/ai-optimization/ai-usage-monitoring",
+      "cluster": "AI Optimization",
+      "title": "AI Usage Monitoring",
+      "subtitle": "Know how AI is used across your organization.",
+      "description": "Track AI usage by developer, team, model and workflow without reducing engineering analytics to a single vanity metric.",
+      "directAnswer": "AI usage monitoring combines provider billing data, application telemetry and engineering context to show who uses AI, which models and workflows they use, what the usage costs and whether adoption produces useful outcomes.",
+      "image": "/images/ai-optimization-observability.png",
+      "metrics": [{"label":"Coverage","value":"Team"},{"label":"Breakdown","value":"Model"},{"label":"Review","value":"Trend"}],
+      "sections": [
+        {"title":"What to monitor","text":"Collect the smallest set of dimensions that supports real decisions. Identity, team, model, project and time are usually the foundation.","bullets":["Sessions, requests and active AI days","Input, output and cached tokens","Estimated and billed cost by model","Usage by developer, team and repository","Acceptance, rework and delivery signals"]},
+        {"title":"A privacy-aware rollout","text":"Usage analytics should explain resource consumption, not inspect private reasoning or rank people without context.","bullets":["Document exactly which fields are collected","Minimize prompt and source-code retention","Apply role-based access to individual data","Use team trends for management reporting","Give developers access to their own data"]}
+      ],
+      "faqs": [{"question":"How do you track AI usage per developer?","answer":"Attach a stable user or cost-center identifier at the client, gateway or telemetry layer, then aggregate token and cost records using the same identity mapping as your engineering organization."},{"question":"Is AI usage a productivity metric?","answer":"Usage alone is not productivity. It becomes useful only when reviewed with quality, delivery and business outcome measures."}],
+      "related": ["/ai-optimization/team-ai-usage","/ai-optimization/token-utilization","/claude-code/usage-monitoring"]
+    },
+    {
+      "path": "/ai-optimization/token-utilization",
+      "cluster": "AI Optimization",
+      "title": "Token Utilization",
+      "subtitle": "Optimize every token without sacrificing quality.",
+      "description": "Measure input, output and cache behavior, then remove repeated context and inefficient agent loops.",
+      "directAnswer": "Token utilization measures whether input, output and cached tokens contribute to a successful result. Optimization focuses on unnecessary context, repeated instructions, low cache reuse, unsuitable models and workflows that loop without producing a better outcome.",
+      "image": "/images/ai-optimization-observability.png",
+      "metrics": [{"label":"Input","value":"Context"},{"label":"Reuse","value":"Cache"},{"label":"Output","value":"Value"}],
+      "sections": [
+        {"title":"Find the major waste sources","text":"The largest savings usually come from architecture and workflow changes rather than micro-editing every prompt.","bullets":["Repeated repository context on every request","Oversized tool results and logs","Unbounded agent retries","Expensive models used for routine transformations","Long conversations that should be summarized or reset"]},
+        {"title":"Optimization sequence","text":"Change one lever at a time and compare both cost and result quality against a representative task set.","bullets":["Establish a baseline by workflow","Trim and retrieve context selectively","Introduce prompt caching where repetition is stable","Route simple work to cheaper capable models","Set retry, tool-output and context limits"]}
+      ],
+      "faqs": [{"question":"What is a good token utilization rate?","answer":"There is no universal percentage. Define success by workflow, then compare tokens and cost per successful result over time."},{"question":"Do fewer tokens always mean lower cost?","answer":"Usually, but model choice, cache pricing, long-context tiers and retries can change the relationship. Measure billed cost as well as raw tokens."}],
+      "related": ["/ai-optimization/ai-cost-per-developer","/claude-code/token-usage","/claude-code/cost-optimization"]
+    },
+    {
+      "path": "/ai-optimization/ai-cost-per-developer",
+      "cluster": "AI Optimization",
+      "title": "AI Cost per Developer",
+      "subtitle": "Understand the true cost of AI-assisted engineering.",
+      "description": "Allocate AI spend per developer and active day, then connect it to workflows and output instead of treating cost as an isolated bill.",
+      "directAnswer": "AI cost per developer is total attributable AI spend divided by the relevant developer population or active developer-days. A useful calculation separates shared platform cost, direct model usage and tooling subscriptions, and always states the period and allocation method.",
+      "image": "/images/ai-optimization-finops.png",
+      "metrics": [{"label":"Normalize","value":"Active day"},{"label":"Allocate","value":"Team"},{"label":"Compare","value":"Outcome"}],
+      "sections": [
+        {"title":"Calculate an accountable cost","text":"Avoid dividing a company-wide invoice by headcount without considering adoption and shared infrastructure.","bullets":["Direct usage cost by identity","Subscription and seat cost","Shared gateway, observability and storage cost","Active developer-days in the period","Documented treatment of unallocated spend"]},
+        {"title":"Interpret the number correctly","text":"High spend can indicate waste, complex valuable work or simply stronger adoption. Review the workflow and outcome before taking action.","bullets":["Compare similar roles and work types","Track trends rather than one-day spikes","Separate onboarding and experimentation","Pair cost with quality and throughput","Investigate outliers collaboratively"]}
+      ],
+      "faqs": [{"question":"What is a good AI cost per developer?","answer":"There is no universal target. Establish a baseline for your toolset and work mix, then evaluate whether incremental spend improves delivery, quality or time saved."},{"question":"How often should cost per developer be reviewed?","answer":"Weekly reporting is useful operationally; monthly reviews are usually better for budgets, trends and policy decisions."}],
+      "related": ["/ai-optimization/ai-cost-benchmarks","/ai-optimization/ai-roi","/claude-code/cost-per-developer"]
+    },
+    {
+      "path": "/ai-optimization/team-ai-usage",
+      "cluster": "AI Optimization",
+      "title": "Team AI Usage",
+      "subtitle": "Compare adoption and efficiency with context.",
+      "description": "Understand how engineering teams adopt AI, where usage differs and which practices can be shared.",
+      "directAnswer": "Team AI usage analysis aggregates activity, tokens, cost and outcomes at team level. It should reveal adoption gaps and reusable practices, not create simplistic individual leaderboards.",
+      "image": "/images/ai-optimization-observability.png",
+      "metrics": [{"label":"Adoption","value":"Active users"},{"label":"Efficiency","value":"Cost / result"},{"label":"Learning","value":"Patterns"}],
+      "sections": [
+        {"title":"Compare like with like","text":"Teams working on legacy migrations, greenfield features and production incidents have different usage profiles.","bullets":["Normalize by active developer-days","Group comparable repositories and workflows","Track model mix and context size","Review adoption and cost together","Annotate migrations, incidents and pilots"]},
+        {"title":"Turn analytics into enablement","text":"The best outcome is a shared practice that helps more teams get reliable results.","bullets":["Identify efficient prompts and workflows","Create role-specific playbooks","Offer coaching where adoption is low","Share reusable context and tools","Measure improvement after enablement"]}
+      ],
+      "faqs": [{"question":"How do you compare AI usage between teams?","answer":"Use the same definitions and time period, normalize by activity, segment by work type and compare both consumption and outcomes."},{"question":"Should managers see individual AI usage?","answer":"Only when there is a clear operational need, documented governance and appropriate context. Team-level reporting should be the default."}],
+      "related": ["/ai-optimization/ai-usage-monitoring","/ai-optimization/ai-roi","/claude-code/team-analytics"]
+    },
+    {
+      "path": "/ai-optimization/ai-roi",
+      "cluster": "AI Optimization",
+      "title": "AI ROI for Engineering Teams",
+      "subtitle": "Measure what matters beyond token volume.",
+      "description": "Connect AI investment with time saved, delivery throughput, quality and business outcomes.",
+      "directAnswer": "AI ROI compares attributable benefits with the full cost of AI. For engineering teams, benefits may include time saved, increased throughput, reduced rework or improved quality, while cost includes models, seats, platforms, integration and governance.",
+      "image": "/images/ai-optimization-finops.png",
+      "metrics": [{"label":"Benefit","value":"Time / quality"},{"label":"Cost","value":"Total spend"},{"label":"Decision","value":"ROI"}],
+      "sections": [
+        {"title":"Build a credible baseline","text":"Measure the same workflow before and after adoption, and avoid attributing every delivery change to AI.","bullets":["Select repeatable workflow cohorts","Record cycle time and rework","Include review and correction effort","Use control periods where possible","State assumptions and confidence"]},
+        {"title":"ROI metrics that survive scrutiny","text":"Translate engineering improvements into a business-relevant unit while keeping the underlying operational measures visible.","bullets":["Hours saved per completed workflow","Cost per accepted change","Change failure and defect trends","Throughput per active developer","Net benefit after platform and enablement cost"]}
+      ],
+      "faqs": [{"question":"How do you measure ROI of AI coding assistants?","answer":"Choose defined workflows, measure their cost and outcomes before and after adoption, include correction time and platform cost, then calculate net benefit with clearly stated assumptions."},{"question":"Can lines of code measure AI ROI?","answer":"Lines of code can describe activity but not value. Quality, delivery time, reliability and customer impact are stronger outcome measures."}],
+      "related": ["/ai-optimization/ai-cost-per-developer","/ai-optimization/team-ai-usage","/ai-optimization/ai-finops"]
+    },
+    {
+      "path": "/ai-optimization/ai-finops",
+      "cluster": "AI Optimization",
+      "title": "AI FinOps",
+      "subtitle": "Bring financial discipline to AI adoption.",
+      "description": "Plan, allocate and optimize AI spend through shared engineering, finance and governance practices.",
+      "directAnswer": "AI FinOps is the operating practice of making AI cost visible, attributable and optimizable. It combines financial accountability with technical levers such as model routing, caching, context management and usage policies.",
+      "image": "/images/ai-optimization-finops.png",
+      "metrics": [{"label":"Plan","value":"Budget"},{"label":"Track","value":"Allocation"},{"label":"Optimize","value":"Unit cost"}],
+      "sections": [
+        {"title":"Core AI FinOps capabilities","text":"Ownership must span finance, engineering, security and platform teams.","bullets":["Cost allocation and chargeback","Budgets, forecasts and anomaly alerts","Model and provider unit economics","Optimization recommendations","Governance and policy evidence"]},
+        {"title":"A practical monthly cycle","text":"Repeatable reviews turn observability into decisions and documented savings.","bullets":["Reconcile provider invoices and telemetry","Review variance by team and model","Prioritize the largest controllable drivers","Assign optimization owners","Validate savings without degrading quality"]}
+      ],
+      "faqs": [{"question":"How is AI FinOps different from cloud FinOps?","answer":"The principles are similar, but AI cost depends heavily on tokens, model choice, context, caching, agent behavior and result quality."},{"question":"Who owns AI FinOps?","answer":"A cross-functional group should own it, with a named accountable lead and participation from platform engineering, finance, security and business owners."}],
+      "related": ["/ai-optimization/ai-cost-benchmarks","/ai-optimization/token-utilization","/claude-code/cost-optimization"]
+    },
+    {
+      "path": "/ai-optimization/ai-cost-benchmarks",
+      "cluster": "AI Optimization",
+      "title": "AI Cost Benchmarks",
+      "subtitle": "Compare carefully, then improve your own baseline.",
+      "description": "Use normalized internal benchmarks and transparent external references without turning estimates into universal targets.",
+      "directAnswer": "AI cost benchmarks are useful only when they specify model mix, pricing basis, active users, workload and period. The most defensible benchmark is your own cost per successful workflow tracked consistently over time.",
+      "image": "/images/ai-optimization-finops.png",
+      "metrics": [{"label":"Normalize","value":"Per active day"},{"label":"Segment","value":"Workload"},{"label":"Improve","value":"Trend"}],
+      "sections": [
+        {"title":"Benchmark dimensions","text":"A single monthly number hides most of the decisions needed for optimization.","bullets":["Cost per developer and active day","Cost per model and provider","Tokens and cost per workflow","Cost per accepted commit or pull request","Adoption rate and result quality"]},
+        {"title":"Avoid false precision","text":"External figures are directional unless the populations, pricing and workflows match your environment.","bullets":["Publish calculation formulas","State whether prices are list or negotiated","Separate subscription and API usage","Show sample size and distribution","Refresh benchmarks when models or prices change"]}
+      ],
+      "faqs": [{"question":"What is the average AI cost per developer?","answer":"It varies materially by tool, model, workload, adoption and commercial agreement. Use external figures as context and establish a normalized internal baseline."},{"question":"What is the best benchmark for AI coding tools?","answer":"Cost per successful, quality-accepted workflow is more actionable than tokens or monthly spend alone."}],
+      "related": ["/ai-optimization/ai-cost-per-developer","/ai-optimization/ai-roi","/claude-code/cost-per-developer"]
+    },
+    {
+      "path": "/claude-code/usage-monitoring",
+      "cluster": "Claude Code",
+      "title": "Claude Code Usage Monitoring",
+      "subtitle": "Monitor Claude Code across your organization.",
+      "description": "Combine Claude Code telemetry, provider usage data and engineering context for accountable team analytics.",
+      "directAnswer": "Claude Code usage monitoring tracks sessions, token consumption, cost and relevant workflow outcomes by user, team, model and project. Organizations can use Anthropic administration data, an LLM gateway and OpenTelemetry depending on deployment architecture.",
+      "image": "/images/claude-code-observability.png",
+      "metrics": [{"label":"Observe","value":"Sessions"},{"label":"Attribute","value":"User / team"},{"label":"Optimize","value":"Workflow"}],
+      "sections": [
+        {"title":"Choose the collection layer","text":"Use the source that matches your deployment and governance requirements.","bullets":["Anthropic organization usage and cost reporting","Claude Code OpenTelemetry export","LLM gateway usage and budget controls","Cloud-provider billing for Bedrock or Vertex","Engineering-system outcome data"]},
+        {"title":"Operational dashboard","text":"A useful dashboard explains trends and supports action without exposing source code or private prompts.","bullets":["Active users and sessions","Tokens and cost by model","Usage by team and repository","High-cost and long-context sessions","Adoption and outcome trends"]}
+      ],
+      "faqs": [{"question":"Can Claude Code usage be monitored per developer?","answer":"Yes, when user identity is consistently available in organization analytics, telemetry or a gateway. Apply access controls and explain how individual data is used."},{"question":"Does monitoring require prompt collection?","answer":"No. Cost and usage monitoring can rely on metadata and counters without storing prompt or source-code content."}],
+      "sources": [{"label":"Anthropic: LLM gateway configuration","url":"https://docs.anthropic.com/en/docs/claude-code/llm-gateway"}],
+      "related": ["/claude-code/token-usage","/claude-code/team-analytics","/claude-code/opentelemetry"]
+    },
+    {
+      "path": "/claude-code/token-usage",
+      "cluster": "Claude Code",
+      "title": "Claude Code Token Usage",
+      "subtitle": "Understand and optimize Claude Code tokens.",
+      "description": "Break down input, output and cache tokens to find expensive context and inefficient workflows.",
+      "directAnswer": "Claude Code token usage should be analyzed by token type, model, user, project and workflow. Input context, tool results, cache writes, cache reads and generated output have different cost behavior and should not be combined into one unexplained total.",
+      "image": "/images/claude-code-observability.png",
+      "metrics": [{"label":"Prompt","value":"Input"},{"label":"Cache","value":"Read / write"},{"label":"Answer","value":"Output"}],
+      "sections": [
+        {"title":"Token breakdown","text":"Keep the provider usage categories intact so optimization points remain visible.","bullets":["Base input tokens","Cache creation tokens","Cache read tokens","Output tokens","Model and long-context pricing tier"]},
+        {"title":"Reduce usage safely","text":"Evaluate savings against a stable task set and quality threshold.","bullets":["Exclude irrelevant repository context","Limit verbose tool output","Reset or summarize stale sessions","Reuse stable instructions through caching","Use capable lower-cost models for routine work"]}
+      ],
+      "faqs": [{"question":"Why does Claude Code use many input tokens?","answer":"Coding workflows can include repository files, tool schemas, tool results and conversation history. Inspect context composition before assuming the model output is the main cost driver."},{"question":"Are cached tokens free?","answer":"No. Anthropic prices cache writes and reads differently from base input tokens; use current official pricing when estimating cost."}],
+      "sources": [{"label":"Anthropic pricing","url":"https://docs.anthropic.com/en/docs/about-claude/pricing"}],
+      "related": ["/ai-optimization/token-utilization","/claude-code/cost-optimization","/claude-code/opentelemetry"]
+    },
+    {
+      "path": "/claude-code/cost-per-developer",
+      "cluster": "Claude Code",
+      "title": "Claude Code Cost per Developer",
+      "subtitle": "Allocate Claude Code cost with context.",
+      "description": "Calculate cost per developer, active day and workflow while preserving team and model context.",
+      "directAnswer": "Claude Code cost per developer divides attributable Claude Code spend by developers or active developer-days. Report API usage, subscriptions and shared infrastructure separately, then connect cost with task complexity and delivered outcomes.",
+      "image": "/images/claude-code-costs.png",
+      "metrics": [{"label":"Spend","value":"Billed cost"},{"label":"Activity","value":"Developer-days"},{"label":"Context","value":"Outcome"}],
+      "sections": [
+        {"title":"Cost allocation formula","text":"Use a transparent formula that finance and engineering can reproduce.","bullets":["Direct model cost by user","Seat or subscription allocation","Gateway and observability cost","Active developer-days","Unallocated shared cost"]},
+        {"title":"Review outliers constructively","text":"A costly month can reflect valuable complex work, onboarding or an inefficient workflow.","bullets":["Compare similar roles and repositories","Inspect model mix and context size","Separate incidents and migrations","Review accepted outcomes","Agree optimization experiments"]}
+      ],
+      "faqs": [{"question":"Is a high Claude Code cost per developer bad?","answer":"Not necessarily. Evaluate whether the spend supports complex valuable work and improves throughput or quality compared with the baseline."},{"question":"Should cost be tracked daily?","answer":"Daily data helps detect anomalies; weekly and monthly windows are better for fair performance and budget interpretation."}],
+      "related": ["/ai-optimization/ai-cost-per-developer","/claude-code/team-analytics","/claude-code/cost-optimization"]
+    },
+    {
+      "path": "/claude-code/team-analytics",
+      "cluster": "Claude Code",
+      "title": "Claude Code Team Analytics",
+      "subtitle": "Understand adoption, cost and outcomes by team.",
+      "description": "Compare team usage patterns responsibly and turn successful workflows into reusable engineering practices.",
+      "directAnswer": "Claude Code team analytics aggregates adoption, sessions, token usage, cost and engineering outcomes. Its purpose is to improve enablement and workflows, not to rank developers using token volume.",
+      "image": "/images/claude-code-observability.png",
+      "metrics": [{"label":"Adoption","value":"Active users"},{"label":"Usage","value":"Sessions"},{"label":"Value","value":"Outcomes"}],
+      "sections": [
+        {"title":"Team analytics dimensions","text":"Segment data so that different responsibilities and codebases are not compared as if they were identical.","bullets":["Team, role and repository","Active days and sessions","Model and token mix","Cost per workflow","Delivery and quality outcomes"]},
+        {"title":"From dashboard to playbook","text":"Use the data to spread reliable practices across teams.","bullets":["Find workflows with strong outcomes","Document context and prompt patterns","Create shared commands and tools","Coach teams with adoption barriers","Measure changes after rollout"]}
+      ],
+      "faqs": [{"question":"Can team analytics measure developer productivity?","answer":"It can contribute evidence, but no single Claude Code metric measures productivity. Use multiple outcome and quality measures with human context."},{"question":"What should a team dashboard show first?","answer":"Start with adoption, cost trend, model mix, high-cost workflows and a small number of agreed engineering outcomes."}],
+      "related": ["/ai-optimization/team-ai-usage","/claude-code/usage-monitoring","/claude-code/grafana"]
+    },
+    {
+      "path": "/claude-code/cost-optimization",
+      "cluster": "Claude Code",
+      "title": "Claude Code Cost Optimization",
+      "subtitle": "Reduce cost without reducing engineering quality.",
+      "description": "Optimize model choice, context, caching and agent behavior using measured workflow outcomes.",
+      "directAnswer": "Claude Code cost optimization reduces unnecessary spend through better context selection, caching, model choice, tool-output limits and workflow design. Each change should be validated against result quality and developer time.",
+      "image": "/images/claude-code-costs.png",
+      "metrics": [{"label":"Right-size","value":"Context"},{"label":"Route","value":"Model"},{"label":"Control","value":"Loops"}],
+      "sections": [
+        {"title":"Highest-impact levers","text":"Focus first on repeated and structurally expensive behavior.","bullets":["Retrieve only relevant files","Keep CLAUDE.md instructions concise","Limit large tool results","Reset stale conversation context","Use model routing where supported"]},
+        {"title":"Optimization experiment","text":"Run a controlled before-and-after comparison rather than assuming a lower bill means a better workflow.","bullets":["Select representative tasks","Record cost, time and acceptance","Change one major lever","Review quality and rework","Roll out only repeatable gains"]}
+      ],
+      "faqs": [{"question":"How can a team reduce Claude Code token usage?","answer":"Start with context and tool-result size, then review session length, caching and model selection. Validate every change against successful task completion."},{"question":"Can a cheaper model handle coding tasks?","answer":"Often for routine transformations or classification, but capability requirements vary. Use task-based routing and an escalation path for complex work."}],
+      "sources": [{"label":"Anthropic pricing and optimization guidance","url":"https://docs.anthropic.com/en/docs/about-claude/pricing"}],
+      "related": ["/claude-code/token-usage","/claude-code/cost-per-developer","/ai-optimization/ai-finops"]
+    },
+    {
+      "path": "/claude-code/opentelemetry",
+      "cluster": "Claude Code",
+      "title": "Claude Code OpenTelemetry",
+      "subtitle": "Stream Claude Code telemetry into your observability stack.",
+      "description": "Design a privacy-aware OpenTelemetry pipeline for usage, cost and operational monitoring.",
+      "directAnswer": "Claude Code OpenTelemetry monitoring exports operational metrics through an OpenTelemetry collector so organizations can process, secure and route telemetry to their existing observability backend. Verify metric names against the installed Claude Code version before building production dashboards.",
+      "image": "/images/claude-code-observability.png",
+      "metrics": [{"label":"Collect","value":"OTel"},{"label":"Process","value":"Collector"},{"label":"Export","value":"Backend"}],
+      "sections": [
+        {"title":"Reference architecture","text":"Centralize processing so identity controls, sampling and destination rules do not live on each developer machine.","bullets":["Claude Code telemetry export","Authenticated OpenTelemetry collector","Attribute filtering and enrichment","Metrics backend and alerting","Restricted dashboard access"]},
+        {"title":"Production checklist","text":"Treat developer telemetry as governed operational data.","bullets":["Pin and document supported Claude Code versions","Allowlist required attributes","Avoid prompt or source-code collection","Use TLS and authenticated exporters","Test missing, delayed and duplicate telemetry"]}
+      ],
+      "faqs": [{"question":"Why use OpenTelemetry for Claude Code?","answer":"It provides a vendor-neutral collection and processing layer that can feed existing observability systems and apply centralized governance."},{"question":"Are Claude Code metric names stable?","answer":"Telemetry can evolve. Validate names and attributes against current official documentation and your installed version before creating alerts."}],
+      "related": ["/claude-code/prometheus","/claude-code/grafana","/claude-code/usage-monitoring"]
+    },
+    {
+      "path": "/claude-code/prometheus",
+      "cluster": "Claude Code",
+      "title": "Claude Code Prometheus Monitoring",
+      "subtitle": "Monitor Claude Code metrics with Prometheus.",
+      "description": "Route OpenTelemetry metrics into Prometheus-compatible storage and create actionable cost and usage alerts.",
+      "directAnswer": "Claude Code metrics can be routed through an OpenTelemetry collector to a Prometheus-compatible backend. Use low-cardinality labels for durable dashboards and keep user-level detail in access-controlled views.",
+      "image": "/images/claude-code-observability.png",
+      "metrics": [{"label":"Ingest","value":"OTel"},{"label":"Store","value":"Prometheus"},{"label":"Alert","value":"Rules"}],
+      "sections": [
+        {"title":"Metric design","text":"Cardinality and identity strategy determine whether the monitoring system remains reliable and affordable.","bullets":["Keep team and model labels bounded","Avoid repository paths as unrestricted labels","Record user detail only where required","Use recording rules for dashboard queries","Define retention by operational need"]},
+        {"title":"Useful alerts","text":"Alert on conditions that require action rather than every usage spike.","bullets":["Unexpected cost acceleration","Telemetry pipeline outage","Sustained cache-efficiency decline","Abnormal retry or session patterns","Budget threshold by team"]}
+      ],
+      "faqs": [{"question":"Does Prometheus scrape Claude Code directly?","answer":"A collector-based design is generally easier to govern: Claude Code exports telemetry, the collector processes it and Prometheus stores or scrapes the resulting metrics endpoint."},{"question":"Should developer email be a Prometheus label?","answer":"Prefer a stable pseudonymous identifier or team aggregation. Personal identifiers create privacy and cardinality concerns."}],
+      "related": ["/claude-code/opentelemetry","/claude-code/grafana","/claude-code/team-analytics"]
+    },
+    {
+      "path": "/claude-code/grafana",
+      "cluster": "Claude Code",
+      "title": "Claude Code Grafana Dashboards",
+      "subtitle": "Visualize Claude Code usage, cost and efficiency.",
+      "description": "Build role-specific Grafana dashboards for engineering, platform and FinOps teams.",
+      "directAnswer": "A Claude Code Grafana dashboard should combine usage and cost trends with model mix, team allocation, telemetry health and selected engineering outcomes. Create separate operational, management and individual views rather than one overloaded dashboard.",
+      "image": "/images/claude-code-observability.png",
+      "metrics": [{"label":"Explore","value":"Usage"},{"label":"Explain","value":"Cost"},{"label":"Act","value":"Alerts"}],
+      "sections": [
+        {"title":"Dashboard layers","text":"Match information density and access to the decision each audience needs to make.","bullets":["Executive spend and adoption overview","Team cost and model breakdown","Developer self-service usage view","Telemetry pipeline health","Optimization experiment tracking"]},
+        {"title":"Panels that drive action","text":"Every panel should answer a question or link to a documented response.","bullets":["Cost trend and forecast","Tokens by type and model","Active users and sessions","Largest controllable cost drivers","Budget and anomaly annotations"]}
+      ],
+      "faqs": [{"question":"What should a Claude Code Grafana dashboard include?","answer":"Start with spend, tokens by type and model, adoption, team allocation, pipeline health and clearly defined optimization indicators."},{"question":"Can Grafana show per-developer usage?","answer":"Yes, if identity is present in the source data, but access should be restricted and team-level views should remain the default."}],
+      "related": ["/claude-code/prometheus","/claude-code/opentelemetry","/claude-code/team-analytics"]
+    }
+  ]
+}

@@ -11,7 +11,19 @@ export function Footer() {
         <p className="footer__copy">
           &copy; {year} improveIT.pl. {t('footer.rights')}
         </p>
-        <nav className="footer__links" aria-label="Social media links">
+        <nav className="footer__links" aria-label={t('footer.services_label')}>
+          <Link to="/services/custom-software-development" className="footer__link">
+            {t('services.items.software.title')}
+          </Link>
+          <Link to="/services/ai-transformation" className="footer__link">
+            {t('services.items.aiTransformation.title')}
+          </Link>
+          <Link to="/services/application-support" className="footer__link">
+            {t('services.items.support.title')}
+          </Link>
+          <Link to="/carriers" className="footer__link">
+            {t('nav.carriers')}
+          </Link>
           <Link to="/contact" className="footer__link">
             {t('nav.contact')}
           </Link>

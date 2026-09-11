@@ -1,10 +1,16 @@
-import { useState, type FormEvent } from 'react'
+import { useEffect, useId, useRef, useState, type FormEvent, type KeyboardEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { Building2, Check, Mail, Phone } from 'lucide-react'
+import { publishingApiUrl } from '../lib/publishingApi'
 
 export function Contact() {
   const { t } = useTranslation()
   const ref = useScrollReveal()
+  const subjectListId = useId()
+  const subjectSelectRef = useRef<HTMLDivElement>(null)
+  const [isSubjectOpen, setIsSubjectOpen] = useState(false)
+  const [activeSubjectIndex, setActiveSubjectIndex] = useState(0)
   
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
   const [formData, setFormData] = useState({
@@ -15,12 +21,68 @@ export function Contact() {
     message: ''
   })
 
+  const subjectOptions = [
+    { value: 'web', label: t('contact.form.s1') },
+    { value: 'mobile', label: t('contact.form.s2') },
+    { value: 'ai', label: t('contact.form.s3') },
+    { value: 'team', label: t('contact.form.s4') },
+    { value: 'consulting', label: t('contact.form.s5') },
+    { value: 'other', label: t('contact.form.s6') },
+  ]
+
+  const selectedSubject = subjectOptions.find(({ value }) => value === formData.subject)
+
+  useEffect(() => {
+    const closeSubjectSelect = (event: MouseEvent) => {
+      if (!subjectSelectRef.current?.contains(event.target as Node)) {
+        setIsSubjectOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', closeSubjectSelect)
+    return () => document.removeEventListener('mousedown', closeSubjectSelect)
+  }, [])
+
+  const chooseSubject = (index: number) => {
+    setFormData((current) => ({ ...current, subject: subjectOptions[index].value }))
+    setActiveSubjectIndex(index)
+    setIsSubjectOpen(false)
+  }
+
+  const handleSubjectKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
+    if (event.key === 'Escape') {
+      setIsSubjectOpen(false)
+      return
+    }
+
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      event.preventDefault()
+      const direction = event.key === 'ArrowDown' ? 1 : -1
+      setActiveSubjectIndex((current) =>
+        (current + direction + subjectOptions.length) % subjectOptions.length
+      )
+      setIsSubjectOpen(true)
+      return
+    }
+
+    if ((event.key === 'Enter' || event.key === ' ') && isSubjectOpen) {
+      event.preventDefault()
+      chooseSubject(activeSubjectIndex)
+    }
+  }
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
+
+    if (!formData.subject) {
+      setIsSubjectOpen(true)
+      return
+    }
+
     setStatus('submitting')
 
     try {
-      const response = await fetch('/contact_process.php', {
+      const response = await fetch(`${publishingApiUrl}/v1/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,15 +126,15 @@ export function Contact() {
 
             <address className="contact__details">
               <div className="contact__detail">
-                <div className="contact__detail-icon">🏢</div>
+                <div className="contact__detail-icon" aria-hidden="true"><Building2 /></div>
                 <span>NIP: 7343126810</span>
               </div>
               <div className="contact__detail">
-                <div className="contact__detail-icon">📞</div>
+                <div className="contact__detail-icon" aria-hidden="true"><Phone /></div>
                 <a href="tel:+48886555201">+48 886 555 201</a>
               </div>
               <div className="contact__detail">
-                <div className="contact__detail-icon">✉️</div>
+                <div className="contact__detail-icon" aria-hidden="true"><Mail /></div>
                 <a href="mailto:contact@improveit.pl">contact@improveit.pl</a>
               </div>
             </address>
@@ -114,22 +176,45 @@ export function Contact() {
               onChange={(e) => setFormData({ ...formData, company: e.target.value })}
               disabled={status === 'submitting'}
             />
-            <select
-              className="contact__input"
-              aria-label={t('contact.form.subject')}
-              value={formData.subject}
-              onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-              required
-              disabled={status === 'submitting'}
-            >
-              <option value="" disabled>{t('contact.form.subject')}</option>
-              <option value="web">{t('contact.form.s1')}</option>
-              <option value="mobile">{t('contact.form.s2')}</option>
-              <option value="ai">{t('contact.form.s3')}</option>
-              <option value="team">{t('contact.form.s4')}</option>
-              <option value="consulting">{t('contact.form.s5')}</option>
-              <option value="other">{t('contact.form.s6')}</option>
-            </select>
+            <div className="contact__select" ref={subjectSelectRef}>
+              <button
+                type="button"
+                className={`contact__select-trigger ${isSubjectOpen ? 'contact__select-trigger--open' : ''}`}
+                aria-label={t('contact.form.subject')}
+                aria-haspopup="listbox"
+                aria-expanded={isSubjectOpen}
+                aria-controls={subjectListId}
+                onClick={() => setIsSubjectOpen((open) => !open)}
+                onKeyDown={handleSubjectKeyDown}
+                disabled={status === 'submitting'}
+              >
+                <span className={selectedSubject ? '' : 'contact__select-placeholder'}>
+                  {selectedSubject?.label ?? t('contact.form.subject')}
+                </span>
+                <span className="contact__select-chevron" aria-hidden="true" />
+              </button>
+
+              {isSubjectOpen && (
+                <div className="contact__select-menu" id={subjectListId} role="listbox">
+                  {subjectOptions.map((option, index) => (
+                    <button
+                      type="button"
+                      role="option"
+                      aria-selected={formData.subject === option.value}
+                      className={`contact__select-option ${activeSubjectIndex === index ? 'contact__select-option--active' : ''}`}
+                      key={option.value}
+                      onMouseEnter={() => setActiveSubjectIndex(index)}
+                      onClick={() => chooseSubject(index)}
+                    >
+                      {option.label}
+                      {formData.subject === option.value && (
+                        <Check className="contact__select-check" size={18} aria-hidden="true" />
+                      )}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
             <textarea
               className="contact__textarea"
               placeholder={t('contact.form.message')}

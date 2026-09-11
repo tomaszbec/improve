@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { Star } from 'lucide-react'
 
 export function Testimonials() {
   const { t } = useTranslation()
@@ -42,7 +43,11 @@ export function Testimonials() {
         <div className="testimonials__grid">
           {TESTIMONIALS.map((t, i) => (
             <article key={i} className="testimonial-card">
-              <div className="testimonial-card__stars">★★★★★</div>
+              <div className="testimonial-card__stars" aria-label="5/5">
+                {Array.from({ length: 5 }, (_, star) => (
+                  <Star key={star} size={16} fill="currentColor" aria-hidden="true" />
+                ))}
+              </div>
               <blockquote className="testimonial-card__quote">
                 „{t.quote}"
               </blockquote>

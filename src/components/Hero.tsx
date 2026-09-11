@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { ChartNoAxesCombined, Globe2 } from 'lucide-react'
 
 export function Hero() {
   const { t } = useTranslation()
@@ -59,14 +60,18 @@ export function Hero() {
             
             <div className="hero__floating-stats">
               <div className="hero__mini-stat">
-                <div className="hero__stat-icon">📈</div>
+                <div className="hero__stat-icon" aria-hidden="true">
+                  <ChartNoAxesCombined />
+                </div>
                 <div>
                   <div className="hero__stat-val">80+</div>
                   <div className="hero__stat-nam">{t('hero.stat_clients')}</div>
                 </div>
               </div>
               <div className="hero__mini-stat">
-                <div className="hero__stat-icon">🌍</div>
+                <div className="hero__stat-icon" aria-hidden="true">
+                  <Globe2 />
+                </div>
                 <div>
                   <div className="hero__stat-val">75</div>
                   <div className="hero__stat-nam">{t('hero.stat_countries')}</div>

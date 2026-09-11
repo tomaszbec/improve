@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { Bot, Lightbulb } from 'lucide-react'
 
 export function NotFound() {
   const ref = useScrollReveal()
@@ -39,12 +40,12 @@ export function NotFound() {
           </h2>
           <div className="bento-grid">
             <Link to="/services" className="bento-item bento-item--col-2">
-              <div className="service-card__icon">🤖</div>
+              <div className="service-card__icon" aria-hidden="true"><Bot /></div>
               <h3 className="service-card__title">Our AI Services</h3>
               <p className="service-card__text">Explore our agentic systems and LLM solutions.</p>
             </Link>
             <Link to="/blog" className="bento-item bento-item--col-2">
-              <div className="service-card__icon">💡</div>
+              <div className="service-card__icon" aria-hidden="true"><Lightbulb /></div>
               <h3 className="service-card__title">AI Insights</h3>
               <p className="service-card__text">Read about the latest trends in autonomous software.</p>
             </Link>

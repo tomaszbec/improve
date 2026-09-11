@@ -1,130 +1,174 @@
-import { useParams, Link, Navigate } from 'react-router-dom'
+import { useMemo } from 'react'
+import { ArrowRight, Check, Code2, Headphones, SearchCheck, Settings2 } from 'lucide-react'
+import { Link, Navigate, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { useScrollReveal } from '../hooks/useScrollReveal'
-import { useEffect } from 'react'
+import { usePageSeo, siteUrl } from '../lib/seo'
+
+const slugToKey = {
+  'custom-software-development': 'software',
+  'software-modernization': 'modernization',
+  'application-support': 'support',
+  'systems-integration': 'integrations',
+  'technology-audit': 'audit',
+  'devops-cloud': 'devops',
+  'ai-agents': 'agents',
+  'llm-semantic-search': 'llm',
+  'process-automation': 'automation',
+  'web-applications': 'web',
+  'mobile-apps': 'mobile',
+  'ai-infrastructure': 'infra',
+} as const
+
+type ServiceData = {
+  title: string
+  description: string
+  full_text: string
+  features: string[]
+  tech: string[]
+  seo_title?: string
+  seo_description?: string
+}
+
+type Faq = { question: string; answer: string }
 
 export function ServicePage() {
-  const { slug } = useParams()
+  const { slug = '' } = useParams()
   const { t } = useTranslation()
-  const ref = useScrollReveal()
+  const serviceKey = slugToKey[slug as keyof typeof slugToKey]
+  const data = serviceKey ? t(`services.items.${serviceKey}`, { returnObjects: true }) as ServiceData : null
+  const process = t('service_page.process.steps', { returnObjects: true }) as Array<{ title: string; text: string }>
+  const faqs = t('service_page.faqs', { returnObjects: true }) as Faq[]
+  const title = data?.seo_title || data?.title || t('services.title')
+  const description = data?.seo_description || data?.description || t('services.description')
 
-  // Map slug to translation key
-  const slugToKey: Record<string, string> = {
-    'ai-agents': 'agents',
-    'llm-semantic-search': 'llm',
-    'process-automation': 'automation',
-    'web-applications': 'web',
-    'mobile-apps': 'mobile',
-    'ai-infrastructure': 'infra'
-  }
+  const schema = useMemo(() => data ? ({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        '@id': `${siteUrl}/services/${slug}#service`,
+        name: data.title,
+        description,
+        serviceType: data.title,
+        provider: { '@type': 'Organization', '@id': `${siteUrl}/#organization`, name: 'improveIT.pl', url: siteUrl },
+        areaServed: ['Poland', 'European Union', 'Worldwide'],
+        url: `${siteUrl}/services/${slug}`,
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: t('nav.home'), item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: t('services.label'), item: `${siteUrl}/services` },
+          { '@type': 'ListItem', position: 3, name: data.title, item: `${siteUrl}/services/${slug}` },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
+      },
+    ],
+  }) : undefined, [data, description, faqs, slug, t])
 
-  const serviceKey = slugToKey[slug || '']
-  
-  const geminiIcons: Record<string, string> = {
-    agents: '/v2/agent_node.png',
-    llm: '/v2/semantic_brain.png',
-    infra: '/v2/neural_core.png'
-  }
+  usePageSeo({ title, description, path: `/services/${slug}`, schema })
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [slug])
-
-  if (!serviceKey) return <Navigate to="/" />
-
-  const translatedFeatures = t(`services.items.${serviceKey}.features`, { returnObjects: true })
-  const features = Array.isArray(translatedFeatures) ? translatedFeatures : []
-  
-  const translatedTech = t(`services.items.${serviceKey}.tech`, { returnObjects: true })
-  const techStack = Array.isArray(translatedTech) ? translatedTech : []
+  if (!serviceKey || !data) return <Navigate to="/services" replace />
 
   return (
-    <div className="service-detail-page">
-      <section className="hero" style={{ paddingTop: '10rem', paddingBottom: '4rem', minHeight: 'auto' }}>
-        <div className="section__container" ref={ref}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '2rem', flexWrap: 'wrap' }}>
-            <Link to="/services" className="blog-post__back" style={{ display: 'inline-flex' }}>
-              ← {t('services.back')}
-            </Link>
-
-            <div className="hero__badge" style={{ margin: 0 }}>
-              <span className="hero__badge-dot" />
-              {t('services.label')}
+    <article className="business-service-page">
+      <header className="business-service-hero">
+        <div className="section__container business-service-hero__grid">
+          <div>
+            <nav className="blog-breadcrumbs" aria-label={t('service_page.breadcrumb_label')}>
+              <Link to="/services">{t('services.label')}</Link>
+              <span className="blog-breadcrumbs__separator">/</span>
+              <span aria-current="page">{data.title}</span>
+            </nav>
+            <div className="hero__badge"><span className="hero__badge-dot" />{t('service_page.badge')}</div>
+            <h1>{data.title}</h1>
+            <p className="business-service-hero__lead">{data.full_text}</p>
+            <div className="business-service-hero__actions">
+              <Link to="/contact" className="btn btn--primary">{t('service_page.cta_quote')} <ArrowRight aria-hidden="true" /></Link>
+              <a href="#zakres" className="btn btn--outline">{t('service_page.cta_scope')}</a>
             </div>
           </div>
-          
-          <h1 className="hero__title">
-            {t(`services.items.${serviceKey}.title`)}
-          </h1>
-          
-          <p className="hero__subtitle" style={{ maxWidth: '800px', margin: '1.5rem 0 3rem' }}>
-            {t(`services.items.${serviceKey}.full_text`)}
-          </p>
-
-          <div className="hero__actions">
-            <Link to="/contact" className="btn btn--primary">
-              {t('hero.cta_talk')}
-            </Link>
+          <div className="business-service-hero__panel" aria-hidden="true">
+            <Code2 />
+            <div><span>01</span><strong>{t('service_page.panel.audit')}</strong></div>
+            <div><span>02</span><strong>{t('service_page.panel.delivery')}</strong></div>
+            <div><span>03</span><strong>{t('service_page.panel.support')}</strong></div>
           </div>
+        </div>
+      </header>
 
-          {geminiIcons[serviceKey] && (
-            <div 
-              className="hero__gemini-visual" 
-              style={{ 
-                backgroundImage: `url(${geminiIcons[serviceKey]})`, 
-                opacity: 0.1, 
-                filter: 'blur(40px)',
-                width: '600px',
-                height: '600px'
-              }} 
-            />
-          )}
+      <section className="section business-service-answer">
+        <div className="section__container">
+          <span>{t('service_page.direct_answer_label')}</span>
+          <p>{data.description} {t('service_page.direct_answer_suffix')}</p>
+        </div>
+      </section>
+
+      <section className="section business-service-scope" id="zakres">
+        <div className="section__container">
+          <div className="section__header">
+            <span className="section__label">{t('service_page.scope_label')}</span>
+            <h2 className="section__title">{t('service_page.scope_title', { service: data.title })}</h2>
+            <p className="section__description">{t('service_page.scope_description')}</p>
+          </div>
+          <div className="business-service-scope__grid">
+            {data.features.map((feature, index) => (
+              <article key={feature}><span>0{index + 1}</span><Check aria-hidden="true" /><h3>{feature}</h3></article>
+            ))}
+          </div>
+          <div className="business-service-tech">
+            <strong>{t('service_page.tech_title')}</strong>
+            <div>{data.tech.map((technology) => <span key={technology}>{technology}</span>)}</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section business-service-process">
+        <div className="section__container">
+          <div className="section__header">
+            <span className="section__label">{t('service_page.process.label')}</span>
+            <h2 className="section__title">{t('service_page.process.title')}</h2>
+          </div>
+          <ol>
+            {process.map((step, index) => (
+              <li key={step.title}>
+                <span>0{index + 1}</span>
+                {index === 0 ? <SearchCheck aria-hidden="true" /> : index === process.length - 1 ? <Headphones aria-hidden="true" /> : <Settings2 aria-hidden="true" />}
+                <div><h3>{step.title}</h3><p>{step.text}</p></div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="section business-service-faq">
+        <div className="section__container">
+          <div className="section__header">
+            <span className="section__label">FAQ</span>
+            <h2 className="section__title">{t('service_page.faq_title')}</h2>
+          </div>
+          <div className="business-service-faq__list">
+            {faqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}
+          </div>
+          <p className="business-service-updated">{t('service_page.updated')}</p>
         </div>
       </section>
 
       <section className="section">
-        <div className="section__container">
-          <div className="bento-grid">
-            <div className="bento-item bento-item--col-2">
-              <h3 className="section__title" style={{ fontSize: '1.5rem', textAlign: 'left', marginBottom: '2rem' }}>
-                {t('services.label')} & Features
-              </h3>
-              <ul className="service-detail__list">
-                {features.map((f, i) => (
-                  <li key={i} className="service-detail__list-item" style={{ marginBottom: '1rem' }}>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bento-item bento-item--col-2">
-              <h3 className="section__title" style={{ fontSize: '1.5rem', textAlign: 'left', marginBottom: '2rem' }}>
-                Tech Stack
-              </h3>
-              <div className="service-card__tags" style={{ justifyContent: 'flex-start', marginTop: '0', flexWrap: 'wrap' }}>
-                {techStack.map((tech) => (
-                  <span key={tech} className="service-card__tag" style={{ fontSize: '1rem', padding: '0.6rem 1.2rem', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.2)' }}>
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
+        <div className="section__container ai-services-cta">
+          <span className="section__label">{t('service_page.cta_label')}</span>
+          <h2>{t('service_page.cta_title')}</h2>
+          <p>{t('service_page.cta_text')}</p>
+          <Link className="btn btn--primary" to="/contact">{t('service_page.cta_quote')} <ArrowRight aria-hidden="true" /></Link>
         </div>
       </section>
-
-      <section className="section" style={{ background: 'rgba(16, 185, 129, 0.03)', borderTop: '1px solid var(--color-border)' }}>
-        <div className="section__container" style={{ textAlign: 'center' }}>
-          <h2 className="section__title">Ready to Elevate Your Business?</h2>
-          <p className="section__description" style={{ margin: '0 auto 3rem auto' }}>
-            Our team is ready to implement {t(`services.items.${serviceKey}.title`)} tailored to your needs.
-          </p>
-          <Link to="/contact" className="btn btn--primary" style={{ padding: '1rem 3rem' }}>
-            Get a Quote
-          </Link>
-        </div>
-      </section>
-    </div>
+    </article>
   )
 }

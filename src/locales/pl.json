@@ -1,17 +1,23 @@
 {
   "nav": {
+    "home": "Strona główna",
     "services": "Usługi",
     "about": "O nas",
     "tech": "Technologie",
     "portfolio": "Portfolio",
     "blog": "Blog",
+    "carriers": "Kariera",
     "contact": "Kontakt"
+  },
+  "home_seo": {
+    "title": "Software development, AI i support technologiczny",
+    "description": "Projektujemy, wdrażamy i rozwijamy oprogramowanie web, mobile, cloud i AI. Zapewniamy audyty, integracje, modernizację, optymalizację oraz stały support dla firm."
   },
   "hero": {
     "badge": "Zaufany partner technologiczny od 2016",
-    "title_start": "Budujemy Przyszłość",
-    "title_gradient": "Napędzaną przez AI",
-    "subtitle": "Projektujemy i wdrażamy zaawansowane systemy agentowe, inteligentną automatyzację i oprogramowanie AI-first, które redefiniuje efektywność Twojego biznesu.",
+    "title_start": "Software development",
+    "title_gradient": "od pomysłu po stały support",
+    "subtitle": "Projektujemy, rozwijamy i modernizujemy oprogramowanie w technologiach web, mobile, cloud i AI. Zapewniamy wdrożenia, integracje, audyty, optymalizację oraz wsparcie istniejących systemów.",
     "cta_talk": "Porozmawiajmy →",
     "cta_portfolio": "Zobacz projekty",
     "stat_clients": "Wdrożeń AI",
@@ -19,10 +25,71 @@
   },
   "services": {
     "label": "Usługi",
-    "title": "Kompleksowe rozwiązania technologiczne",
-    "description": "Od strategii po wdrożenie — dostarczamy pełen zakres usług inżynierii oprogramowania.",
+    "title": "Development, wdrożenia i support technologiczny",
+    "description": "Budujemy nowe produkty, przejmujemy istniejące systemy i poprawiamy ich wydajność, bezpieczeństwo oraz koszty utrzymania.",
     "back": "Powrót do usług",
     "items": {
+      "software": {
+        "title": "Dedykowane oprogramowanie",
+        "seo_title": "Software development dla firm — web, mobile, cloud i AI",
+        "seo_description": "Dedykowane oprogramowanie dla firm: analiza, UX, development, testy, wdrożenie i support. React, Angular, Node.js, Python, Java, .NET, mobile, cloud i AI.",
+        "description": "Tworzymy aplikacje webowe, mobilne, systemy SaaS i rozwiązania biznesowe w technologii dopasowanej do produktu.",
+        "full_text": "Prowadzimy software development od analizy i architektury przez implementację oraz testy po wdrożenie i dalszy rozwój. Możemy zbudować cały produkt albo dołączyć do istniejącego zespołu i stosu technologicznego.",
+        "features": ["Analiza wymagań i architektura", "Frontend, backend i aplikacje mobilne", "Testy, CI/CD i wdrożenie", "Rozwój produktu i stały support"],
+        "tech": ["React, Angular, Vue", "Node.js, Python, Java, .NET, PHP", "React Native, Flutter, Swift, Kotlin", "AWS, Azure, Kubernetes, PostgreSQL"]
+      },
+      "modernization": {
+        "title": "Modernizacja i refaktoryzacja oprogramowania",
+        "seo_title": "Modernizacja i refaktoryzacja aplikacji",
+        "seo_description": "Audyt i modernizacja istniejących aplikacji: refaktoryzacja kodu, aktualizacja frameworków, poprawa wydajności, bezpieczeństwa i kosztów utrzymania.",
+        "description": "Porządkujemy kod, aktualizujemy technologie i usuwamy ograniczenia, które spowalniają rozwój produktu.",
+        "full_text": "Modernizujemy działające systemy bez niepotrzebnego przepisywania ich od zera. Zaczynamy od audytu kodu, architektury i ryzyk, a następnie realizujemy refaktoryzację etapami z testami regresji i kontrolowanym wdrożeniem.",
+        "features": ["Audyt kodu i długu technologicznego", "Aktualizacja frameworków i zależności", "Refaktoryzacja React Native, web i backendu", "Migracja etapami bez zatrzymywania biznesu"],
+        "tech": ["React Native", "React i Angular", "Node.js, Java, .NET, PHP", "Bazy danych i infrastruktura cloud"]
+      },
+      "support": {
+        "title": "Support i rozwój aplikacji",
+        "seo_title": "Support aplikacji i utrzymanie oprogramowania",
+        "seo_description": "Stały support aplikacji: usuwanie błędów, monitoring, aktualizacje, rozwój funkcji, optymalizacja wydajności i bezpieczne przejęcie istniejącego systemu.",
+        "description": "Przejmujemy utrzymanie istniejących aplikacji, rozwiązujemy bieżące problemy i planujemy dalszy rozwój.",
+        "full_text": "Zapewniamy support techniczny dla aplikacji webowych, mobilnych, backendów i środowisk cloud. Dokumentujemy system, stabilizujemy najbardziej ryzykowne obszary, monitorujemy działanie i realizujemy poprawki oraz nowe funkcje.",
+        "features": ["Przejęcie i dokumentacja systemu", "Diagnostyka oraz usuwanie błędów", "Monitoring, aktualizacje i bezpieczeństwo", "Planowany rozwój nowych funkcji"],
+        "tech": ["Web i mobile", "Backend i API", "Bazy danych", "Cloud, DevOps i observability"]
+      },
+      "integrations": {
+        "title": "Integracje systemów i API",
+        "seo_title": "Integracje systemów, API, CRM i e-commerce",
+        "seo_description": "Projektujemy i wdrażamy integracje API między aplikacjami, CRM, ERP, e-commerce, płatnościami, magazynem, analityką i usługami AI.",
+        "description": "Łączymy aplikacje i dane tak, aby informacje przepływały automatycznie, bez ręcznego przepisywania.",
+        "full_text": "Budujemy bezpieczne integracje API, synchronizację danych i automatyczne przepływy między systemami firmy. Obsługujemy zarówno nowoczesne API, jak i starsze rozwiązania wymagające adapterów, kolejek lub kontrolowanej migracji.",
+        "features": ["Projekt integracji i model danych", "API, webhooki i kolejki zdarzeń", "Synchronizacja CRM, ERP i e-commerce", "Monitoring błędów i ponawianie operacji"],
+        "tech": ["REST, GraphQL, gRPC", "Kafka i RabbitMQ", "Salesforce, HubSpot, systemy ERP", "Płatności, logistyka i usługi AI"]
+      },
+      "audit": {
+        "title": "Audyt technologiczny i architektoniczny",
+        "seo_title": "Audyt technologiczny, kodu i architektury systemu",
+        "seo_description": "Niezależny audyt kodu, architektury, wydajności, bezpieczeństwa i infrastruktury. Raport ryzyk, priorytetów, kosztów oraz konkretna roadmapa zmian.",
+        "description": "Sprawdzamy kod, architekturę, infrastrukturę i proces wytwarzania, a następnie wskazujemy priorytety zmian.",
+        "full_text": "Audyt technologiczny daje niezależny obraz jakości systemu przed rozwojem, modernizacją, przejęciem projektu lub inwestycją. Wynikiem jest raport z dowodami, oceną ryzyka i roadmapą uporządkowaną według wpływu oraz nakładu pracy.",
+        "features": ["Przegląd kodu i architektury", "Wydajność, bezpieczeństwo i skalowalność", "Proces developmentu, testy i CI/CD", "Raport ryzyk oraz roadmapa działań"],
+        "tech": ["Web i mobile", "Backend i bazy danych", "Cloud i Kubernetes", "AI, dane i integracje"]
+      },
+      "devops": {
+        "title": "DevOps, cloud i wdrożenia",
+        "seo_title": "DevOps i cloud — wdrożenia, Kubernetes, AWS i Azure",
+        "seo_description": "Projektujemy CI/CD, konteneryzację, monitoring i środowiska cloud. Wdrożenia Kubernetes, AWS i Azure, optymalizacja kosztów oraz niezawodności.",
+        "description": "Automatyzujemy wdrożenia i budujemy środowiska, które można bezpiecznie rozwijać, monitorować i skalować.",
+        "full_text": "Porządkujemy proces od repozytorium do produkcji: CI/CD, kontenery, konfigurację, obserwowalność i zarządzanie środowiskami. Wspieramy migracje do chmury, wdrożenia Kubernetes oraz optymalizację kosztów infrastruktury.",
+        "features": ["CI/CD i automatyzacja wdrożeń", "Docker i Kubernetes", "Monitoring, logi i alerty", "Optymalizacja kosztów i niezawodności"],
+        "tech": ["AWS i Azure", "Kubernetes i Docker", "Terraform i Helm", "Prometheus, Grafana i OpenTelemetry"]
+      },
+      "aiTransformation": {
+        "title": "Transformacja AI dla firm",
+        "description": "Audytujemy procesy, wybieramy właściwe zastosowania AI, wdrażamy je w obecnych systemach i wspieramy zespół po uruchomieniu.",
+        "full_text": "Kompleksowo przygotowujemy e-commerce do wykorzystania AI: identyfikujemy procesy o największym potencjale, wdrażamy rozwiązania z mierzalnym celem i wspieramy zespół po uruchomieniu.",
+        "features": ["Audyt gotowości i danych", "Roadmapa AI z priorytetami", "Wdrożenie i integracja", "Monitoring i stały support"],
+        "tech": ["OpenAI", "RAG", "Automatyzacja", "Integracje e-commerce"]
+      },
       "agents": {
         "title": "Agenci AI & Autonomiczne Przepływy",
         "description": "Inteligentne systemy agentowe, które samodzielnie planują i wykonują złożone procesy biznesowe.",
@@ -71,7 +138,329 @@
         "full_text": "Zapewniamy wydajność i oszczędność kosztów poprzez precyzyjne skalowanie instancji GPU i CPU. Wdrażamy systemy monitoringu modeli w produkcji (MLOps).",
         "features": ["Auto-scaling GPU clusters", "Model hosting & Versioning", "Fine-tuning pipelines", "Monitoring i drift detection"],
         "tech": ["AWS SageMaker", "Kubernetes", "vLLM", "Docker"]
+      },
+      "aiOptimization": {
+        "title": "Optymalizacja AI",
+        "description": "Mierz wykorzystanie AI, kontroluj koszty tokenów, porównuj zespoły i przekładaj inwestycje w AI na wartość biznesową."
+      },
+      "claudeCode": {
+        "title": "Optymalizacja Claude Code",
+        "description": "Monitoruj adopcję Claude Code, wykorzystanie tokenów i koszt na programistę dzięki gotowej obserwowalności."
       }
+    }
+  },
+  "service_page": {
+    "breadcrumb_label": "Okruszki nawigacyjne",
+    "badge": "Usługi software development",
+    "cta_quote": "Zapytaj o wycenę",
+    "cta_scope": "Zobacz zakres",
+    "panel": { "audit": "Analiza", "delivery": "Wdrożenie", "support": "Support" },
+    "direct_answer_label": "W skrócie",
+    "direct_answer_suffix": "Zakres, technologię i model współpracy dobieramy do istniejącego środowiska, ryzyka oraz celu biznesowego.",
+    "scope_label": "Zakres usługi",
+    "scope_title": "Co obejmuje {{service}}?",
+    "scope_description": "Przed rozpoczęciem ustalamy rezultat, odpowiedzialności, kryteria odbioru i sposób mierzenia efektów.",
+    "tech_title": "Technologie dobierane do rozwiązania",
+    "process": {
+      "label": "Jak pracujemy",
+      "title": "Od diagnozy do stabilnego działania",
+      "steps": [
+        { "title": "Analiza i cele", "text": "Poznajemy system, proces biznesowy, ograniczenia oraz mierniki sukcesu." },
+        { "title": "Plan techniczny", "text": "Ustalamy architekturę, zakres, ryzyka, harmonogram i sposób bezpiecznego wdrożenia." },
+        { "title": "Realizacja i testy", "text": "Pracujemy iteracyjnie, pokazujemy postęp i weryfikujemy rozwiązanie na rzeczywistych scenariuszach." },
+        { "title": "Wdrożenie i support", "text": "Uruchamiamy rozwiązanie, przekazujemy dokumentację i wspieramy dalszy rozwój." }
+      ]
+    },
+    "faq_title": "Najczęstsze pytania o współpracę",
+    "faqs": [
+      { "question": "Czy możecie przejąć istniejącą aplikację lub projekt?", "answer": "Tak. Zaczynamy od przeglądu kodu, infrastruktury, dokumentacji i listy bieżących problemów. Następnie przygotowujemy plan przejęcia, stabilizacji i rozwoju bez wymiany technologii tylko dlatego, że jest nam mniej znana." },
+      { "question": "Czy realizujecie zarówno pojedyncze wdrożenia, jak i stały support?", "answer": "Tak. Możemy przeprowadzić zamknięty audyt lub wdrożenie, a także zapewnić stały zespół do utrzymania, optymalizacji i rozwoju systemu po uruchomieniu." },
+      { "question": "Jak powstaje wycena projektu?", "answer": "Najpierw ustalamy cel, zakres, integracje, ryzyka i oczekiwany termin. Dla dobrze określonego zakresu możemy przygotować wycenę etapową, a przy ciągłym rozwoju rozliczenie według uzgodnionego zespołu i czasu pracy." },
+      { "question": "Czy pracujecie w technologii używanej już w naszej firmie?", "answer": "Tak. Pracujemy z rozwiązaniami web, mobile, backend, cloud, bazami danych i AI. Dobór specjalistów wynika z istniejącego stosu, architektury i zadania, a nie z jednej preferowanej technologii." }
+    ],
+    "updated": "Ostatnia aktualizacja: 11 września 2026",
+    "cta_label": "Porozmawiajmy o systemie",
+    "cta_title": "Otrzymaj konkretny plan kolejnego kroku",
+    "cta_text": "Opisz produkt, problem lub zakres zmian. Wrócimy z rekomendacją audytu, wdrożenia albo modelu stałego wsparcia."
+  },
+  "ai_services": {
+    "seo": {
+      "title": "Usługi transformacji AI dla firm",
+      "description": "Audyt, roadmapa, pilotaż i wdrożenie AI dla e-commerce, obsługi klienta, sprzedaży, operacji, wiedzy firmowej i zespołów software development."
+    },
+    "breadcrumb": "Transformacja AI dla firm",
+    "hero": {
+      "badge": "Usługi transformacji AI",
+      "title_start": "Zmieniamy procesy w",
+      "title_accent": "firmę AI-first",
+      "lead": "Od konkretnego problemu do bezpiecznego, mierzalnego wdrożenia.",
+      "description": "Analizujemy procesy, wybieramy zastosowania AI i wdrażamy rozwiązania tam, gdzie mogą skrócić pracę, poprawić obsługę klienta lub zwiększyć kontrolę nad kosztami. Integrujemy je z obecnymi systemami i wspieramy zespół po uruchomieniu.",
+      "cta_services": "Poznaj obszary transformacji",
+      "cta_talk": "Porozmawiajmy"
+    },
+    "map": { "label": "Mapa usług transformacji AI", "core": "Transformacja firmy" },
+    "catalog": {
+      "label": "Obszary transformacji",
+      "title": "AI dopasowane do miejsca, w którym powstaje wartość",
+      "description": "Każdy obszar ma osobny zakres, rezultat i sposób integracji. Możesz zacząć od jednego procesu i rozwijać kolejne.",
+      "more": "Zobacz usługę"
+    },
+    "items": {
+      "ecommerce": {
+        "short": "E-commerce",
+        "title": "E-commerce z AI",
+        "headline": "Zmień sklep internetowy w biznes AI-first",
+        "description": "Wdrażamy AI w sprzedaży, obsłudze klienta i procesach operacyjnych sklepu.",
+        "bullets": ["Audyt i konkretna roadmapa", "Bez wymiany całej platformy", "Stałe wsparcie po uruchomieniu"]
+      },
+      "customerService": {
+        "short": "Obsługa",
+        "title": "Obsługa klienta z AI",
+        "headline": "Zapewnij szybszą pomoc i odciąż swój zespół",
+        "description": "Asystenci AI obsługują powtarzalne pytania i wspierają konsultantów w trudniejszych sprawach.",
+        "bullets": ["Odpowiedzi z firmowej wiedzy", "Integracja z helpdeskiem i CRM", "Płynne przekazanie konsultantowi"]
+      },
+      "sales": {
+        "short": "Sprzedaż",
+        "title": "Sprzedaż z AI",
+        "headline": "Daj handlowcom więcej czasu na sprzedaż",
+        "description": "Usprawniamy drogę od pierwszego kontaktu do umowy bez odbierania zespołowi kontroli.",
+        "bullets": ["Kwalifikacja leadów", "Projekty ofert i wiadomości", "Notatki i aktualizacja CRM"]
+      },
+      "operations": {
+        "short": "Operacje",
+        "title": "Operacje z AI",
+        "headline": "Zamień powtarzalne zadania w sprawne procesy",
+        "description": "Łączymy AI z automatyzacją dokumentów, danych i przepływu informacji.",
+        "bullets": ["Odczyt i klasyfikacja dokumentów", "Integracja z obecnymi narzędziami", "Historia działań i obsługa wyjątków"]
+      },
+      "knowledge": {
+        "short": "Wiedza",
+        "title": "Wiedza firmowa z AI",
+        "headline": "Zamień firmowe dokumenty w odpowiedzi dostępne od ręki",
+        "description": "Łączymy dokumentację, procedury i materiały w asystenta wiedzy ze źródłami i uprawnieniami.",
+        "bullets": ["Wyszukiwanie w dokumentach", "Dostęp zgodny z uprawnieniami", "Wsparcie onboardingu i pracy"]
+      },
+      "softwareDevelopment": {
+        "short": "Software",
+        "title": "Software development z AI",
+        "headline": "Włącz AI w codzienną pracę programistów",
+        "description": "Konfigurujemy narzędzia do kodu, testów i dokumentacji oraz mierzymy ich rzeczywisty wpływ.",
+        "bullets": ["Asystenci z kontekstem projektu", "Integracja z repozytoriami", "Pomiar użycia, kosztów i efektów"]
+      },
+      "aiGuard": {
+        "short": "AI Guard",
+        "title": "Zarządzanie AI z AI Guard",
+        "headline": "Kontroluj dostęp, dane i koszty firmowego AI",
+        "description": "Wspólne zasady dla podłączonych aplikacji, modeli, projektów i zespołów.",
+        "bullets": ["Budżety i uprawnienia", "Reguły ochrony danych", "Monitoring, raporty i alerty"]
+      }
+    },
+    "model": {
+      "label": "Wspólny model realizacji",
+      "title": "Kontrolowany proces od audytu do efektów",
+      "description": "Zakres, mierniki sukcesu i koszty ustalamy przed wdrożeniem. Każdy etap ma jasny rezultat i decyzję o dalszym rozwoju.",
+      "steps": ["Audyt i roadmapa", "Pilotaż", "Wdrożenie i integracje", "Szkolenie zespołu", "Stałe wsparcie i pomiar efektów"],
+      "note": "AI Guard obejmuje podłączone przepływy i aplikacje. Nie oznacza automatycznej kontroli wszystkich narzędzi AI używanych przez pracowników."
+    },
+    "cta": {
+      "label": "Pierwszy krok",
+      "title": "Znajdźmy najlepszy punkt startu dla AI",
+      "description": "Opisz proces, który spowalnia Twój zespół. Wrócimy z rekomendacją zakresu audytu lub pilotażu.",
+      "button": "Umów konsultację"
+    },
+    "faq_title": "Najczęstsze pytania o transformację AI",
+    "faqs": [
+      { "question": "Czym jest transformacja AI w firmie?", "answer": "Transformacja AI to uporządkowany proces wyboru, wdrożenia i mierzenia rozwiązań wykorzystujących sztuczną inteligencję. Zaczyna się od konkretnego problemu biznesowego, danych i miernika sukcesu, a nie od zakupu przypadkowego narzędzia." },
+      { "question": "Od czego zacząć wdrożenie AI?", "answer": "Najbezpieczniej zacząć od audytu procesów, danych i obecnych systemów. Na tej podstawie wybieramy zastosowanie o wysokiej wartości i możliwym do kontrolowania ryzyku, a następnie sprawdzamy je w pilotażu." },
+      { "question": "Czy wdrożenie AI wymaga wymiany obecnych systemów?", "answer": "Zwykle nie. Rozwiązania AI można integrować z obecnym e-commerce, CRM, helpdeskiem, bazą wiedzy lub systemem operacyjnym przez API i kontrolowane przepływy danych." },
+      { "question": "Jak mierzyć efekty wdrożenia AI?", "answer": "Mierniki ustalamy przed pilotażem. Mogą obejmować czas obsługi, liczbę ręcznych czynności, trafność odpowiedzi, koszt procesu, poziom eskalacji lub wykorzystanie narzędzia przez zespół." },
+      { "question": "Czy zapewniacie wsparcie po uruchomieniu?", "answer": "Tak. Po wdrożeniu monitorujemy jakość, koszty i błędy, aktualizujemy integracje oraz rozwijamy rozwiązanie na podstawie rzeczywistego użycia i informacji od zespołu." }
+    ]
+  },
+  "ai_service_pages": {
+    "common": {
+      "cta": "Porozmawiajmy o wdrożeniu",
+      "scope": "Zobacz zakres",
+      "audit": "Audyt",
+      "integrate": "Integracja",
+      "measure": "Pomiar",
+      "capabilitiesLabel": "Zakres usługi",
+      "outcomeLabel": "Sposób realizacji",
+      "ctaLabel": "Kolejny krok",
+      "ctaTitle": "Zacznij od jednego procesu",
+      "ctaText": "Zweryfikujemy potencjał, ryzyka i koszt przed rozpoczęciem właściwego wdrożenia.",
+      "faqTitle": "Pytania przed wdrożeniem",
+      "updated": "Ostatnia aktualizacja: 11 września 2026"
+    },
+    "customerService": {
+      "title": "Obsługa klienta z AI",
+      "headline": "Zapewnij szybszą pomoc i odciąż swój zespół",
+      "description": "Wdrażamy asystentów odpowiadających na powtarzalne pytania oraz wspierających konsultantów w trudniejszych sprawach — w oparciu o aktualną wiedzę firmy.",
+      "bullets": ["Odpowiedzi oparte na firmowej bazie wiedzy", "Integracja z helpdeskiem, CRM i czatem", "Przekazanie rozmowy konsultantowi wraz z kontekstem"],
+      "seoDescription": "Asystenci AI dla obsługi klienta: firmowa baza wiedzy, integracja z helpdeskiem i CRM oraz bezpieczne przekazywanie spraw konsultantom.",
+      "capabilitiesTitle": "Asystent, który pomaga klientom i konsultantom",
+      "capabilities": [
+        { "title": "Samoobsługa klienta", "text": "Natychmiastowe odpowiedzi na pytania o ofertę, zamówienia, zwroty i procedury przez całą dobę." },
+        { "title": "Copilot konsultanta", "text": "Proponuje odpowiedzi, podsumowuje historię kontaktu i odnajduje właściwe informacje podczas rozmowy." },
+        { "title": "Kontrolowane eskalacje", "text": "Rozpoznaje sytuacje wymagające człowieka i przekazuje sprawę wraz z pełnym kontekstem." }
+      ],
+      "outcomeTitle": "Krótszy czas odpowiedzi bez utraty jakości",
+      "outcomeText": "Zaczynamy od analizy typów zgłoszeń, jakości bazy wiedzy i obecnych integracji. Mierzymy trafność odpowiedzi, poziom automatyzacji i wpływ na czas pracy zespołu."
+    },
+    "sales": {
+      "title": "Sprzedaż z AI",
+      "headline": "Daj handlowcom więcej czasu na sprzedaż",
+      "description": "Usprawniamy drogę od pierwszego kontaktu do umowy: porządkowanie leadów, przygotowywanie ofert i podsumowywanie rozmów.",
+      "bullets": ["Kwalifikacja leadów według Twoich kryteriów", "Projekty ofert i wiadomości do zatwierdzenia", "Notatki ze spotkań i aktualizacja CRM"],
+      "seoDescription": "AI dla sprzedaży B2B: kwalifikacja leadów, przygotowanie ofert, notatki ze spotkań i automatyczna aktualizacja CRM.",
+      "capabilitiesTitle": "AI wspiera handlowca na każdym etapie lejka",
+      "capabilities": [
+        { "title": "Priorytetyzacja leadów", "text": "Porządkuje zgłoszenia według ustalonych kryteriów i wskazuje brakujące informacje." },
+        { "title": "Przygotowanie komunikacji", "text": "Tworzy projekty wiadomości, podsumowań i ofert na podstawie danych klienta oraz firmowych standardów." },
+        { "title": "Porządek w CRM", "text": "Zamienia rozmowy i spotkania w notatki, zadania i aktualne dane procesu sprzedażowego." }
+      ],
+      "outcomeTitle": "Mniej administracji, więcej wartościowych rozmów",
+      "outcomeText": "AI przygotowuje materiały i dane, ale kluczowe decyzje oraz komunikacja pozostają pod kontrolą zespołu sprzedaży."
+    },
+    "operations": {
+      "title": "Operacje z AI",
+      "headline": "Zamień powtarzalne zadania w sprawne procesy",
+      "description": "Łączymy AI z automatyzacją, aby ograniczyć przepisywanie danych, ręczną obsługę dokumentów i przekazywanie informacji między systemami.",
+      "bullets": ["Odczytywanie i klasyfikowanie dokumentów", "Integracja z obecnymi narzędziami firmy", "Zatwierdzanie wyjątków i historia działań"],
+      "seoDescription": "Automatyzacja operacji z AI: przetwarzanie dokumentów, integracje systemów, kontrola wyjątków i pełna historia działań.",
+      "capabilitiesTitle": "Automatyzacja, która rozumie dane i wyjątki",
+      "capabilities": [
+        { "title": "Dokumenty i dane", "text": "Odczytuje, klasyfikuje i sprawdza faktury, zamówienia, formularze oraz korespondencję." },
+        { "title": "Przepływy między systemami", "text": "Łączy istniejące aplikacje bez wymagania kosztownej wymiany całego środowiska." },
+        { "title": "Człowiek przy wyjątkach", "text": "Kieruje nietypowe przypadki do zatwierdzenia i zachowuje historię każdej wykonanej czynności." }
+      ],
+      "outcomeTitle": "Szybszy proces z zachowaną kontrolą",
+      "outcomeText": "Projektujemy przepływ tak, aby automatyzować przewidywalne przypadki, a decyzje ryzykowne lub nietypowe pozostawić właściwym osobom."
+    },
+    "knowledge": {
+      "title": "Wiedza firmowa z AI",
+      "headline": "Zamień firmowe dokumenty w odpowiedzi dostępne od ręki",
+      "description": "Łączymy dokumentację, procedury i materiały wewnętrzne w asystenta wiedzy. Odpowiedzi wskazują źródła i uwzględniają uprawnienia pracownika.",
+      "bullets": ["Wyszukiwanie w dokumentach i bazach wiedzy", "Dostęp zgodny z uprawnieniami pracownika", "Wsparcie onboardingu i codziennej pracy"],
+      "seoDescription": "Bezpieczny asystent wiedzy firmowej AI z cytowaniem źródeł, kontrolą uprawnień i integracją dokumentacji oraz baz wiedzy.",
+      "capabilitiesTitle": "Jedno miejsce do rozmowy z wiedzą organizacji",
+      "capabilities": [
+        { "title": "Odpowiedzi ze źródłami", "text": "Wyszukuje informacje w podłączonych materiałach i pokazuje dokumenty, na których opiera odpowiedź." },
+        { "title": "Kontrola dostępu", "text": "Uwzględnia rolę i uprawnienia użytkownika, aby nie ujawniać treści spoza jego zakresu." },
+        { "title": "Aktualna wiedza", "text": "Synchronizuje zatwierdzone źródła i pomaga wykrywać niespójne lub nieaktualne materiały." }
+      ],
+      "outcomeTitle": "Mniej szukania, szybsze decyzje i onboarding",
+      "outcomeText": "Najpierw porządkujemy źródła i reguły dostępu. Następnie testujemy jakość odpowiedzi na realnych pytaniach pracowników."
+    },
+    "softwareDevelopment": {
+      "title": "Software development z AI",
+      "headline": "Włącz AI w codzienną pracę programistów",
+      "description": "Wdrażamy narzędzia AI do pracy z kodem, testami i dokumentacją. Ustalamy zasady korzystania, szkolimy zespół i mierzymy efekty.",
+      "bullets": ["Konfiguracja asystentów i kontekstu projektowego", "Integracja z repozytoriami i procesem code review", "Pomiar wykorzystania, kosztów i efektów pracy"],
+      "seoDescription": "Wdrożenie AI w software development: asystenci kodowania, kontekst repozytorium, code review, szkolenia oraz pomiar kosztów i efektów.",
+      "capabilitiesTitle": "AI osadzone w rzeczywistym procesie wytwarzania",
+      "capabilities": [
+        { "title": "Kontekst projektu", "text": "Konfigurujemy instrukcje, wiedzę i narzędzia tak, aby asystent rozumiał architekturę oraz standardy zespołu." },
+        { "title": "Workflow developerski", "text": "Włączamy AI do implementacji, testowania, dokumentacji i code review z kontrolą jakości." },
+        { "title": "Adopcja i pomiar", "text": "Szkolimy zespół oraz mierzymy wykorzystanie, koszty i wpływ na szybkość dostarczania zmian." }
+      ],
+      "outcomeTitle": "Szybsza praca bez obniżania standardów",
+      "outcomeText": "Wdrożenie obejmuje technologię, zasady bezpieczeństwa i sposób pracy zespołu — nie kończy się na zakupie licencji."
+    },
+    "aiGuard": {
+      "title": "Zarządzanie AI z AI Guard",
+      "headline": "Kontroluj dostęp, dane i koszty firmowego AI",
+      "description": "Wdrażamy wspólne zasady dla objętych integracją aplikacji i zespołów. Zapewniamy widoczność wydatków, kontrolę dostępu do modeli i rejestr zdarzeń.",
+      "bullets": ["Budżety i uprawnienia dla zespołów oraz projektów", "Reguły ochrony danych w podłączonych przepływach", "Monitoring użycia, raporty i powiadomienia"],
+      "seoDescription": "AI Guard: zarządzanie dostępem do modeli, budżetami, regułami ochrony danych oraz monitoringiem podłączonych przepływów AI.",
+      "capabilitiesTitle": "Warstwa kontroli dla podłączonych rozwiązań AI",
+      "capabilities": [
+        { "title": "Dostęp i budżety", "text": "Definiuje uprawnienia, limity i modele dostępne dla zespołów, projektów lub środowisk." },
+        { "title": "Reguły ochrony danych", "text": "Egzekwuje zasady w objętych integracją przepływach i zapisuje zdarzenia wymagane do audytu." },
+        { "title": "Widoczność wykorzystania", "text": "Pokazuje użycie, koszty i anomalie oraz dostarcza raporty i powiadomienia właściwym osobom." }
+      ],
+      "outcomeTitle": "Kontrola tam, gdzie AI jest podłączone",
+      "outcomeText": "AI Guard obejmuje zintegrowane aplikacje i przepływy. Nie obiecujemy automatycznej kontroli narzędzi, które działają poza tym zakresem."
+    }
+  },
+  "ai_transformation": {
+    "seo": {
+      "title": "Transformacja AI dla e-commerce — audyt, wdrożenie, support",
+      "description": "Profesjonalna transformacja sklepu internetowego pod AI: audyt, roadmapa, wdrożenie, integracje i support. Zamów bezpłatną wycenę online."
+    },
+    "hero": {
+      "badge": "Transformacja AI dla e-commerce",
+      "title": "Zmień sklep internetowy w biznes AI-first",
+      "description": "Analizujemy sprzedaż, obsługę klienta i procesy operacyjne, a następnie wdrażamy AI tam, gdzie realnie skraca pracę, poprawia doświadczenie zakupowe i wspiera wzrost.",
+      "points": ["Profesjonalny audyt i konkretna roadmapa", "Wdrożenie bez wymiany całej platformy", "Stały support po uruchomieniu"],
+      "cta_quote": "Bezpłatna wycena online",
+      "cta_process": "Zobacz, jak pracujemy"
+    },
+    "console": {
+      "label": "AI TRANSFORMATION MAP",
+      "store": "Twój e-commerce",
+      "status": "Gotowy do analizy",
+      "audit": "Audyt możliwości",
+      "implementation": "Wdrożenie AI",
+      "support": "Optymalizacja i support"
+    },
+    "proof": {
+      "label": "Zakres usługi",
+      "audit": "Audyt biznesu, procesów i danych",
+      "delivery": "Bezpieczne wdrożenie end-to-end",
+      "support": "Monitoring i długofalowy support"
+    },
+    "opportunities": {
+      "label": "Możliwości",
+      "title": "AI, które pracuje na wynik e-commerce",
+      "description": "Dobieramy rozwiązania do modelu biznesowego, obecnej platformy i jakości danych — nie odwrotnie.",
+      "items": [
+        { "title": "Obsługa klienta 24/7", "text": "Asystenci AI odpowiadają na pytania, sprawdzają zamówienia i wspierają zwroty, korzystając z aktualnej wiedzy sklepu." },
+        { "title": "Inteligentne wyszukiwanie", "text": "Klienci znajdują produkty językiem naturalnym, a rekomendacje uwzględniają intencję, kontekst i ofertę." },
+        { "title": "Automatyzacja operacji", "text": "AI usprawnia opisy produktów, klasyfikację, raporty, komunikację oraz powtarzalne zadania zespołu." },
+        { "title": "Decyzje oparte na danych", "text": "Łączymy dane sprzedażowe i marketingowe, aby szybciej wykrywać szanse, ryzyka i obszary do optymalizacji." }
+      ]
+    },
+    "process": {
+      "label": "Proces",
+      "title": "Od audytu do działającego rozwiązania",
+      "description": "Każdy etap kończy się konkretnym rezultatem biznesowym. Zaczynamy od małego, mierzalnego zakresu i skalujemy to, co działa.",
+      "steps": [
+        { "title": "Audyt AI", "text": "Przeglądamy procesy, dane, narzędzia, koszty i ograniczenia. Wskazujemy szybkie usprawnienia oraz inicjatywy o największym potencjale.", "result": "Raport i priorytety" },
+        { "title": "Wdrożenie", "text": "Projektujemy, integrujemy i testujemy rozwiązanie z Twoją platformą e-commerce, CRM, ERP lub systemem obsługi klienta.", "result": "Działające rozwiązanie" },
+        { "title": "Support i rozwój", "text": "Monitorujemy jakość, koszty i wykorzystanie. Szkolimy zespół, poprawiamy działanie i rozwijamy kolejne scenariusze.", "result": "Stabilny wzrost wartości" }
+      ]
+    },
+    "pricing": {
+      "label": "Konkurencyjna wycena",
+      "title": "Płacisz za właściwy zakres, nie za modę na AI",
+      "description": "Pracę dzielimy na czytelne etapy. Najpierw potwierdzamy potencjał i koszty, potem wdrażamy rozwiązanie — bez ukrytych zobowiązań.",
+      "items": ["Wstępna wycena online bez opłat", "Modułowy zakres dopasowany do budżetu", "Jasne rezultaty i kryteria odbioru", "Możliwość stałego supportu po wdrożeniu"],
+      "promise_title": "Odpowiedź w 1 dzień roboczy",
+      "promise_text": "Otrzymasz wstępny zakres, rekomendowany następny krok i orientacyjną wycenę."
+    },
+    "quote": {
+      "eyebrow": "Wycena online",
+      "title": "Opowiedz nam o swoim e-commerce",
+      "name": "Imię i nazwisko *",
+      "email": "E-mail firmowy *",
+      "company": "Firma",
+      "website": "Adres sklepu",
+      "platform": "Platforma *",
+      "scale": "Miesięczna liczba zamówień *",
+      "budget": "Planowany budżet *",
+      "message": "Najważniejszy cel lub problem *",
+      "message_placeholder": "Np. chcemy skrócić czas obsługi klienta i zautomatyzować tworzenie opisów produktów...",
+      "choose": "Wybierz",
+      "platform_options": ["Shopify", "WooCommerce", "PrestaShop", "Magento / Adobe Commerce", "Shoper", "Dedykowana platforma", "Inna / nie wiem"],
+      "scale_options": ["Do 500", "500–2 000", "2 000–10 000", "Powyżej 10 000", "Jeszcze nie sprzedajemy"],
+      "budget_options": ["Do 15 000 zł", "15 000–40 000 zł", "40 000–100 000 zł", "Powyżej 100 000 zł", "Potrzebuję rekomendacji"],
+      "submit": "Otrzymaj wstępną wycenę",
+      "sending": "Wysyłanie...",
+      "note": "Bez zobowiązań. Dane wykorzystamy wyłącznie do przygotowania odpowiedzi.",
+      "success": "Dziękujemy. Wrócimy z pierwszą rekomendacją i wyceną w ciągu 1 dnia roboczego.",
+      "error": "Nie udało się wysłać formularza. Spróbuj ponownie lub napisz na contact@improveit.pl."
     }
   },
   "security_audit": {
@@ -117,6 +506,30 @@
       "countries": "Projektów",
       "clients": "Wdrożeń AI"
     }
+  },
+  "technology_page": {
+    "breadcrumb_label": "Okruszki nawigacyjne",
+    "badge": "Development i wsparcie technologiczne",
+    "cta": "Zapytaj o projekt",
+    "scope": "Zobacz kompetencje",
+    "direct_answer_label": "W skrócie",
+    "direct_answer_suffix": "Możemy zbudować nowe rozwiązanie, przejąć istniejący kod, przeprowadzić refaktoryzację albo zapewnić stały support.",
+    "scope_label": "Kompetencje",
+    "scope_title": "Development w {{technology}}",
+    "scope_description": "Zakres obejmuje analizę, implementację, testy, wdrożenie i dalsze utrzymanie — zależnie od potrzeb produktu.",
+    "stack_title": "Narzędzia i ekosystem",
+    "faq_title": "Pytania o {{technology}}",
+    "faqs": [
+      { "question": "Czy możecie przejąć istniejący projekt?", "answer": "Tak. Przed przejęciem sprawdzamy kod, zależności, środowiska, testy i proces wdrożenia. Następnie ustalamy plan stabilizacji, dokumentacji oraz dalszego rozwoju." },
+      { "question": "Czy wykonujecie refaktoryzację i aktualizację starszych aplikacji?", "answer": "Tak. Modernizację dzielimy na bezpieczne etapy. W pierwszej kolejności ograniczamy ryzyka i problemy blokujące rozwój, a zmiany zabezpieczamy testami oraz kontrolowanym wdrożeniem." },
+      { "question": "Czy zapewniacie support po wdrożeniu?", "answer": "Tak. Możemy odpowiadać za utrzymanie, monitoring, poprawki, aktualizacje bezpieczeństwa, optymalizację wydajności i rozwój kolejnych funkcji." },
+      { "question": "Jak dobieracie zespół i technologię?", "answer": "Uwzględniamy istniejący stos, architekturę, skalę produktu, wymagania bezpieczeństwa i kompetencje zespołu klienta. Nie proponujemy migracji bez uzasadnionej korzyści biznesowej lub technicznej." }
+    ],
+    "updated": "Ostatnia aktualizacja: 11 września 2026",
+    "cta_label": "Następny krok",
+    "cta_title": "Porozmawiaj z inżynierem o swoim systemie",
+    "cta_text": "Opisz technologię, stan projektu i najważniejszy problem. Zaproponujemy audyt, plan rozwoju albo model stałego wsparcia.",
+    "modernization_link": "Modernizacja oprogramowania"
   },
   "tech": {
     "label": "Technologie",
@@ -196,14 +609,16 @@
         "tech": ["Vue 3", "Pinia", "Vue Router", "Vite"]
       },
       "angular": {
-        "title": "Angular Development",
-        "description": "Rozbudowane aplikacje korporacyjne budowane w solidnym frameworku Angular.",
-        "full_text": "Dostarczamy skalowalne aplikacje klasy enterprise wykorzystując Angular. Nasze podejście gwarantuje stabilność, bezpieczeństwo i łatwość zarządzania dużymi zbiorami danych w aplikacjach bankowych, medycznych i logistycznych.",
+        "title": "Angular development dla firm",
+        "seo_title": "Angular development — aplikacje, modernizacja i support",
+        "seo_description": "Angular development dla firm: nowe aplikacje, przejęcie projektu, aktualizacja wersji, refaktoryzacja, testy, optymalizacja wydajności i stały support.",
+        "description": "Tworzymy, modernizujemy i utrzymujemy rozbudowane aplikacje biznesowe w Angular.",
+        "full_text": "Realizujemy Angular development dla nowych i istniejących aplikacji. Projektujemy architekturę, rozwijamy funkcje, aktualizujemy starsze wersje Angular, porządkujemy RxJS i stan aplikacji oraz zapewniamy testy, wdrożenia i support.",
         "features": [
-          "Pełne wsparcie TypeScript",
-          "Dependency Injection",
-          "Architektura modułowa",
-          "Reactive Forms i RxJS"
+          "Nowe aplikacje Angular i TypeScript",
+          "Aktualizacja wersji i zależności",
+          "Refaktoryzacja RxJS, stanu i modułów",
+          "Testy, wydajność i stały support"
         ],
         "tech": ["Angular 17+", "RxJS", "NgRx", "Angular Material"]
       },
@@ -268,16 +683,18 @@
         "tech": ["Dart", "Flutter SDK", "Riverpod / Bloc", "Firebase"]
       },
       "reactnative": {
-        "title": "React Native Development",
-        "description": "Wydajne aplikacje mobilne budowane w oparciu o React.",
-        "full_text": "React Native pozwala nam dostarczać aplikacje o natywnym odczuciu, wykorzystując siłę ekosystemu React. To idealne rozwiązanie dla dynamicznych produktów, które muszą działać na wielu urządzeniach.",
+        "title": "React Native development i refaktoryzacja",
+        "seo_title": "React Native development — aplikacje i refaktoryzacja",
+        "seo_description": "React Native development: nowe aplikacje iOS i Android, przejęcie projektu, refaktoryzacja, aktualizacje, moduły natywne, wydajność oraz stały support.",
+        "description": "Budujemy nowe aplikacje React Native oraz przejmujemy, modernizujemy i rozwijamy istniejące produkty mobilne.",
+        "full_text": "Realizujemy React Native development od architektury i interfejsu po publikację aplikacji. W istniejących projektach wykonujemy audyt, refaktoryzację, aktualizację React Native i Expo, poprawę wydajności, integracje natywne oraz stały support.",
         "features": [
-          "Współdzielenie kodu z Web",
-          "Dostęp do natywnych API",
-          "Szybkie iteracje (Fast Refresh)",
-          "Duża społeczność"
+          "Aplikacje iOS i Android od podstaw",
+          "Refaktoryzacja i aktualizacja React Native",
+          "Moduły natywne, API i płatności",
+          "Testy, publikacja i stały support"
         ],
-        "tech": ["React Native", "Expo", "React Navigation", "Paper / Elements"]
+        "tech": ["React Native i Expo", "TypeScript", "Swift i Kotlin", "React Navigation i EAS"]
       },
       "swift": {
         "title": "Swift Development",
@@ -352,14 +769,16 @@
         "tech": ["Docker Engine", "Docker Compose", "Registry", "Security Scanning"]
       },
       "k8s": {
-        "title": "Kubernetes Orchestration",
-        "description": "Orkiestracja kontenerów na skalę produkcyjną.",
-        "full_text": "Wdrażamy i zarządzamy klastrami Kubernetes, aby zapewnić Twoim aplikacjom automatyczne skalowanie, samonaprawianie i wysoką dostępność bez względu na ruch.",
+        "title": "Eksperci Kubernetes — wdrożenia i support",
+        "seo_title": "Eksperci Kubernetes — audyt, wdrożenia i support",
+        "seo_description": "Eksperci Kubernetes: audyt klastrów, projekt architektury, migracja, Helm, Terraform, monitoring, bezpieczeństwo, optymalizacja kosztów i support.",
+        "description": "Projektujemy, audytujemy i utrzymujemy środowiska Kubernetes dla systemów produkcyjnych.",
+        "full_text": "Pomagamy firmom wdrożyć Kubernetes, uporządkować istniejące klastry i poprawić ich niezawodność. Zakres obejmuje architekturę, migrację, bezpieczeństwo, autoscaling, observability, optymalizację kosztów oraz support produkcyjny.",
         "features": [
-          "Auto-scaling",
-          "Self-healing",
-          "Load Balancing",
-          "Zarządzanie konfiguracją"
+          "Audyt klastra i architektury",
+          "Migracja oraz automatyzacja wdrożeń",
+          "Monitoring, bezpieczeństwo i skalowanie",
+          "Optymalizacja kosztów i support"
         ],
         "tech": ["Helm", "Terraform", "Istio / Linkerd", "Prometheus / Grafana"]
       },
@@ -400,9 +819,11 @@
         "tech": ["Apollo Server", "Hasura", "GraphQL Yoga", "Codegen"]
       },
       "tensorflow": {
-        "title": "TensorFlow / AI Development",
-        "description": "Budowa i trenowanie zaawansowanych modeli uczenia maszynowego.",
-        "full_text": "Wykorzystujemy TensorFlow do tworzenia modeli Computer Vision, NLP i systemów rekomendacyjnych, które realnie rozwiązują złożone problemy biznesowe nasi klientów.",
+        "title": "TensorFlow i AI development",
+        "seo_title": "TensorFlow development — modele AI i wdrożenia produkcyjne",
+        "seo_description": "TensorFlow development: modele computer vision, NLP i rekomendacje, pipeline danych, optymalizacja, TensorFlow Lite oraz wdrożenie i monitoring produkcyjny.",
+        "description": "Budujemy, optymalizujemy i wdrażamy modele uczenia maszynowego z użyciem TensorFlow.",
+        "full_text": "Wykorzystujemy TensorFlow do systemów computer vision, NLP i rekomendacji. Oprócz trenowania modeli przygotowujemy pipeline danych, testy, optymalizację inferencji, wdrożenie produkcyjne i monitoring jakości.",
         "features": [
           "Głębokie sieci neuronowe",
           "Machine Learning pipelines",
@@ -435,7 +856,10 @@
       "fintech_ai": "FinTech / AI",
       "healthtech_ai": "HealthTech / AI",
       "internet_analytics": "Analityka internetu",
-      "family_discovery": "Rodzina / Lokalne odkrycia"
+      "seo_ai": "SEO / Agenci AI",
+      "family_discovery": "Rodzina / Lokalne odkrycia",
+      "edtech": "EdTech / Wczesna edukacja",
+      "ai_mcp": "AI / MCP"
     },
     "visit_project": "Zobacz działający projekt",
     "items": {
@@ -448,6 +872,15 @@
         "features": ["Testy prędkości i jakości sieci w przeglądarce", "Globalne i krajowe raporty internetu", "Porównania operatorów i technologii", "Udostępniane wyniki i przejrzysta metodologia"],
         "tech_detailed": ["Next.js", "Go", "PostgreSQL", "Measurement Lab NDT7", "Docker", "Cloudflare"]
       },
+      "seoAgent": {
+        "title": "SEO Agent",
+        "description": "Desktopowa aplikacja w Tauri 2 do technicznego crawlowania, analizy widoczności i kontrolowanej automatyzacji SEO z wykorzystaniem AI.",
+        "full_text": "SEO Agent to desktopowa aplikacja zbudowana w Tauri 2, która łączy techniczny crawling, dane Google Search Console i GA4, analizę SERP, Core Web Vitals oraz agentów AI. Pomaga wykrywać i priorytetyzować problemy, planować strategię treści, automatyzować kontrolowane działania SEO i mierzyć ich rzeczywisty wpływ na widoczność.",
+        "challenge": "Dane SEO są rozproszone między crawlerami, analityką, Search Console i narzędziami AI, co utrudnia ustalenie priorytetów i szybkie przejście od diagnozy do działania.",
+        "solution": "Zaprojektowaliśmy wielomodułową platformę agentową, która agreguje sygnały techniczne i contentowe, ocenia gotowość witryny dla wyszukiwarek i agentów AI, a następnie tworzy uporządkowaną kolejkę rekomendacji.",
+        "features": ["Techniczny crawl i grupowanie problemów według wpływu", "Monitoring widoczności organicznej i odpowiedzi AI", "Ocena gotowości witryny dla agentów AI", "Priorytetyzowane rekomendacje i automatyzacje SEO"],
+        "tech_detailed": ["Tauri 2", "Rust", "SQLite", "AI Agents", "Google Search Console API", "Google Analytics 4"]
+      },
       "kidsRadar": {
         "title": "kids-radar.com",
         "description": "Platforma lokalnych odkryć, która pomaga rodzinom znajdować miejsca, wydarzenia, usługi, aplikacje i okazje dla dzieci.",
@@ -456,6 +889,24 @@
         "solution": "Stworzyliśmy wielojęzyczny katalog wykorzystujący geolokalizację, uporządkowane procesy redakcyjne i wzbogacanie treści z pomocą AI. Dedykowany panel administracyjny pozwala skalować bazę miejsc, wydarzeń, usług, aplikacji i ofert.",
         "features": ["Lokalne odkrycia oparte na geolokalizacji", "Miejsca, wydarzenia, usługi, aplikacje i okazje", "Filtrowanie według wieku i kategorii", "Procesy treści i SEO wspierane przez AI"],
         "tech_detailed": ["React", "Go / Gin", "PostgreSQL", "OpenAI API", "Docker", "Nginx"]
+      },
+      "maluchCzyta": {
+        "title": "MaluchCzyta.pl",
+        "description": "Platforma edukacyjna dla dzieci 0–6 lat, łącząca czytanie globalne z ruchem, grami i wspólną nauką z rodzicem.",
+        "full_text": "MaluchCzyta.pl zamienia metodę czytania globalnego Glenna Domana w dostępny program dla rodziców i dzieci w wieku 0–6 lat. Krótkie lekcje, gry i gotowe materiały pomagają poznawać całe słowa przez ruch, zabawę i wspólnie spędzony czas.",
+        "challenge": "Rodzice zainteresowani wczesną edukacją potrzebują jasnej ścieżki działania oraz gotowych materiałów, które da się łatwo włączyć w codzienny rytm dziecka bez szkolnej presji i czasochłonnych przygotowań.",
+        "solution": "Stworzyliśmy responsywną platformę edukacyjną z bazą słów, uporządkowanymi lekcjami, interaktywnymi grami i śledzeniem postępów. Program działa na komputerze i telefonie, wspiera wiele języków oraz pozwala rodzicowi dopasować naukę do potrzeb dziecka.",
+        "features": ["Krótkie lekcje czytania globalnego", "Gry łączące słowa, ruch i logiczne myślenie", "Gotowe materiały oraz baza słów", "Śledzenie postępów i obsługa wielu języków"],
+        "tech_detailed": ["Angular 22", "PHP", "PostgreSQL", "REST API", "Docker", "Responsive Web"]
+      },
+      "athropy": {
+        "title": "Athropy",
+        "description": "Platforma MCP do monitorowania wykorzystania AI w zespołach, analizy tokenów oraz optymalizacji kosztów i procesów.",
+        "full_text": "Athropy zapewnia organizacjom przejrzysty obraz tego, jak zespoły korzystają z narzędzi AI. Platforma zbiera dane przez Model Context Protocol, analizuje zużycie tokenów, koszty, modele i przebieg pracy, a następnie wskazuje możliwości poprawy jakości, wydajności i sposobu wykorzystania AI.",
+        "challenge": "Wraz ze wzrostem wykorzystania AI firmy tracą kontrolę nad zużyciem tokenów, kosztami i powtarzalnością procesów. Dane są rozproszone pomiędzy narzędziami i zespołami, przez co trudno ocenić, które zastosowania przynoszą wartość, a które wymagają optymalizacji.",
+        "solution": "Zbudowaliśmy warstwę monitorowania opartą na MCP, która agreguje aktywność narzędzi AI i prezentuje ją w jednym panelu. Athropy monitoruje wykorzystanie przez zespoły, analizuje tokeny i koszty, wykrywa nieefektywne wzorce oraz generuje praktyczne rekomendacje usprawniające procesy AI.",
+        "features": ["Monitoring wykorzystania AI przez zespoły", "Analiza zużycia tokenów, modeli i kosztów", "Wykrywanie nieefektywnych procesów i wzorców użycia", "Rekomendacje optymalizacyjne oparte na danych"],
+        "tech_detailed": ["React", "TypeScript", "Node.js", "MCP SDK", "PostgreSQL", "ClickHouse", "Docker", "OpenAI API"]
       },
       "engineer": {
         "title": "Autonomiczny Inżynier AI",
@@ -538,25 +989,111 @@
     }
   },
   "footer": {
-    "rights": "Wszelkie prawa zastrzeżone."
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "services_label": "Usługi i kontakt"
+  },
+  "carriers": {
+    "seo_title": "Kariera w improveIT.pl — dołącz do zespołu AI",
+    "seo_description": "Dołącz do improveIT.pl i twórz systemy AI, automatyzacje oraz nowoczesne oprogramowanie dla klientów z całego świata.",
+    "eyebrow": "Dołącz do naszej misji",
+    "title_start": "Budujemy przyszłość",
+    "title_accent": "oprogramowania i AI",
+    "intro": "Twórz z nami systemy agentowe, inteligentne automatyzacje i produkty cyfrowe, które rozwiązują rzeczywiste problemy biznesowe.",
+    "view_roles": "Zobacz otwarte role",
+    "about_us": "Poznaj nas",
+    "roles_label": "Otwarte stanowiska",
+    "roles_title": "Znajdź miejsce dla siebie",
+    "roles_intro": "Szukamy specjalistów, którzy chcą mieć realny wpływ na sposób, w jaki firmy wykorzystują technologię.",
+    "spontaneous": "Aplikacja spontaniczna",
+    "new": "NOWE",
+    "location": "Polska / Zdalnie",
+    "details": "Aplikuj",
+    "roles": {
+      "ai": { "title": "AI / LLM Engineer", "description": "Projektuj agentów AI, systemy RAG i integracje MCP, a następnie wdrażaj je w rzeczywistych procesach biznesowych." },
+      "fullstack": { "title": "Senior Full-stack Engineer", "description": "Buduj skalowalne aplikacje webowe i platformy SaaS, łącząc dopracowany frontend z niezawodnym backendem." },
+      "data": { "title": "Data & Automation Engineer", "description": "Twórz potoki danych, analitykę i automatyzacje, które zamieniają rozproszone informacje w praktyczne decyzje." }
+    },
+    "values_label": "Dlaczego improveIT.pl",
+    "values_title": "Technologia z realnym wpływem",
+    "values_heading_start": "Dlaczego warto dołączyć",
+    "values_heading_accent": "Pracuj z nami",
+    "values": {
+      "impact": { "title": "Realny wpływ", "description": "Twoja praca trafia do produkcji i usprawnia codzienne procesy użytkowników." },
+      "ai": { "title": "AI na pierwszym miejscu", "description": "Pracuj z agentami, LLM, RAG i technologiami, które dopiero definiują rynek." },
+      "team": { "title": "Zespół ekspertów", "description": "Wymieniaj wiedzę z ludźmi, którzy lubią trudne problemy i proste rozwiązania." },
+      "global": { "title": "Globalne projekty", "description": "Rozwijaj produkty i usługi wykorzystywane przez organizacje na wielu rynkach." }
+    },
+    "profile_title": "Szukamy specjalistów z pasją",
+    "profile_intro": "Jeśli jesteś ciekawy świata, cenisz samodzielność i chcesz budować rozwiązania, które mają znaczenie — chcemy Cię poznać.",
+    "profile": {
+      "passion": "Pasja do technologii i rozwiązywania problemów",
+      "growth": "Chęć uczenia się i dzielenia wiedzą",
+      "ownership": "Samodzielność i odpowiedzialność za rezultat",
+      "collaboration": "Otwartość, komunikacja i współpraca"
+    },
+    "contact_label": "Pozostańmy w kontakcie",
+    "contact_title": "Nie widzisz swojej roli? Napisz do nas.",
+    "contact_text": "Opowiedz, w czym jesteś najlepszy i jaki problem chciałbyś z nami rozwiązać.",
+    "contact_cta": "Skontaktuj się",
+    "form": {
+      "role": "Stanowisko",
+      "name": "Imię i nazwisko",
+      "email": "Adres e-mail",
+      "profile": "LinkedIn lub portfolio (opcjonalnie)",
+      "message": "Napisz krótko o swoim doświadczeniu i motywacji",
+      "submit": "Wyślij aplikację",
+      "sending": "Wysyłanie…",
+      "success": "Dziękujemy. Otrzymaliśmy Twoją aplikację i skontaktujemy się po jej przejrzeniu.",
+      "error": "Nie udało się wysłać aplikacji. Spróbuj ponownie za chwilę."
+    }
   },
   "blog": {
     "label": "Blog",
+    "seo_title": "Blog o AI, automatyzacji i tworzeniu oprogramowania",
     "title_start": "Wiedza i ",
     "gradient": "Innowacje AI",
     "description": "Odkryj najnowsze trendy w systemach agentowych, LLMs i AI-First development.",
     "read_more": "Czytaj więcej →",
+    "home": "Strona główna",
+    "breadcrumbs": "Okruszki nawigacyjne",
+    "filters": "Wyszukiwanie i filtrowanie artykułów",
+    "search_label": "Szukaj artykułów",
+    "search_placeholder": "Szukaj po tytule, kategorii lub tagach…",
+    "clear_search": "Wyczyść wyszukiwanie",
+    "categories": "Kategorie artykułów",
+    "all_categories": "Wszystkie",
+    "results_one": "{{count}} artykuł",
+    "results_few": "{{count}} artykuły",
+    "results_many": "{{count}} artykułów",
+    "results_other": "{{count}} artykułu",
+    "clear_filters": "Wyczyść filtry",
+    "reading_time_one": "{{count}} min czytania",
+    "reading_time_few": "{{count}} min czytania",
+    "reading_time_many": "{{count}} min czytania",
+    "reading_time_other": "{{count}} min czytania",
+    "author": "Autor",
+    "no_results_title": "Brak pasujących artykułów",
+    "no_results_description": "Zmień wyszukiwaną frazę, wybierz inną kategorię lub wyczyść filtry.",
     "back": "Powrót do bloga",
     "no_post": "Post nie istnieje",
+    "loading_title": "Ładowanie artykułów",
+    "loading_description": "Pobieramy najnowsze publikacje z naszej bazy wiedzy.",
+    "error_title": "Nie udało się załadować artykułów",
+    "error_description": "Usługa bloga jest chwilowo niedostępna. Sprawdź połączenie lub spróbuj ponownie za moment.",
+    "retry": "Spróbuj ponownie",
+    "empty_title": "Nie ma jeszcze opublikowanych artykułów",
+    "empty_description": "Nowe materiały pojawią się tutaj po ich publikacji.",
     "cta_title": "Zainteresowany wdrożeniem AI?",
     "cta_desc": "Skontaktuj się z naszymi ekspertami, aby porozmawiać o tym, jak systemy agentowe mogą pomóc Twojej firmie.",
     "cta_btn": "Ekspercka Konsultacja",
     "post1": {
       "title": "Przyszłość Agentów AI w Biznesie",
+      "full_title": "Przyszłość Agentów AI w Biznesie: Od Automatyzacji do Autonomii",
       "excerpt": "Jak systemy agentowe redefiniują sposób, w jaki firmy podchodzą do złożonych problemów."
     },
     "post2": {
       "title": "Optymalizacja LLM z wykorzystaniem RAG",
+      "full_title": "Optymalizacja LLM z wykorzystaniem RAG: Przewodnik dla Inżynierów",
       "excerpt": "Dlaczego Retrieval-Augmented Generation jest kluczem do budowania wiarygodnych rozwiązań."
     }
   }

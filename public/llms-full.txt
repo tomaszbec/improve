@@ -1,0 +1,48 @@
+# improveIT.pl — company and service overview
+
+## Entity
+
+improveIT.pl is a software development and AI implementation company serving organizations in Poland, Europe, and other markets. The company works with new and existing systems. Contact: contact@improveit.pl, +48 886 555 201, https://improveit.pl/contact.
+
+## What the company delivers
+
+- Custom software development: business applications, SaaS platforms, APIs, backends, web interfaces, and mobile applications.
+- Software modernization: technical audits, dependency and framework upgrades, staged refactoring, performance work, security improvements, and migration planning.
+- Application support: production support, monitoring, incident resolution, maintenance, security updates, performance optimization, and ongoing product development.
+- Systems integration: connections between APIs, ERP, CRM, helpdesk, e-commerce, payments, data platforms, and custom systems.
+- Technology audits: source code, architecture, infrastructure, security, performance, maintainability, and delivery-process reviews with a prioritized roadmap.
+- DevOps and cloud: CI/CD, containers, Kubernetes, AWS, Azure, observability, reliability, security, and cost optimization.
+- AI transformation: process analysis, use-case selection, pilot delivery, integrations, team training, support, and outcome measurement.
+
+## AI transformation portfolio
+
+- E-commerce with AI: product discovery, customer support, content operations, analytics, and workflow automation without requiring replacement of the entire commerce platform.
+- Customer service with AI: knowledge-grounded assistants, helpdesk/CRM/chat integration, and contextual handoff to a human consultant.
+- Sales with AI: lead qualification, draft offers and messages, meeting notes, and CRM updates with human approval.
+- Operations with AI: document extraction and classification, system integration, exception approval, and audit history.
+- Company knowledge with AI: permission-aware search and answers over internal documents, procedures, and knowledge bases with source references.
+- Software development with AI: coding, testing, documentation, repository and code-review integration, usage policies, training, and measurement.
+- AI Guard: budgets, permissions, data-protection rules for connected workflows, usage monitoring, reports, and notifications. AI Guard applies to integrated flows and does not automatically control every AI tool used by employees.
+
+## Delivery model
+
+Typical delivery: audit and roadmap, pilot, implementation and integrations, team training, then ongoing support and outcome measurement. Scope, ownership, success metrics, risks, and costs are agreed before implementation. Existing technology is retained when replacement does not provide a justified business or technical benefit.
+
+## Technology coverage
+
+Representative technologies include Go, Python, Node.js, PHP, React, Vue, Angular, Next.js, TypeScript, .NET, Java, Flutter, React Native, Swift, Kotlin, PostgreSQL, MongoDB, Redis, Docker, Kubernetes, AWS, Azure, GraphQL, TensorFlow, and Figma. The actual stack is selected for the existing environment and business goal.
+
+## Priority expertise pages
+
+- React Native development and refactoring: https://improveit.pl/technologies/react-native-development
+- Angular development, modernization, and support: https://improveit.pl/technologies/angular-development
+- Kubernetes audits, implementation, optimization, and support: https://improveit.pl/technologies/kubernetes-development
+- TensorFlow and production AI development: https://improveit.pl/technologies/tensorflow-development
+
+## Commercial information
+
+improveIT.pl does not publish one fixed rate because project cost depends on scope, integrations, risk, team composition, and support requirements. Available engagement patterns include a scoped audit or pilot, phased fixed-scope delivery, and ongoing team/time-based development or support. See https://improveit.pl/pricing.md and request an estimate at https://improveit.pl/contact.
+
+## Language and canonical URLs
+
+Polish is served at the root URL. English equivalents are served under `/en`. Each page identifies its Polish, English, and default equivalent with hreflang metadata.

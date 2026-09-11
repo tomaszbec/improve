@@ -10,7 +10,10 @@ export function ProjectPage() {
 
   const slugToKey: Record<string, string> = {
     'internet-analysis': 'internetAnalysis',
+    'seo-agent': 'seoAgent',
     'kids-radar': 'kidsRadar',
+    'maluch-czyta': 'maluchCzyta',
+    'athropy': 'athropy',
     'autonomous-ai-engineer': 'engineer',
     'ai-travel-agent': 'travel',
     'predictive-finance-analytics': 'finance',
@@ -33,7 +36,10 @@ export function ProjectPage() {
 
   const projectImages: Record<string, string> = {
     internetAnalysis: '/images/internet-analysis.png',
+    seoAgent: '/images/seo-agent.png',
     kidsRadar: '/images/kids-radar.png',
+    maluchCzyta: '/images/maluch-czyta.png',
+    athropy: '/images/athropy.png',
     engineer: '/images/ai-dev.png',
     travel: '/images/ai-travel.png',
     finance: '/images/ai-saas.png',
@@ -42,7 +48,8 @@ export function ProjectPage() {
 
   const projectUrls: Record<string, string> = {
     internetAnalysis: 'https://internet-analysis.com',
-    kidsRadar: 'https://kids-radar.com'
+    kidsRadar: 'https://kids-radar.com',
+    maluchCzyta: 'https://maluchczyta.pl'
   }
 
   return (
@@ -99,51 +106,55 @@ export function ProjectPage() {
 
       <section className="section">
         <div className="section__container">
-          <div className="bento-grid">
-            <div className="bento-item bento-item--col-2" style={{ textAlign: 'left' }}>
-              <h3 className="section__title" style={{ fontSize: '1.5rem', textAlign: 'left', marginBottom: '2rem' }}>
-                Challenge & Solution
-              </h3>
-              <div style={{ marginBottom: '2rem' }}>
-                <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>The Challenge</h4>
-                <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>{t(`portfolio.items.${projectKey}.challenge`)}</p>
+          <div className="bento-grid project-case-study-grid">
+            <div className="project-case-study-column">
+              <div className="bento-item" style={{ textAlign: 'left' }}>
+                <h3 className="section__title" style={{ fontSize: '1.5rem', textAlign: 'left', marginBottom: '2rem' }}>
+                  Challenge & Solution
+                </h3>
+                <div style={{ marginBottom: '2rem' }}>
+                  <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>The Challenge</h4>
+                  <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>{t(`portfolio.items.${projectKey}.challenge`)}</p>
+                </div>
+                <div>
+                  <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>Our Solution</h4>
+                  <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>{t(`portfolio.items.${projectKey}.solution`)}</p>
+                </div>
               </div>
-              <div>
-                <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>Our Solution</h4>
-                <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>{t(`portfolio.items.${projectKey}.solution`)}</p>
+
+              <div className="bento-item" style={{ textAlign: 'left' }}>
+                <h3 className="section__title" style={{ fontSize: '1.5rem', textAlign: 'left', marginBottom: '1.5rem' }}>
+                  Tech Stack
+                </h3>
+                <div className="service-card__tags" style={{ justifyContent: 'flex-start', marginTop: '0', flexWrap: 'wrap', gap: '10px', display: 'flex' }}>
+                  {techStack.map((tech: string) => (
+                    <span key={tech} className="service-card__tag" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.2)', borderRadius: '999px', color: 'var(--color-primary-light)' }}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
 
-            <div className="bento-item bento-item--col-2" style={{ textAlign: 'left' }}>
-              <h3 className="section__title" style={{ fontSize: '1.5rem', textAlign: 'left', marginBottom: '2rem' }}>
-                Key Features
-              </h3>
-              <ul className="service-detail__list" style={{ listStyle: 'none', padding: 0 }}>
-                {features.map((f: string, i: number) => (
-                  <li key={i} className="service-detail__list-item" style={{ marginBottom: '1rem', color: 'var(--color-text-muted)' }}>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bento-item bento-item--col-2" style={{ textAlign: 'left' }}>
-              <h3 className="section__title" style={{ fontSize: '1.5rem', textAlign: 'left', marginBottom: '1.5rem' }}>
-                Tech Stack
-              </h3>
-              <div className="service-card__tags" style={{ justifyContent: 'flex-start', marginTop: '0', flexWrap: 'wrap', gap: '10px', display: 'flex' }}>
-                {techStack.map((tech: string) => (
-                  <span key={tech} className="service-card__tag" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.2)', borderRadius: '999px', color: 'var(--color-primary-light)' }}>
-                    {tech}
-                  </span>
-                ))}
+            <div className="project-case-study-column">
+              <div className="bento-item" style={{ textAlign: 'left' }}>
+                <h3 className="section__title" style={{ fontSize: '1.5rem', textAlign: 'left', marginBottom: '2rem' }}>
+                  Key Features
+                </h3>
+                <ul className="service-detail__list" style={{ listStyle: 'none', padding: 0 }}>
+                  {features.map((f: string, i: number) => (
+                    <li key={i} className="service-detail__list-item" style={{ marginBottom: '1rem', color: 'var(--color-text-muted)' }}>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-            
-            <div className="bento-item bento-item--col-2">
-               <div className="portfolio-card__image" style={{ height: '100%', minHeight: '300px', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
+
+              <div className="bento-item project-case-study-image">
+               <div className="portfolio-card__image" style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
                   <img src={projectImages[projectKey]} alt={t(`portfolio.items.${projectKey}.title`)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                </div>
+              </div>
             </div>
           </div>
         </div>

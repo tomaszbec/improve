@@ -1,0 +1,9 @@
+ARG BASE_IMAGE=improveit-app:20260825-images-v3
+
+FROM golang:1.24-alpine AS build
+WORKDIR /src/api
+COPY go.mod go.sum main.go ./
+RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /publishing-api .
+
+FROM ${BASE_IMAGE}
+COPY --from=build /publishing-api /usr/local/bin/publishing-api

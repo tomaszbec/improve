@@ -1,16 +1,17 @@
 import { useTranslation } from 'react-i18next'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { Link } from 'react-router-dom'
+import { Bot, CloudCog, Code2, ShieldCheck } from 'lucide-react'
 
 export function SecurityAudit() {
   const { t } = useTranslation()
   const ref = useScrollReveal()
 
   const SECTIONS = [
-    { icon: '🛡️', key: 'pentests' },
-    { icon: '💻', key: 'code' },
-    { icon: '☁️', key: 'cloud' },
-    { icon: '🤖', key: 'ai' },
+    { icon: ShieldCheck, key: 'pentests' },
+    { icon: Code2, key: 'code' },
+    { icon: CloudCog, key: 'cloud' },
+    { icon: Bot, key: 'ai' },
   ]
 
   return (
@@ -48,9 +49,11 @@ export function SecurityAudit() {
       <section className="section" style={{ background: 'rgba(255,0,0,0.02)' }}>
         <div className="section__container">
           <div className="bento-grid">
-            {SECTIONS.map((s) => (
+            {SECTIONS.map((s) => {
+              const Icon = s.icon
+              return (
               <div key={s.key} className="bento-item bento-item--col-2" style={{ borderLeft: '4px solid #ef4444' }}>
-                <div style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>{s.icon}</div>
+                <div className="service-card__icon" style={{ marginBottom: '1.5rem' }} aria-hidden="true"><Icon /></div>
                 <h3 className="section__title" style={{ fontSize: '1.5rem', textAlign: 'left' }}>
                   {t(`security_audit.sections.${s.key}.title`)}
                 </h3>
@@ -59,7 +62,8 @@ export function SecurityAudit() {
                 </p>
                 <div className="scanning-line" />
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>

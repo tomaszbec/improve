@@ -1,17 +1,23 @@
 {
   "nav": {
+    "home": "Home",
     "services": "Services",
     "about": "About Us",
     "tech": "Technologies",
     "portfolio": "Portfolio",
     "blog": "Blog",
+    "carriers": "Careers",
     "contact": "Contact"
+  },
+  "home_seo": {
+    "title": "Software Development, AI & Technology Support",
+    "description": "We design, deliver, and develop web, mobile, cloud, and AI software. We provide audits, integrations, modernization, optimization, and ongoing support for companies."
   },
   "hero": {
     "badge": "Trusted technology partner since 2016",
-    "title_start": "Building the Future",
-    "title_gradient": "Powered by AI",
-    "subtitle": "We design and implement advanced agentic systems, intelligent automation, and AI-first software that redefines your business efficiency.",
+    "title_start": "Software development",
+    "title_gradient": "from idea to ongoing support",
+    "subtitle": "We design, build, and modernize software across web, mobile, cloud, and AI. Our team handles implementation, integrations, audits, optimization, and support for existing systems.",
     "cta_talk": "Let's talk →",
     "cta_portfolio": "See projects",
     "stat_clients": "AI Deployments",
@@ -19,10 +25,71 @@
   },
   "services": {
     "label": "Services",
-    "title": "Comprehensive Technological Solutions",
-    "description": "From strategy to implementation — we provide a full range of software engineering services.",
+    "title": "Development, implementation, and technology support",
+    "description": "We build new products, take over existing systems, and improve their performance, security, and operating cost.",
     "back": "Back to services",
     "items": {
+      "software": {
+        "title": "Custom Software Development",
+        "seo_title": "Custom software development — web, mobile, cloud, and AI",
+        "seo_description": "Custom software development for business: discovery, UX, engineering, testing, deployment, and support across web, mobile, cloud, data, and AI.",
+        "description": "We build web and mobile applications, SaaS platforms, and business systems with technology selected for the product.",
+        "full_text": "We deliver software from discovery and architecture through implementation and testing to deployment and continuous improvement. We can own the whole product or join an existing team and technology stack.",
+        "features": ["Requirements analysis and architecture", "Frontend, backend, and mobile development", "Testing, CI/CD, and deployment", "Product development and ongoing support"],
+        "tech": ["React, Angular, Vue", "Node.js, Python, Java, .NET, PHP", "React Native, Flutter, Swift, Kotlin", "AWS, Azure, Kubernetes, PostgreSQL"]
+      },
+      "modernization": {
+        "title": "Software Modernization and Refactoring",
+        "seo_title": "Application modernization and software refactoring",
+        "seo_description": "Audit and modernize existing applications through code refactoring, framework upgrades, and improvements to performance, security, and maintenance cost.",
+        "description": "We clean up code, upgrade technologies, and remove constraints that slow product development.",
+        "full_text": "We modernize running systems without automatically rewriting them from scratch. Work begins with a code, architecture, and risk audit, followed by phased refactoring with regression testing and controlled releases.",
+        "features": ["Code and technical-debt audit", "Framework and dependency upgrades", "React Native, web, and backend refactoring", "Phased migration without stopping the business"],
+        "tech": ["React Native", "React and Angular", "Node.js, Java, .NET, PHP", "Databases and cloud infrastructure"]
+      },
+      "support": {
+        "title": "Application Support and Development",
+        "seo_title": "Application support and software maintenance",
+        "seo_description": "Ongoing application support including bug fixing, monitoring, upgrades, feature development, performance optimization, and safe takeover of an existing system.",
+        "description": "We take over existing applications, solve current issues, and plan their continued development.",
+        "full_text": "We provide technical support for web and mobile applications, backends, and cloud environments. We document the system, stabilize high-risk areas, monitor operations, and deliver fixes and new features.",
+        "features": ["System takeover and documentation", "Diagnostics and bug fixing", "Monitoring, upgrades, and security", "Planned delivery of new features"],
+        "tech": ["Web and mobile", "Backend and APIs", "Databases", "Cloud, DevOps, and observability"]
+      },
+      "integrations": {
+        "title": "System and API Integrations",
+        "seo_title": "System, API, CRM, and e-commerce integrations",
+        "seo_description": "We design and implement API integrations across applications, CRM, ERP, e-commerce, payments, logistics, analytics, and AI services.",
+        "description": "We connect applications and data so information moves automatically without manual re-entry.",
+        "full_text": "We build secure API integrations, data synchronization, and automated workflows between company systems. We handle both modern APIs and legacy solutions that require adapters, queues, or a controlled migration.",
+        "features": ["Integration design and data model", "APIs, webhooks, and event queues", "CRM, ERP, and e-commerce synchronization", "Error monitoring and safe retries"],
+        "tech": ["REST, GraphQL, gRPC", "Kafka and RabbitMQ", "Salesforce, HubSpot, and ERP systems", "Payments, logistics, and AI services"]
+      },
+      "audit": {
+        "title": "Technology and Architecture Audit",
+        "seo_title": "Technology, code, and system architecture audit",
+        "seo_description": "Independent audit of code, architecture, performance, security, and infrastructure with an evidence-based risk report and prioritized roadmap.",
+        "description": "We review code, architecture, infrastructure, and engineering practices and identify the highest-priority changes.",
+        "full_text": "A technology audit provides an independent view of system quality before development, modernization, project takeover, or investment. The result is an evidence-based report with risks and a roadmap prioritized by impact and effort.",
+        "features": ["Code and architecture review", "Performance, security, and scalability", "Engineering process, tests, and CI/CD", "Risk report and actionable roadmap"],
+        "tech": ["Web and mobile", "Backend and databases", "Cloud and Kubernetes", "AI, data, and integrations"]
+      },
+      "devops": {
+        "title": "DevOps, Cloud, and Deployments",
+        "seo_title": "DevOps and cloud — Kubernetes, AWS, and Azure deployments",
+        "seo_description": "We design CI/CD, containerization, monitoring, and cloud environments across Kubernetes, AWS, and Azure, including cost and reliability optimization.",
+        "description": "We automate releases and build environments that teams can develop, monitor, and scale safely.",
+        "full_text": "We organize the path from repository to production: CI/CD, containers, configuration, observability, and environment management. We support cloud migrations, Kubernetes deployments, and infrastructure cost optimization.",
+        "features": ["CI/CD and deployment automation", "Docker and Kubernetes", "Monitoring, logs, and alerts", "Cost and reliability optimization"],
+        "tech": ["AWS and Azure", "Kubernetes and Docker", "Terraform and Helm", "Prometheus, Grafana, and OpenTelemetry"]
+      },
+      "aiTransformation": {
+        "title": "AI Transformation for Business",
+        "description": "We audit processes, select the right AI use cases, integrate them with existing systems, and support your team after launch.",
+        "full_text": "We prepare e-commerce businesses for practical AI adoption end to end: identify the highest-value processes, deliver solutions with measurable goals, and support your team after launch.",
+        "features": ["Data and readiness audit", "Prioritized AI roadmap", "Implementation and integration", "Monitoring and ongoing support"],
+        "tech": ["OpenAI", "RAG", "Automation", "E-commerce integrations"]
+      },
       "agents": {
         "title": "AI Agents & Autonomous Workflows",
         "description": "Intelligent agentic systems that plan and execute complex business processes independently.",
@@ -71,7 +138,329 @@
         "full_text": "We provide efficiency and cost-savings through precise hardware management. We implement robust monitoring for models in production (MLOps).",
         "features": ["Auto-scaling GPU instances", "Model Serving & Versioning", "Automated Fine-tuning pipelines", "Model Drift Detection"],
         "tech": ["AWS SageMaker", "Kubernetes (K8s)", "vLLM", "Docker"]
+      },
+      "aiOptimization": {
+        "title": "AI Optimization",
+        "description": "Measure AI usage, control token costs, compare teams and turn AI investment into measurable business value."
+      },
+      "claudeCode": {
+        "title": "Claude Code Optimization",
+        "description": "Monitor Claude Code adoption, token usage and cost per developer with production-ready observability."
       }
+    }
+  },
+  "service_page": {
+    "breadcrumb_label": "Breadcrumb",
+    "badge": "Software development services",
+    "cta_quote": "Request an estimate",
+    "cta_scope": "Explore the scope",
+    "panel": { "audit": "Analysis", "delivery": "Delivery", "support": "Support" },
+    "direct_answer_label": "In brief",
+    "direct_answer_suffix": "We select the scope, technology, and engagement model around your current environment, risk profile, and business objective.",
+    "scope_label": "Service scope",
+    "scope_title": "What does {{service}} include?",
+    "scope_description": "Before work begins, we define the outcome, responsibilities, acceptance criteria, and how results will be measured.",
+    "tech_title": "Technology selected for the solution",
+    "process": {
+      "label": "How we work",
+      "title": "From diagnosis to stable operation",
+      "steps": [
+        { "title": "Analysis and goals", "text": "We understand the system, business process, constraints, and success metrics." },
+        { "title": "Technical plan", "text": "We define architecture, scope, risks, timeline, and a safe release approach." },
+        { "title": "Delivery and testing", "text": "We work iteratively, demonstrate progress, and test against real scenarios." },
+        { "title": "Launch and support", "text": "We release the solution, hand over documentation, and support continued development." }
+      ]
+    },
+    "faq_title": "Common questions about working with us",
+    "faqs": [
+      { "question": "Can you take over an existing application or project?", "answer": "Yes. We start by reviewing the code, infrastructure, documentation, and current issues. We then prepare a takeover, stabilization, and development plan without replacing technology simply because it is less familiar to us." },
+      { "question": "Do you deliver one-off implementations and ongoing support?", "answer": "Yes. We can run a fixed audit or implementation and can also provide an ongoing team for maintenance, optimization, and continued development after launch." },
+      { "question": "How do you estimate a software project?", "answer": "We first clarify the objective, scope, integrations, risks, and expected timeline. A well-defined project can be estimated by phase, while continuous development is normally based on the agreed team and time commitment." },
+      { "question": "Can you work with the technology already used by our company?", "answer": "Yes. We work across web, mobile, backend, cloud, databases, and AI. We select specialists based on the existing stack, architecture, and problem instead of forcing one preferred technology." }
+    ],
+    "updated": "Last updated: September 11, 2026",
+    "cta_label": "Discuss your system",
+    "cta_title": "Get a concrete recommendation for the next step",
+    "cta_text": "Describe the product, problem, or planned change. We will recommend an audit, implementation, or ongoing support model."
+  },
+  "ai_services": {
+    "seo": {
+      "title": "AI Transformation Services for Business",
+      "description": "AI audit, roadmap, pilot, and implementation for e-commerce, customer service, sales, operations, company knowledge, and software teams."
+    },
+    "breadcrumb": "AI Transformation for Business",
+    "hero": {
+      "badge": "AI transformation services",
+      "title_start": "Turn your processes into an",
+      "title_accent": "AI-first business",
+      "lead": "From a concrete problem to a secure, measurable implementation.",
+      "description": "We analyze processes, select AI use cases, and implement solutions where they can save time, improve customer service, or increase cost control. We integrate with your current systems and support the team after launch.",
+      "cta_services": "Explore transformation areas",
+      "cta_talk": "Let's talk"
+    },
+    "map": { "label": "AI transformation services map", "core": "Business transformation" },
+    "catalog": {
+      "label": "Transformation areas",
+      "title": "AI aligned with where your business creates value",
+      "description": "Each area has its own scope, outcome, and integration approach. Start with one process and expand what works.",
+      "more": "Explore service"
+    },
+    "items": {
+      "ecommerce": {
+        "short": "E-commerce",
+        "title": "E-commerce with AI",
+        "headline": "Turn your online store into an AI-first business",
+        "description": "We implement AI across sales, customer service, and store operations.",
+        "bullets": ["Audit and actionable roadmap", "No full platform replacement", "Ongoing support after launch"]
+      },
+      "customerService": {
+        "short": "Service",
+        "title": "Customer Service with AI",
+        "headline": "Help customers faster and reduce your team's workload",
+        "description": "AI assistants handle repeat questions and support agents with more complex cases.",
+        "bullets": ["Answers from company knowledge", "Helpdesk and CRM integration", "Context-rich agent handoff"]
+      },
+      "sales": {
+        "short": "Sales",
+        "title": "Sales with AI",
+        "headline": "Give your salespeople more time to sell",
+        "description": "We streamline the journey from first contact to signed agreement while keeping your team in control.",
+        "bullets": ["Lead qualification", "Draft proposals and messages", "Meeting notes and CRM updates"]
+      },
+      "operations": {
+        "short": "Operations",
+        "title": "Operations with AI",
+        "headline": "Turn repetitive work into efficient processes",
+        "description": "We combine AI with automation across documents, data, and information flows.",
+        "bullets": ["Document capture and classification", "Current-tool integrations", "Exception handling and audit trail"]
+      },
+      "knowledge": {
+        "short": "Knowledge",
+        "title": "Company Knowledge with AI",
+        "headline": "Turn company documents into answers on demand",
+        "description": "We connect documentation, procedures, and internal materials into a source-aware, permission-aware assistant.",
+        "bullets": ["Search across documents", "Permission-aware access", "Onboarding and daily-work support"]
+      },
+      "softwareDevelopment": {
+        "short": "Software",
+        "title": "Software Development with AI",
+        "headline": "Bring AI into developers' daily work",
+        "description": "We configure AI for code, testing, and documentation and measure its real impact.",
+        "bullets": ["Project-aware assistants", "Repository integration", "Usage, cost, and outcome measurement"]
+      },
+      "aiGuard": {
+        "short": "AI Guard",
+        "title": "AI Management with AI Guard",
+        "headline": "Control access, data, and the cost of company AI",
+        "description": "Shared policies for connected applications, models, projects, and teams.",
+        "bullets": ["Budgets and permissions", "Data-protection rules", "Monitoring, reports, and alerts"]
+      }
+    },
+    "model": {
+      "label": "Shared delivery model",
+      "title": "A controlled path from audit to outcomes",
+      "description": "We agree on scope, success metrics, and cost before implementation. Every phase has a clear result and a decision point.",
+      "steps": ["Audit and roadmap", "Pilot", "Implementation and integrations", "Team training", "Ongoing support and outcome measurement"],
+      "note": "AI Guard covers connected workflows and applications. It does not automatically control every AI tool employees may use."
+    },
+    "cta": {
+      "label": "First step",
+      "title": "Find the best starting point for AI",
+      "description": "Tell us which process slows your team down. We will recommend the right audit or pilot scope.",
+      "button": "Book a consultation"
+    },
+    "faq_title": "Common questions about AI transformation",
+    "faqs": [
+      { "question": "What is AI transformation in a business?", "answer": "AI transformation is a structured process for selecting, implementing, and measuring solutions that use artificial intelligence. It starts with a business problem, available data, and a success metric instead of purchasing an isolated tool." },
+      { "question": "Where should a company start with AI implementation?", "answer": "The safest starting point is an audit of processes, data, and current systems. We then select a high-value use case with manageable risk and validate it through a focused pilot." },
+      { "question": "Does AI implementation require replacing current systems?", "answer": "Usually not. AI can be integrated with an existing e-commerce platform, CRM, helpdesk, knowledge base, or operational system through APIs and controlled data flows." },
+      { "question": "How should the impact of AI be measured?", "answer": "Success metrics are defined before the pilot. They may include handling time, manual work removed, answer accuracy, process cost, escalation rate, or team adoption." },
+      { "question": "Do you provide support after launch?", "answer": "Yes. After launch, we monitor quality, cost, and failures, maintain integrations, and improve the solution using real usage data and feedback from the team." }
+    ]
+  },
+  "ai_service_pages": {
+    "common": {
+      "cta": "Discuss the implementation",
+      "scope": "Explore the scope",
+      "audit": "Audit",
+      "integrate": "Integration",
+      "measure": "Measurement",
+      "capabilitiesLabel": "Service scope",
+      "outcomeLabel": "Delivery approach",
+      "ctaLabel": "Next step",
+      "ctaTitle": "Start with one process",
+      "ctaText": "We validate value, risk, and cost before the full implementation begins.",
+      "faqTitle": "Questions before implementation",
+      "updated": "Last updated: September 11, 2026"
+    },
+    "customerService": {
+      "title": "Customer Service with AI",
+      "headline": "Help customers faster and reduce your team's workload",
+      "description": "We implement assistants that answer repeat questions and support agents with more complex cases, grounded in current company knowledge.",
+      "bullets": ["Answers grounded in company knowledge", "Helpdesk, CRM, and chat integration", "Context-rich handoff to a human agent"],
+      "seoDescription": "AI assistants for customer service with company knowledge, helpdesk and CRM integrations, and safe escalation to human agents.",
+      "capabilitiesTitle": "An assistant for customers and service teams",
+      "capabilities": [
+        { "title": "Customer self-service", "text": "Instant answers about products, orders, returns, and procedures around the clock." },
+        { "title": "Agent copilot", "text": "Suggests replies, summarizes contact history, and finds the right information during a conversation." },
+        { "title": "Controlled escalation", "text": "Recognizes when a person is needed and transfers the case with full context." }
+      ],
+      "outcomeTitle": "Faster responses without sacrificing quality",
+      "outcomeText": "We begin with ticket types, knowledge quality, and existing integrations. We measure answer accuracy, automation, and impact on team workload."
+    },
+    "sales": {
+      "title": "Sales with AI",
+      "headline": "Give your salespeople more time to sell",
+      "description": "We streamline the journey from first contact to agreement: lead organization, proposal preparation, and conversation summaries.",
+      "bullets": ["Lead qualification using your criteria", "Draft proposals and messages for approval", "Meeting notes and CRM updates"],
+      "seoDescription": "AI for B2B sales: lead qualification, proposal preparation, meeting notes, and automated CRM updates.",
+      "capabilitiesTitle": "AI supports sellers throughout the funnel",
+      "capabilities": [
+        { "title": "Lead prioritization", "text": "Organizes inquiries using your rules and highlights missing information." },
+        { "title": "Communication drafts", "text": "Creates messages, summaries, and proposals from customer data and company standards." },
+        { "title": "Clean CRM data", "text": "Turns calls and meetings into notes, tasks, and current sales-process records." }
+      ],
+      "outcomeTitle": "Less administration, more valuable conversations",
+      "outcomeText": "AI prepares materials and data, while key decisions and external communication remain under your sales team's control."
+    },
+    "operations": {
+      "title": "Operations with AI",
+      "headline": "Turn repetitive work into efficient processes",
+      "description": "We combine AI with automation to reduce data entry, manual document handling, and information transfer between systems.",
+      "bullets": ["Document capture and classification", "Integration with existing company tools", "Exception approval and full audit trail"],
+      "seoDescription": "AI operations automation for document processing, system integration, exception control, and complete audit trails.",
+      "capabilitiesTitle": "Automation that understands data and exceptions",
+      "capabilities": [
+        { "title": "Documents and data", "text": "Reads, classifies, and validates invoices, orders, forms, and correspondence." },
+        { "title": "Cross-system workflows", "text": "Connects current applications without requiring an expensive platform replacement." },
+        { "title": "Humans handle exceptions", "text": "Routes unusual cases for approval and records every action performed." }
+      ],
+      "outcomeTitle": "A faster process that stays under control",
+      "outcomeText": "We automate predictable cases while leaving risky or unusual decisions with the right people."
+    },
+    "knowledge": {
+      "title": "Company Knowledge with AI",
+      "headline": "Turn company documents into answers on demand",
+      "description": "We connect documentation, procedures, and internal materials into a knowledge assistant. Answers cite sources and respect employee permissions.",
+      "bullets": ["Search across documents and knowledge bases", "Access aligned with employee permissions", "Support for onboarding and daily work"],
+      "seoDescription": "A secure company knowledge assistant with source citations, permission controls, and integrated documentation and knowledge bases.",
+      "capabilitiesTitle": "One place to talk to organizational knowledge",
+      "capabilities": [
+        { "title": "Source-backed answers", "text": "Finds information in connected materials and shows the documents supporting each answer." },
+        { "title": "Access control", "text": "Uses the person's role and permissions to prevent access to out-of-scope content." },
+        { "title": "Current knowledge", "text": "Synchronizes approved sources and helps surface inconsistent or outdated materials." }
+      ],
+      "outcomeTitle": "Less searching, faster decisions and onboarding",
+      "outcomeText": "We first organize sources and access rules, then test response quality using real employee questions."
+    },
+    "softwareDevelopment": {
+      "title": "Software Development with AI",
+      "headline": "Bring AI into developers' daily work",
+      "description": "We implement AI tools for code, tests, and documentation. We define usage rules, train the team, and measure outcomes.",
+      "bullets": ["Assistant and project-context configuration", "Repository and code-review integration", "Usage, cost, and outcome measurement"],
+      "seoDescription": "AI implementation for software development: coding assistants, repository context, code review, training, and cost and outcome measurement.",
+      "capabilitiesTitle": "AI embedded in the actual delivery workflow",
+      "capabilities": [
+        { "title": "Project context", "text": "We configure instructions, knowledge, and tools so the assistant understands architecture and team standards." },
+        { "title": "Developer workflow", "text": "We integrate AI into implementation, testing, documentation, and code review with quality controls." },
+        { "title": "Adoption and measurement", "text": "We train the team and measure use, cost, and impact on delivery speed." }
+      ],
+      "outcomeTitle": "Faster work without lowering standards",
+      "outcomeText": "The implementation covers technology, security rules, and team workflow — it does not end with purchasing licenses."
+    },
+    "aiGuard": {
+      "title": "AI Management with AI Guard",
+      "headline": "Control access, data, and the cost of company AI",
+      "description": "We implement shared policies for integrated applications and teams, giving you cost visibility, model access control, and an event log.",
+      "bullets": ["Budgets and permissions for teams and projects", "Data-protection rules in connected workflows", "Usage monitoring, reports, and alerts"],
+      "seoDescription": "AI Guard for model access, budgets, data-protection rules, and monitoring across connected AI workflows.",
+      "capabilitiesTitle": "A control layer for connected AI solutions",
+      "capabilities": [
+        { "title": "Access and budgets", "text": "Defines permissions, limits, and available models for teams, projects, or environments." },
+        { "title": "Data-protection rules", "text": "Enforces policies in integrated workflows and records events required for audits." },
+        { "title": "Usage visibility", "text": "Shows use, cost, and anomalies while delivering reports and alerts to the right people." }
+      ],
+      "outcomeTitle": "Control where AI is connected",
+      "outcomeText": "AI Guard covers integrated applications and workflows. We do not promise automatic control of tools operating outside that scope."
+    }
+  },
+  "ai_transformation": {
+    "seo": {
+      "title": "AI Transformation for E-commerce — Audit, Delivery & Support",
+      "description": "Professional AI transformation for online stores: audit, roadmap, implementation, integrations, and support. Request a free online estimate."
+    },
+    "hero": {
+      "badge": "AI transformation for e-commerce",
+      "title": "Turn your online store into an AI-first business",
+      "description": "We analyze sales, customer service, and operations, then implement AI where it genuinely saves time, improves the shopping experience, and supports growth.",
+      "points": ["Professional audit and actionable roadmap", "Implementation without replacing your entire platform", "Ongoing support after launch"],
+      "cta_quote": "Get a free online estimate",
+      "cta_process": "See how we work"
+    },
+    "console": {
+      "label": "AI TRANSFORMATION MAP",
+      "store": "Your e-commerce",
+      "status": "Ready for analysis",
+      "audit": "Opportunity audit",
+      "implementation": "AI implementation",
+      "support": "Optimization & support"
+    },
+    "proof": {
+      "label": "Service scope",
+      "audit": "Business, process, and data audit",
+      "delivery": "Secure end-to-end implementation",
+      "support": "Monitoring and long-term support"
+    },
+    "opportunities": {
+      "label": "Opportunities",
+      "title": "AI that improves e-commerce performance",
+      "description": "We fit solutions to your business model, current platform, and data quality — not the other way around.",
+      "items": [
+        { "title": "24/7 customer service", "text": "AI assistants answer questions, check orders, and support returns using your store's current knowledge." },
+        { "title": "Intelligent search", "text": "Customers find products in natural language, while recommendations reflect intent, context, and your live catalog." },
+        { "title": "Operations automation", "text": "AI streamlines product content, classification, reporting, communication, and repetitive team tasks." },
+        { "title": "Data-informed decisions", "text": "We connect sales and marketing data to surface opportunities, risks, and optimization priorities faster." }
+      ]
+    },
+    "process": {
+      "label": "Process",
+      "title": "From audit to a working solution",
+      "description": "Every stage ends with a concrete business result. We start with a small, measurable scope and scale what works.",
+      "steps": [
+        { "title": "AI audit", "text": "We review your processes, data, tools, costs, and constraints. You get quick wins and the initiatives with the strongest potential.", "result": "Report and priorities" },
+        { "title": "Implementation", "text": "We design, integrate, and test the solution with your e-commerce platform, CRM, ERP, or customer service system.", "result": "Working solution" },
+        { "title": "Support and growth", "text": "We monitor quality, cost, and adoption. We train your team, improve performance, and expand to new use cases.", "result": "Sustainable business value" }
+      ]
+    },
+    "pricing": {
+      "label": "Competitive pricing",
+      "title": "Pay for the right scope, not the AI hype",
+      "description": "We split the work into transparent stages. First we confirm the value and cost, then we implement — with no hidden commitments.",
+      "items": ["Free initial online estimate", "Modular scope aligned with your budget", "Clear outcomes and acceptance criteria", "Optional ongoing support after launch"],
+      "promise_title": "Response within 1 business day",
+      "promise_text": "You will receive an initial scope, recommended next step, and indicative estimate."
+    },
+    "quote": {
+      "eyebrow": "Online estimate",
+      "title": "Tell us about your e-commerce business",
+      "name": "Full name *",
+      "email": "Business email *",
+      "company": "Company",
+      "website": "Store URL",
+      "platform": "Platform *",
+      "scale": "Monthly orders *",
+      "budget": "Planned budget *",
+      "message": "Main goal or challenge *",
+      "message_placeholder": "For example: we want to reduce customer service time and automate product content...",
+      "choose": "Choose",
+      "platform_options": ["Shopify", "WooCommerce", "PrestaShop", "Magento / Adobe Commerce", "Shoper", "Custom platform", "Other / not sure"],
+      "scale_options": ["Up to 500", "500–2,000", "2,000–10,000", "Over 10,000", "Not selling yet"],
+      "budget_options": ["Up to €4,000", "€4,000–10,000", "€10,000–25,000", "Over €25,000", "I need a recommendation"],
+      "submit": "Get my initial estimate",
+      "sending": "Sending...",
+      "note": "No commitment. We will only use your details to prepare a response.",
+      "success": "Thank you. We will return with an initial recommendation and estimate within 1 business day.",
+      "error": "We could not send the form. Please try again or email contact@improveit.pl."
     }
   },
   "security_audit": {
@@ -117,6 +506,30 @@
       "countries": "Projects",
       "clients": "Deployments"
     }
+  },
+  "technology_page": {
+    "breadcrumb_label": "Breadcrumb",
+    "badge": "Technology development and support",
+    "cta": "Discuss your project",
+    "scope": "Explore capabilities",
+    "direct_answer_label": "In brief",
+    "direct_answer_suffix": "We can build a new solution, take over an existing codebase, modernize it, or provide ongoing support.",
+    "scope_label": "Capabilities",
+    "scope_title": "{{technology}} development",
+    "scope_description": "The scope can include analysis, implementation, testing, deployment, and ongoing maintenance depending on the product.",
+    "stack_title": "Tools and ecosystem",
+    "faq_title": "Questions about {{technology}}",
+    "faqs": [
+      { "question": "Can you take over an existing project?", "answer": "Yes. Before takeover, we review the code, dependencies, environments, tests, and release process. We then define a plan for stabilization, documentation, and continued development." },
+      { "question": "Do you refactor and upgrade older applications?", "answer": "Yes. We divide modernization into safe stages. We first reduce the risks and issues that block development, with tests and controlled releases protecting each change." },
+      { "question": "Do you provide support after deployment?", "answer": "Yes. We can cover maintenance, monitoring, bug fixes, security upgrades, performance optimization, and the development of new features." },
+      { "question": "How do you select the team and technology?", "answer": "We consider the existing stack, architecture, product scale, security requirements, and the client's internal capabilities. We do not recommend a migration without a clear business or technical benefit." }
+    ],
+    "updated": "Last updated: September 11, 2026",
+    "cta_label": "Next step",
+    "cta_title": "Discuss your system with an engineer",
+    "cta_text": "Describe the technology, current project state, and most important problem. We will recommend an audit, development plan, or ongoing support model.",
+    "modernization_link": "Software modernization"
   },
   "tech": {
     "label": "Technologies",
@@ -166,10 +579,12 @@
         "tech": ["Vue 3", "Pinia", "Vue Router", "Vite"]
       },
       "angular": {
-        "title": "Angular Development",
-        "description": "Extensive corporate applications built in the solid Angular framework.",
-        "full_text": "We deliver enterprise-grade scalable applications using Angular. Our approach guarantees stability, security, and ease of management of large datasets in banking, medical, and logistics applications.",
-        "features": ["Full TypeScript support", "Dependency Injection", "Modular architecture", "Reactive Forms & RxJS"],
+        "title": "Angular Development for Companies",
+        "seo_title": "Angular Development — Apps, Modernization & Support",
+        "seo_description": "Angular development for companies: new applications, project takeover, version upgrades, refactoring, testing, performance optimization, and ongoing support.",
+        "description": "We build, modernize, and maintain complex business applications in Angular.",
+        "full_text": "We provide Angular development for new and existing applications. We design architecture, deliver features, upgrade older Angular versions, improve RxJS and application state, and provide testing, deployment, and ongoing support.",
+        "features": ["New Angular and TypeScript applications", "Framework and dependency upgrades", "RxJS, state, and module refactoring", "Testing, performance, and ongoing support"],
         "tech": ["Angular 17+", "RxJS", "NgRx", "Angular Material"]
       },
       "next": {
@@ -208,11 +623,13 @@
         "tech": ["Dart", "Flutter SDK", "Riverpod / Bloc", "Firebase"]
       },
       "reactnative": {
-        "title": "React Native Development",
-        "description": "Efficient mobile applications built on React.",
-        "full_text": "React Native allows us to deliver applications with a native feel, leveraging the power of the React ecosystem. It's an ideal solution for dynamic products that must run on multiple devices.",
-        "features": ["Code sharing with Web", "Access to native APIs", "Fast iterations (Fast Refresh)", "Large community"],
-        "tech": ["React Native", "Expo", "React Navigation", "Paper / Elements"]
+        "title": "React Native Development & Refactoring",
+        "seo_title": "React Native Development — Apps & Refactoring",
+        "seo_description": "React Native development: new iOS and Android apps, project takeover, refactoring, upgrades, native modules, performance optimization, and ongoing support.",
+        "description": "We build new React Native applications and take over, modernize, and develop existing mobile products.",
+        "full_text": "We provide React Native development from architecture and interface design to app publishing. For existing projects, we deliver audits, refactoring, React Native and Expo upgrades, performance improvements, native integrations, and ongoing support.",
+        "features": ["iOS and Android apps from scratch", "React Native refactoring and upgrades", "Native modules, APIs, and payments", "Testing, publishing, and ongoing support"],
+        "tech": ["React Native & Expo", "TypeScript", "Swift & Kotlin", "React Navigation & EAS"]
       },
       "swift": {
         "title": "Swift Development",
@@ -257,10 +674,12 @@
         "tech": ["Docker Engine", "Docker Compose", "Registry", "Security Scanning"]
       },
       "k8s": {
-        "title": "Kubernetes Orchestration",
-        "description": "Production-scale container orchestration.",
-        "full_text": "We deploy and manage Kubernetes clusters to provide your applications with automatic scaling, self-healing, and high availability regardless of traffic.",
-        "features": ["Auto-scaling", "Self-healing", "Load Balancing", "Configuration management"],
+        "title": "Kubernetes Experts — Delivery & Support",
+        "seo_title": "Kubernetes Experts — Audit, Delivery & Support",
+        "seo_description": "Kubernetes experts for cluster audits, architecture, migration, Helm, Terraform, monitoring, security, cost optimization, and production support.",
+        "description": "We design, audit, and maintain Kubernetes environments for production systems.",
+        "full_text": "We help companies introduce Kubernetes, improve existing clusters, and increase reliability. Our work covers architecture, migration, security, autoscaling, observability, cost optimization, and production support.",
+        "features": ["Cluster and architecture audit", "Migration and deployment automation", "Monitoring, security, and scaling", "Cost optimization and support"],
         "tech": ["Helm", "Terraform", "Istio / Linkerd", "Prometheus / Grafana"]
       },
       "aws": {
@@ -285,9 +704,11 @@
         "tech": ["Apollo Server", "Hasura", "GraphQL Yoga", "Codegen"]
       },
       "tensorflow": {
-        "title": "TensorFlow / AI Development",
-        "description": "Building and training advanced machine learning models.",
-        "full_text": "We use TensorFlow to create Computer Vision, NLP models, and recommendation systems that really solve our clients' complex business problems.",
+        "title": "TensorFlow & AI Development",
+        "seo_title": "TensorFlow Development — AI Models & Production Delivery",
+        "seo_description": "TensorFlow development for computer vision, NLP, and recommendations: data pipelines, optimization, TensorFlow Lite, production delivery, and monitoring.",
+        "description": "We build, optimize, and deploy machine learning models with TensorFlow.",
+        "full_text": "We use TensorFlow for computer vision, NLP, and recommendation systems. In addition to model training, we prepare data pipelines, testing, inference optimization, production deployment, and quality monitoring.",
         "features": ["Deep neural networks", "Machine Learning pipelines", "Training on GPU", "Production deployments with TF Serving"],
         "tech": ["Keras", "Tensorboard", "TF Lite", "TF Extended"]
       },
@@ -310,7 +731,10 @@
       "fintech_ai": "FinTech / AI",
       "healthtech_ai": "HealthTech / AI",
       "internet_analytics": "Internet Analytics",
-      "family_discovery": "Family / Local Discovery"
+      "seo_ai": "SEO / AI Agents",
+      "family_discovery": "Family / Local Discovery",
+      "edtech": "EdTech / Early Learning",
+      "ai_mcp": "AI / MCP"
     },
     "visit_project": "Visit live project",
     "items": {
@@ -323,6 +747,15 @@
         "features": ["Browser-based speed and network quality tests", "Global and country internet reports", "ISP and technology comparison tools", "Shareable results and transparent methodology"],
         "tech_detailed": ["Next.js", "Go", "PostgreSQL", "Measurement Lab NDT7", "Docker", "Cloudflare"]
       },
+      "seoAgent": {
+        "title": "SEO Agent",
+        "description": "A Tauri 2 desktop application for technical crawling, visibility analysis, and controlled AI-powered SEO automation.",
+        "full_text": "SEO Agent is a desktop application built with Tauri 2 that combines technical crawling, Google Search Console and GA4 data, SERP research, Core Web Vitals, and AI agents. It helps teams identify and prioritize issues, plan content strategy, automate controlled SEO workflows, and measure their real impact on search visibility.",
+        "challenge": "SEO data is fragmented across crawlers, analytics, Search Console, and AI tools, making it difficult to set priorities and move quickly from diagnosis to action.",
+        "solution": "We designed a modular agentic platform that aggregates technical and content signals, evaluates website readiness for search engines and AI agents, and turns findings into a prioritized recommendation queue.",
+        "features": ["Technical crawling with impact-based issue grouping", "Organic search and AI answer visibility monitoring", "AI agent readiness assessment", "Prioritized recommendations and SEO automations"],
+        "tech_detailed": ["Tauri 2", "Rust", "SQLite", "AI Agents", "Google Search Console API", "Google Analytics 4"]
+      },
       "kidsRadar": {
         "title": "kids-radar.com",
         "description": "A location-aware discovery platform helping families find child-friendly places, events, services, apps and deals.",
@@ -331,6 +764,24 @@
         "solution": "We created a multilingual, geo-aware directory with structured content workflows, editorial tooling and AI-assisted enrichment. A dedicated administration panel supports places, events, services, apps and deals at scale.",
         "features": ["Location-aware family discovery", "Places, events, services, apps and deals", "Age and category-based filtering", "AI-assisted content and SEO workflows"],
         "tech_detailed": ["React", "Go / Gin", "PostgreSQL", "OpenAI API", "Docker", "Nginx"]
+      },
+      "maluchCzyta": {
+        "title": "MaluchCzyta.pl",
+        "description": "An educational platform for children aged 0–6, combining whole-word reading with movement, games and parent-led learning.",
+        "full_text": "MaluchCzyta.pl turns Glenn Doman's whole-word reading method into an accessible program for parents and children aged 0–6. Short lessons, games and ready-made materials help children discover complete words through movement, play and shared time with a parent.",
+        "challenge": "Parents interested in early education need a clear path and ready-made resources that fit naturally into a child's daily routine without school-like pressure or time-consuming preparation.",
+        "solution": "We created a responsive educational platform with a word library, structured lessons, interactive games and progress tracking. The program works across computers and phones, supports multiple languages and lets parents adapt learning to their child's needs.",
+        "features": ["Bite-sized whole-word reading lessons", "Games combining words, movement and logical thinking", "Ready-made materials and a rich word library", "Progress tracking and multilingual support"],
+        "tech_detailed": ["Angular 22", "PHP", "PostgreSQL", "REST API", "Docker", "Responsive Web"]
+      },
+      "athropy": {
+        "title": "Athropy",
+        "description": "An MCP platform for monitoring team AI usage, analyzing token consumption, and optimizing costs and workflows.",
+        "full_text": "Athropy gives organizations a transparent view of how their teams use AI tools. The platform collects data through Model Context Protocol, analyzes token consumption, costs, models and workflows, then identifies opportunities to improve quality, efficiency and the way AI is used.",
+        "challenge": "As AI adoption grows, organizations lose visibility into token consumption, costs and workflow consistency. Data is fragmented across tools and teams, making it difficult to determine which use cases deliver value and which require optimization.",
+        "solution": "We built an MCP-based observability layer that aggregates AI-tool activity in one dashboard. Athropy monitors usage across teams, analyzes tokens and costs, identifies inefficient patterns, and generates practical recommendations for improving AI workflows.",
+        "features": ["Team-level AI usage monitoring", "Token, model and cost analytics", "Detection of inefficient workflows and usage patterns", "Data-driven optimization recommendations"],
+        "tech_detailed": ["React", "TypeScript", "Node.js", "MCP SDK", "PostgreSQL", "ClickHouse", "Docker", "OpenAI API"]
       },
       "engineer": {
         "title": "Autonomous AI Engineer",
@@ -413,25 +864,107 @@
     }
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "services_label": "Services and contact"
+  },
+  "carriers": {
+    "seo_title": "Careers at improveIT.pl — join our AI team",
+    "seo_description": "Join improveIT.pl and build AI systems, intelligent automation and modern software for clients around the world.",
+    "eyebrow": "Join our mission",
+    "title_start": "We build the future of",
+    "title_accent": "software and AI",
+    "intro": "Build agentic systems, intelligent automation and digital products that solve real business problems with us.",
+    "view_roles": "View open roles",
+    "about_us": "About us",
+    "roles_label": "Open positions",
+    "roles_title": "Find your place",
+    "roles_intro": "We are looking for specialists who want to shape how companies use technology.",
+    "spontaneous": "Open application",
+    "new": "NEW",
+    "location": "Poland / Remote",
+    "details": "Apply now",
+    "roles": {
+      "ai": { "title": "AI / LLM Engineer", "description": "Design AI agents, RAG systems and MCP integrations, then deploy them into real business processes." },
+      "fullstack": { "title": "Senior Full-stack Engineer", "description": "Build scalable web applications and SaaS platforms, combining a polished frontend with a reliable backend." },
+      "data": { "title": "Data & Automation Engineer", "description": "Create data pipelines, analytics and automation that turn fragmented information into practical decisions." }
+    },
+    "values_label": "Why improveIT.pl",
+    "values_title": "Technology with real impact",
+    "values_heading_start": "Why join us",
+    "values_heading_accent": "Build what matters",
+    "values": {
+      "impact": { "title": "Real impact", "description": "Your work reaches production and improves the daily processes of real users." },
+      "ai": { "title": "AI-first", "description": "Work with agents, LLMs, RAG and technologies that are still defining the market." },
+      "team": { "title": "Expert team", "description": "Share knowledge with people who enjoy difficult problems and simple solutions." },
+      "global": { "title": "Global projects", "description": "Develop products and services used by organizations across multiple markets." }
+    },
+    "profile_title": "We are looking for passionate specialists",
+    "profile_intro": "If you are curious, value ownership and want to build solutions that matter, we would like to meet you.",
+    "profile": {
+      "passion": "Passion for technology and problem-solving",
+      "growth": "Willingness to learn and share knowledge",
+      "ownership": "Ownership and responsibility for outcomes",
+      "collaboration": "Openness, communication and collaboration"
+    },
+    "contact_label": "Let's stay in touch",
+    "contact_title": "Can't see your role? Write to us.",
+    "contact_text": "Tell us what you do best and which problem you would like to solve with us.",
+    "contact_cta": "Get in touch",
+    "form": {
+      "role": "Position",
+      "name": "Full name",
+      "email": "Email address",
+      "profile": "LinkedIn or portfolio (optional)",
+      "message": "Tell us briefly about your experience and motivation",
+      "submit": "Send application",
+      "sending": "Sending…",
+      "success": "Thank you. We received your application and will contact you after reviewing it.",
+      "error": "The application could not be sent. Please try again in a moment."
+    }
   },
   "blog": {
     "label": "Blog",
+    "seo_title": "AI, automation and software development blog",
     "title_start": "Knowledge and ",
     "gradient": "AI Innovation",
     "description": "Discover the latest trends in agentic systems, LLMs, and AI-First development.",
     "read_more": "Read more →",
+    "home": "Home",
+    "breadcrumbs": "Breadcrumbs",
+    "filters": "Article search and filters",
+    "search_label": "Search articles",
+    "search_placeholder": "Search by title, category or tags…",
+    "clear_search": "Clear search",
+    "categories": "Article categories",
+    "all_categories": "All",
+    "results_one": "{{count}} article",
+    "results_other": "{{count}} articles",
+    "clear_filters": "Clear filters",
+    "reading_time_one": "{{count}} min read",
+    "reading_time_other": "{{count}} min read",
+    "author": "Author",
+    "no_results_title": "No matching articles",
+    "no_results_description": "Try another phrase, select a different category or clear the filters.",
     "back": "Back to blog",
     "no_post": "Post does not exist",
+    "loading_title": "Loading articles",
+    "loading_description": "We are retrieving the latest publications from our knowledge base.",
+    "error_title": "Articles could not be loaded",
+    "error_description": "The blog service is temporarily unavailable. Check your connection or try again in a moment.",
+    "retry": "Try again",
+    "empty_title": "No articles have been published yet",
+    "empty_description": "New materials will appear here after publication.",
     "cta_title": "Interested in implementing AI?",
     "cta_desc": "Contact our experts to discuss how agentic systems can help your company.",
     "cta_btn": "Expert Consultation",
     "post1": {
       "title": "The Future of AI Agents in Business",
+      "full_title": "The Future of AI Agents in Business: From Automation to Autonomy",
       "excerpt": "How agentic systems are redefining how companies approach complex problems."
     },
     "post2": {
       "title": "Optimizing LLMs with RAG",
+      "full_title": "Optimizing LLMs with RAG: An Engineer's Guide",
       "excerpt": "Why Retrieval-Augmented Generation is key to building reliable solutions."
     }
   }

@@ -11,13 +11,17 @@ export function Navbar() {
   const NAV_LINKS = [
     { href: '/services', label: t('nav.services'), width: '110px' },
     { href: '/about', label: t('nav.about'), width: '110px' },
-    { href: '/technologies', label: t('nav.tech'), width: '140px' },
-    { href: '/portfolio', label: t('nav.portfolio'), width: '120px' },
-    { href: '/blog', label: t('nav.blog'), width: '80px' },
+    { href: '/portfolio', label: t('nav.portfolio'), width: '110px' },
+    { href: '/blog', label: t('nav.blog'), width: '70px' },
+    { href: '/carriers', label: t('nav.carriers'), width: '90px' },
   ]
 
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'pl' ? 'en' : 'pl')
+    const isEnglish = i18n.resolvedLanguage?.startsWith('en')
+    const targetPath = isEnglish
+      ? pathname
+      : `/en${pathname === '/' ? '' : pathname}`
+    window.location.assign(`${targetPath}${window.location.search}${window.location.hash}`)
   }
 
   useEffect(() => {
@@ -61,9 +65,10 @@ export function Navbar() {
           <button 
             onClick={toggleLanguage} 
             className="navbar__link" 
+            aria-label={i18n.resolvedLanguage?.startsWith('en') ? 'Przejdź do polskiej wersji' : 'Switch to English'}
             style={{ marginRight: '0.5rem', fontSize: '0.8rem', fontWeight: '800' }}
           >
-            {i18n.language.toUpperCase().split('-')[0]}
+            {i18n.resolvedLanguage?.startsWith('en') ? 'PL' : 'EN'}
           </button>
           <Link to="/contact" className="navbar__cta">{t('nav.contact')}</Link>
           <button

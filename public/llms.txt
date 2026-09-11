@@ -1,0 +1,37 @@
+# improveIT.pl
+
+> improveIT.pl is a software engineering and AI implementation company. We design, deliver, modernize, integrate, optimize, and support business software in web, mobile, cloud, data, and AI technologies.
+
+Languages: Polish and English.
+Contact: contact@improveit.pl | +48 886 555 201
+
+## Core service pages
+
+- [Software development](https://improveit.pl/services/custom-software-development)
+- [AI transformation for companies](https://improveit.pl/services/ai-transformation)
+- [Software modernization](https://improveit.pl/services/software-modernization)
+- [Application support](https://improveit.pl/services/application-support)
+- [Systems integration](https://improveit.pl/services/systems-integration)
+- [Technology audit](https://improveit.pl/services/technology-audit)
+- [DevOps and cloud](https://improveit.pl/services/devops-cloud)
+
+## AI transformation services
+
+- [AI for e-commerce](https://improveit.pl/services/ai-transformation/ecommerce)
+- [AI customer service](https://improveit.pl/services/ai-transformation/customer-service)
+- [AI sales](https://improveit.pl/services/ai-transformation/sales)
+- [AI operations](https://improveit.pl/services/ai-transformation/operations)
+- [Company knowledge with AI](https://improveit.pl/services/ai-transformation/knowledge)
+- [AI for software development](https://improveit.pl/services/ai-transformation/software-development)
+- [AI Guard](https://improveit.pl/services/ai-transformation/ai-guard)
+
+## More information
+
+- [Technology pages](https://improveit.pl/#technologies)
+- [Portfolio](https://improveit.pl/#portfolio)
+- [Blog](https://improveit.pl/blog)
+- [How pricing works](https://improveit.pl/pricing.md)
+- [Contact](https://improveit.pl/contact)
+- [Extended machine-readable overview](https://improveit.pl/llms-full.txt)
+
+English versions use the same paths under `/en`, for example: https://improveit.pl/en/services/ai-transformation
