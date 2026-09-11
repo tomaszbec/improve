@@ -27,6 +27,11 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: api/go.mod
+
       - name: Install dependencies
         run: |
           bun install
@@ -34,6 +39,11 @@ jobs:
       - name: Build React app
         run: |
           bun run build
+
+      - name: Build publishing API
+        working-directory: api
+        run: |
+          CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags="-s -w" -o ../publishing-api .
 
       - name: Get current version and increment
         id: version
@@ -52,9 +62,9 @@ jobs:
           mkdir -p dist/assets
           echo $VERSION > $VERSION_FILE
 
-      - name: Rename index.html to index.phtml
+      - name: Add PHP-compatible index
         run: |
-          mv dist/index.html dist/index.phtml
+          cp dist/index.html dist/index.phtml
 
       - name: Copy PHP files to dist
         run: |
@@ -82,6 +92,7 @@ jobs:
       - name: Deploy to server using SCP
         run: |
           scp -o StrictHostKeyChecking=no -r dist/* root@146.59.13.80:/root/_improveit.pl/
+          scp -o StrictHostKeyChecking=no publishing-api root@146.59.13.80:/root/_improveit-publishing-api
 
       - name: Finalize deployment and rotate backups
         run: |
@@ -114,3 +125,22 @@ jobs:
           "
         shell: bash
         timeout-minutes: 10
+
+      - name: Refresh publishing API and rendered pages
+        run: |
+          ssh -o StrictHostKeyChecking=no root@146.59.13.80 "
+            CONTAINER_ID=\$(sudo docker ps --filter publish=3201 --format '{{.ID}}' | head -n 1)
+            test -n \"\$CONTAINER_ID\"
+            sudo docker cp /root/_improveit-publishing-api \"\$CONTAINER_ID:/tmp/publishing-api\"
+            sudo docker exec --user root \"\$CONTAINER_ID\" sh -c 'chmod 755 /tmp/publishing-api && mv /tmp/publishing-api /usr/local/bin/publishing-api && rm -rf /app/dist/*'
+            sudo docker cp /var/www/html/improveit.pl/site/. \"\$CONTAINER_ID:/app/dist/\"
+            sudo docker restart \"\$CONTAINER_ID\"
+            rm -f /root/_improveit-publishing-api
+            for attempt in 1 2 3 4 5 6; do
+              curl -fsS http://127.0.0.1:3201/health && exit 0
+              sleep 2
+            done
+            exit 1
+          "
+        shell: bash
+        timeout-minutes: 5
